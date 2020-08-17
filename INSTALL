@@ -1,0 +1,9 @@
+Building Konjugate
+
+See doc/readme-qt.rst for instructions on building Konjugate QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Konjugate.
+
+See doc/build-*.txt for instructions on building Konjugated,
+the intended-for-services, no-graphical-interface, reference
+implementation of Konjugate.
