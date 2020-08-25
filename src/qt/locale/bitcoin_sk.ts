@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Konjugate</source>
-        <translation>O Konjugatee</translation>
+        <source>About Konjungate</source>
+        <translation>O Konjungatee</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Konjugate&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Konjugate&lt;/b&gt; verzia</translation>
+        <source>&lt;b&gt;Konjungate&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Konjungate&lt;/b&gt; verzia</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Konjugate developers</source>
+Copyright © 2014 The Konjungate developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Konjugate developers</translation>
+Copyright © 2014 The Konjungate developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -65,8 +65,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Konjugate addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Toto sú vaše Konjugate adresy pre príjem platieb. Možno budete chcieť dať inú každému odosielateľovi, aby ste mohli sledovať, kto Vám platí.</translation>
+        <source>These are your Konjungate addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Toto sú vaše Konjungate adresy pre príjem platieb. Možno budete chcieť dať inú každému odosielateľovi, aby ste mohli sledovať, kto Vám platí.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -80,8 +80,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Konjugate address</source>
-        <translation>Podpísať správu ako dôkaz, že vlastníte túto Konjugate adresu</translation>
+        <source>Sign a message to prove you own a Konjungate address</source>
+        <translation>Podpísať správu ako dôkaz, že vlastníte túto Konjungate adresu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -95,8 +95,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Konjugate address</source>
-        <translation>Overte správu, aby ste zabezpečili, že bola podpísaná s určitou Konjugate adresou</translation>
+        <source>Verify a message to ensure it was signed with a specified Konjungate address</source>
+        <translation>Overte správu, aby ste zabezpečili, že bola podpísaná s určitou Konjungate adresou</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -263,8 +263,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+82"/>
-        <source>Konjugate will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Konjugate sa teraz zavrie aby dokončil proces zašifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť vaše mince pred krádežou malwarom, ktorý napadol váš počítač.</translation>
+        <source>Konjungate will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Konjungate sa teraz zavrie aby dokončil proces zašifrovania. Nezabudnite, že zašifrovanie vašej peňaženky nemôže plne chrániť vaše mince pred krádežou malwarom, ktorý napadol váš počítač.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -309,7 +309,7 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
 </context>
 <context>
-    <name>KonjugateGUI</name>
+    <name>KonjungateGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
@@ -357,8 +357,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Konjugate</source>
-        <translation>Zobraziť informácie o Konjugate</translation>
+        <source>Show information about Konjungate</source>
+        <translation>Zobraziť informácie o Konjungate</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -397,13 +397,13 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Konjugate address</source>
-        <translation>Poslať mince na Konjugate adresu</translation>
+        <source>Send coins to a Konjungate address</source>
+        <translation>Poslať mince na Konjungate adresu</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Konjugate</source>
-        <translation>Upraviť možnosti konfigurácie pre Konjugate</translation>
+        <source>Modify configuration options for Konjungate</source>
+        <translation>Upraviť možnosti konfigurácie pre Konjungate</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -443,8 +443,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Konjugate</source>
-        <translation>Konjugate</translation>
+        <source>Konjungate</source>
+        <translation>Konjungate</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -453,8 +453,8 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Konjugate</source>
-        <translation>&amp;O Konjugate</translation>
+        <source>&amp;About Konjungate</source>
+        <translation>&amp;O Konjungate</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -505,13 +505,13 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Konjugate client</source>
-        <translation>Konjugate klient</translation>
+        <source>Konjungate client</source>
+        <translation>Konjungate klient</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Konjugate network</source>
-        <translation><numerusform>%n aktívne spojenie s Konjugate sieťov</numerusform><numerusform>%n aktívnych spojení s Konjugate sieťov</numerusform><numerusform>%n aktívnych spojení s Konjugate sieťou</numerusform></translation>
+        <source>%n active connection(s) to Konjungate network</source>
+        <translation><numerusform>%n aktívne spojenie s Konjungate sieťov</numerusform><numerusform>%n aktívnych spojení s Konjungate sieťov</numerusform><numerusform>%n aktívnych spojení s Konjungate sieťou</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -604,8 +604,8 @@ Adresa: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Konjugate address or malformed URI parameters.</source>
-        <translation>URI nemožno analyzovať! Toto môže byť spôsobené neplatnou Konjugate adresu alebo chybnými URI parametrami.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Konjungate address or malformed URI parameters.</source>
+        <translation>URI nemožno analyzovať! Toto môže byť spôsobené neplatnou Konjungate adresu alebo chybnými URI parametrami.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -727,8 +727,8 @@ Adresa: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Konjugate can no longer continue safely and will quit.</source>
-        <translation>Došlo k závažnej chybe. Konjugate už nemôže pokračovať bezpečne a bude ukončený.</translation>
+        <source>A fatal error occurred. Konjungate can no longer continue safely and will quit.</source>
+        <translation>Došlo k závažnej chybe. Konjungate už nemôže pokračovať bezpečne a bude ukončený.</translation>
     </message>
 </context>
 <context>
@@ -1061,8 +1061,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Konjugate address.</source>
-        <translation>Zadaná adresa &quot;%1&quot; nie je platnou Konjugate adresou.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Konjungate address.</source>
+        <translation>Zadaná adresa &quot;%1&quot; nie je platnou Konjungate adresou.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1080,8 +1080,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Konjugate-Qt</source>
-        <translation>Konjugate-Qt</translation>
+        <source>Konjungate-Qt</source>
+        <translation>Konjungate-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1153,13 +1153,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Konjugate after logging in to the system.</source>
-        <translation>Automaticky spustiť Konjugate po prihlásení sa do systému.</translation>
+        <source>Automatically start Konjungate after logging in to the system.</source>
+        <translation>Automaticky spustiť Konjungate po prihlásení sa do systému.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Konjugate on system login</source>
-        <translation>&amp;Spustiť Konjugate pri prihlásení do systému</translation>
+        <source>&amp;Start Konjungate on system login</source>
+        <translation>&amp;Spustiť Konjungate pri prihlásení do systému</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1168,8 +1168,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Konjugate client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otvoriť port klienta Konjugate na routeri. To funguje iba vtedy, ak váš router podporuje UPnP a je povolené.</translation>
+        <source>Automatically open the Konjungate client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otvoriť port klienta Konjungate na routeri. To funguje iba vtedy, ak váš router podporuje UPnP a je povolené.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1178,8 +1178,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Konjugate network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Pripojenie k sieti Konjugate cez SOCKS proxy server (napr. pri pripojení cez Tor).</translation>
+        <source>Connect to the Konjungate network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Pripojenie k sieti Konjungate cez SOCKS proxy server (napr. pri pripojení cez Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1253,8 +1253,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Konjugate.</source>
-        <translation>Tu môžete nastaviť jazyk používateľského rozhrania. Toto nastavenie sa prejaví až po reštartovaní Konjugate.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Konjungate.</source>
+        <translation>Tu môžete nastaviť jazyk používateľského rozhrania. Toto nastavenie sa prejaví až po reštartovaní Konjungate.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1320,8 +1320,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Konjugate.</source>
-        <translation>Toto nastavenie sa prejaví až po reštartovaní Konjugate.</translation>
+        <source>This setting will take effect after restarting Konjungate.</source>
+        <translation>Toto nastavenie sa prejaví až po reštartovaní Konjungate.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1339,8 +1339,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Konjugate network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informácie môžu byť zastaralé. Vaša peňaženka sa automaticky synchronizuje so sieťou Konjugate po nadviazaní spojenia, ale tento proces nie je ešte dokončený.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Konjungate network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informácie môžu byť zastaralé. Vaša peňaženka sa automaticky synchronizuje so sieťou Konjungate po nadviazaní spojenia, ale tento proces nie je ešte dokončený.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1413,8 +1413,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start Konjugate: click-to-pay handler</source>
-        <translation>Konjugate sa nedá spustiť: click-to-pay handler</translation>
+        <source>Cannot start Konjungate: click-to-pay handler</source>
+        <translation>Konjungate sa nedá spustiť: click-to-pay handler</translation>
     </message>
 </context>
 <context>
@@ -1581,8 +1581,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Konjugate-Qt help message to get a list with possible Konjugate command-line options.</source>
-        <translation>Zobraziť Konjugate-Qt nápovedu k získaniu zoznamu pre možnosti  príkazového riadku Konjugate.</translation>
+        <source>Show the Konjungate-Qt help message to get a list with possible Konjungate command-line options.</source>
+        <translation>Zobraziť Konjungate-Qt nápovedu k získaniu zoznamu pre možnosti  príkazového riadku Konjungate.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1601,13 +1601,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Konjugate - Debug window</source>
-        <translation>Konjugate - Ladiace okno</translation>
+        <source>Konjungate - Debug window</source>
+        <translation>Konjungate - Ladiace okno</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Konjugate Core</source>
-        <translation>Jadro Konjugate</translation>
+        <source>Konjungate Core</source>
+        <translation>Jadro Konjungate</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1616,8 +1616,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Konjugate debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otvorte Konjugate súbor denníku ladenia z aktuálneho adresára dát. To môže trvať niekoľko sekúnd pre veľké súbory denníka.</translation>
+        <source>Open the Konjungate debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otvorte Konjungate súbor denníku ladenia z aktuálneho adresára dát. To môže trvať niekoľko sekúnd pre veľké súbory denníka.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1626,8 +1626,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Konjugate RPC console.</source>
-        <translation>Vitajte v konzole Konjugate RPC.</translation>
+        <source>Welcome to the Konjungate RPC console.</source>
+        <translation>Vitajte v konzole Konjungate RPC.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1820,8 +1820,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Zadajte Konjugate adresu (napr. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Zadajte Konjungate adresu (napr. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1920,8 +1920,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Konjugate address</source>
-        <translation>UPOZORNENIE: Neplatná Konjugate adresa</translation>
+        <source>WARNING: Invalid Konjungate address</source>
+        <translation>UPOZORNENIE: Neplatná Konjungate adresa</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1994,8 +1994,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Zadajte Konjugate adresu (napr. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Zadajte Konjungate adresu (napr. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
 </context>
 <context>
@@ -2055,8 +2055,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Konjugate address</source>
-        <translation>Podpísať správu ako dôkaz, že vlastníte túto Konjugate adresu</translation>
+        <source>Sign the message to prove you own this Konjungate address</source>
+        <translation>Podpísať správu ako dôkaz, že vlastníte túto Konjungate adresu</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2087,8 +2087,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Konjugate address</source>
-        <translation>Overte správu, aby ste sa ubezpečili, že bola podpísaná s danou Konjugate adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Konjungate address</source>
+        <translation>Overte správu, aby ste sa ubezpečili, že bola podpísaná s danou Konjungate adresou</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2098,8 +2098,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Zadajte Konjugate adresu (napr. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Zadajte Konjungate adresu (napr. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2108,8 +2108,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Konjugate signature</source>
-        <translation>Zadajte Konjugate podpis</translation>
+        <source>Enter Konjungate signature</source>
+        <translation>Zadajte Konjungate podpis</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2687,8 +2687,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Konjugate version</source>
-        <translation>Konjugate verzia</translation>
+        <source>Konjungate version</source>
+        <translation>Konjungate verzia</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2697,8 +2697,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Konjugated</source>
-        <translation>Pošli príkaz na -server alebo Konjugated</translation>
+        <source>Send command to -server or Konjungated</source>
+        <translation>Pošli príkaz na -server alebo Konjungated</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2717,13 +2717,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Konjugate.conf)</source>
-        <translation>Zadajte konfiguračný súbor (predvolené: Konjugate.conf)</translation>
+        <source>Specify configuration file (default: Konjungate.conf)</source>
+        <translation>Zadajte konfiguračný súbor (predvolené: Konjungate.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Konjugated.pid)</source>
-        <translation>Zadajte pid súbor (predvolené: Konjugated.pid)</translation>
+        <source>Specify pid file (default: Konjungated.pid)</source>
+        <translation>Zadajte pid súbor (predvolené: Konjungated.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2740,24 +2740,24 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=Konjugaterpc
+rpcuser=Konjungaterpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Konjungate Alert&quot; admin@foo.com
 </source>
         <translation>%s, musíte nastaviť rpcpassword v konfiguračnom súbore:
 %s
 Doporučuje sa použiť nasledovné náhodne heslo:
-rpcuser=Konjugaterpc
+rpcuser=Konjungaterpc
 rpcpassword=%s
 (toto heslo si nemusíte pamätať)
 Užívateľské meno a heslo NESMIE byť rovnaké.
 Ak súbor neexistuje, vytvorte ho s právami &quot;môže čítať iba vlastník&quot;.
 Odporúča sa tiež nastaviť &quot;alertnotify&quot;, takže budete upozornení na problémy,
-napríklad: alertnotify=echo %%s | mail -s &quot;Konjugate upozornenie&quot; admin@foo.com
+napríklad: alertnotify=echo %%s | mail -s &quot;Konjungate upozornenie&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2862,8 +2862,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Konjugate upozornenie&quot; adm
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Konjugate will not work properly.</source>
-        <translation>Upozornenie: Skontrolujte, že dátum a čas počítača sú správne! Ak je Váš čas nesprávny Konjugate nebude pracovať správne.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Konjungate will not work properly.</source>
+        <translation>Upozornenie: Skontrolujte, že dátum a čas počítača sú správne! Ak je Váš čas nesprávny Konjungate nebude pracovať správne.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -2937,8 +2937,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Konjugate upozornenie&quot; adm
     </message>
     <message>
         <location line="+41"/>
-        <source>SSL options: (see the Konjugate Wiki for SSL setup instructions)</source>
-        <translation>SSL možnosť: (pozrite Konjugate Wiki pre návod na nastavenie SSL)</translation>
+        <source>SSL options: (see the Konjungate Wiki for SSL setup instructions)</source>
+        <translation>SSL možnosť: (pozrite Konjungate Wiki pre návod na nastavenie SSL)</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -3169,8 +3169,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Konjugate upozornenie&quot; adm
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Konjugate is shutting down.</source>
-        <translation>Úvodné kontrolné testy zlyhali. Konjugate sa teraz zatvori.</translation>
+        <source>Initialization sanity check failed. Konjungate is shutting down.</source>
+        <translation>Úvodné kontrolné testy zlyhali. Konjungate sa teraz zatvori.</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -3234,13 +3234,13 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Konjugate upozornenie&quot; adm
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Konjugate</source>
-        <translation>Chyba pri načítaní wallet.dat: Peňaženka vyžaduje novšiu verziu Konjugate</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Konjungate</source>
+        <translation>Chyba pri načítaní wallet.dat: Peňaženka vyžaduje novšiu verziu Konjungate</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Konjugate to complete</source>
-        <translation>Peňaženka potrebuje byť prepísaná: reštartujte Konjugate k dokončeniu</translation>
+        <source>Wallet needed to be rewritten: restart Konjungate to complete</source>
+        <translation>Peňaženka potrebuje byť prepísaná: reštartujte Konjungate k dokončeniu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3304,8 +3304,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Konjugate upozornenie&quot; adm
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Konjugate is probably already running.</source>
-        <translation>Nemôžem sa pripojiť na %s na tomto počítači. Konjugate je pravdepodobne už beží.</translation>
+        <source>Unable to bind to %s on this computer. Konjungate is probably already running.</source>
+        <translation>Nemôžem sa pripojiť na %s na tomto počítači. Konjungate je pravdepodobne už beží.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3344,8 +3344,8 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Konjugate upozornenie&quot; adm
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Konjugate is probably already running.</source>
-        <translation>Nedá sa zamknúť dátová zložka %s. Konjugate je pravdepodobne už spustený</translation>
+        <source>Cannot obtain a lock on data directory %s. Konjungate is probably already running.</source>
+        <translation>Nedá sa zamknúť dátová zložka %s. Konjungate je pravdepodobne už spustený</translation>
     </message>
     <message>
         <location line="+4"/>

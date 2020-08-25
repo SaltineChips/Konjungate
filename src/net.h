@@ -284,7 +284,7 @@ public:
   
 typedef std::map<CSubNet, CBanEntry> banmap_t;
 
-/** Information about a Konjugate (D-Note) peer */
+/** Information about a Konjungate (D-Note) peer */
 class SecMsgNode
 {
 public:

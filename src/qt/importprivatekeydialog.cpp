@@ -43,7 +43,7 @@ void ImportPrivateKeyDialog::accept()
     QString strKey = ui->keyEdit->text();
     if (!strKey.isEmpty())
     {
-        CKonjugateSecret vchSecret;
+        CKonjungateSecret vchSecret;
         bool fGood = vchSecret.SetString(strKey.toUtf8().constData());
         if (fGood) {
             QString strLabel = ui->labelEdit->text();

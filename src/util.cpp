@@ -83,7 +83,7 @@ bool fLiteMode = false;
 bool fEnableInstantX = true;
 int nInstantXDepth = 10;
 int nMNengineRounds = 2;
-int nAnonymizeKonjugateAmount = 1000;
+int nAnonymizeKonjungateAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 int64_t enforceMasternodePaymentsTime = 4085657524;
@@ -1080,7 +1080,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "Konjugate";
+    const char* pszModule = "Konjungate";
 #endif
     if (pex)
         return strprintf(
@@ -1180,7 +1180,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "Konjugate.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "Konjungate.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1201,7 +1201,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     if (!streamConfig.good())
     {
         boost::filesystem::path ConfPath;
-               ConfPath = GetDataDir() / "Konjugate.conf";
+               ConfPath = GetDataDir() / "Konjungate.conf";
                FILE* ConfFile = fopen(ConfPath.string().c_str(), "w");
                fprintf(ConfFile, "listen=1\n");
                fprintf(ConfFile, "server=1\n");
@@ -1224,10 +1224,10 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                //TODO: investigate node: fprintf(ConfFile, "addnode=199.175.54.187\n");
                /* fprintf(ConfFile, "addnode=157.230.107.144\n");
                fprintf(ConfFile, "addnode=138.197.161.183\n");
-               fprintf(ConfFile, "addnode=seed1n.konjugate.biz\n");
-               fprintf(ConfFile, "addnode=seed2n.konjugate.biz\n");
-               fprintf(ConfFile, "addnode=seed3n.konjugate.biz\n");
-               fprintf(ConfFile, "addnode=seed4n.konjugate.biz\n"); */
+               fprintf(ConfFile, "addnode=seed1n.konjungate.biz\n");
+               fprintf(ConfFile, "addnode=seed2n.konjungate.biz\n");
+               fprintf(ConfFile, "addnode=seed3n.konjungate.biz\n");
+               fprintf(ConfFile, "addnode=seed4n.konjungate.biz\n"); */
 
                fclose(ConfFile);
     }
@@ -1260,7 +1260,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "Konjugated.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "Konjungated.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1421,7 +1421,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Konjugate will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Konjungate will not work properly.");
                     strMiscWarning = strMessage;
                     LogPrintf("*** %s\n", strMessage);
                     uiInterface.ThreadSafeMessageBox(strMessage, "", CClientUIInterface::MSG_WARNING);

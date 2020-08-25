@@ -1,21 +1,21 @@
-Konjugate [KONJ] 2020
+Konjungate [KONJ] 2020
 ===========================================================================================
 
-http://konjugate.org/
+http://konjungate.org/
 
-What is the Konjugate [KONJ] Blockchain?
+What is the Konjungate [KONJ] Blockchain?
 -----------------------------------------
 *TODO: Update documentation regarding implemented tech as this section is out of date and much progress and upgrades have been made to mentioned sections...*
 
 ### Overview
-Konjugate is a blockchain project with the goal of offering secured messaging, Darksend, masternodes and an overall pleasing experience to the user.
+Konjungate is a blockchain project with the goal of offering secured messaging, Darksend, masternodes and an overall pleasing experience to the user.
 
 ### Blockchain Technology
-The Konjugate [KONJ] Blockchain is an experimental smart contract platform protocol that enables 
+The Konjungate [KONJ] Blockchain is an experimental smart contract platform protocol that enables 
 instant payments to anyone, anywhere in the world in a private, secure manner. 
-Konjugate [KONJ] uses peer-to-peer blockchain technology developed by Konjugate to operate
+Konjungate [KONJ] uses peer-to-peer blockchain technology developed by Konjungate to operate
 with no central authority: managing transactions, execution of contracts, and 
-issuing money are carried out collectively by the network. Konjugate [KONJ] is the name of 
+issuing money are carried out collectively by the network. Konjungate [KONJ] is the name of 
 open source software which enables the use of this protocol.
 
 ### Custom Difficulty Retarget Algorithm “VRX”
@@ -29,7 +29,7 @@ Wish or bmw512 hashing algorithm is utilized for the Proof-of-Work function and 
 
 Specifications and General info
 ------------------
-Konjugate uses 
+Konjungate uses 
 
 	libsecp256k1,
 	libgmp,
@@ -50,7 +50,7 @@ General Specs
 
 BUILD LINUX
 -----------
-### Compiling Konjugate "SatoshiCore" daemon on Ubunutu 18.04 LTS Bionic
+### Compiling Konjungate "SatoshiCore" daemon on Ubunutu 18.04 LTS Bionic
 ### Note: guide should be compatible with other Ubuntu versions from 14.04+
 
 ### Become poweruser
@@ -74,15 +74,15 @@ cd ~; wget http://download.oracle.com/berkeley-db/db-6.2.32.NC.tar.gz; tar zxf d
 
 ### GitHub pull (Source Download)
 ```
-cd ~; git clone https://github.com/SaltineChips/Konjugate Konjugate
+cd ~; git clone https://github.com/SaltineChips/Konjungate Konjungate
 ```
 
-### Build Konjugate daemon
+### Build Konjungate daemon
 ```
-cd ~; cd ~/Konjugate/src; chmod a+x obj; chmod a+x leveldb/build_detect_platform; chmod a+x secp256k1; chmod a+x leveldb; chmod a+x ~/Konjugate/src; chmod a+x ~/Konjugate; make -f makefile.unix USE_UPNP=-; cd ~; cp -r ~/Konjugate/src/Konjugated /usr/local/bin/Konjugated;
+cd ~; cd ~/Konjungate/src; chmod a+x obj; chmod a+x leveldb/build_detect_platform; chmod a+x secp256k1; chmod a+x leveldb; chmod a+x ~/Konjungate/src; chmod a+x ~/Konjungate; make -f makefile.unix USE_UPNP=-; cd ~; cp -r ~/Konjungate/src/Konjungated /usr/local/bin/Konjungated;
 ```
 
-### (Optional) Build Konjugate-QT (GUI wallet) on Linux 
+### (Optional) Build Konjungate-QT (GUI wallet) on Linux 
 
 **All previous steps must be completed first.**
 
@@ -94,20 +94,20 @@ export BDB_INCLUDE_PATH="/usr/local/BerkeleyDB.6.2/include"; export BDB_LIB_PATH
 With UPNP:
 
 ```
-cd ~; cd ~/Konjugate; qmake -qt=qt5; make
+cd ~; cd ~/Konjungate; qmake -qt=qt5; make
 ```
 
 **Recommended Without** UPNP:
 
 ```
-cd ~; cd ~/Konjugate; qmake -qt=qt5 USE_UPNP=-; make
+cd ~; cd ~/Konjungate; qmake -qt=qt5 USE_UPNP=-; make
 ```
 
 
 
 ### Create config file for daemon
 ```
-cd ~; sudo ufw allow 19427/tcp; sudo ufw allow 18695/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.KONJ; cat << "CONFIG" >> ~/.KONJ/Konjugate.conf
+cd ~; sudo ufw allow 19427/tcp; sudo ufw allow 18695/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.KONJ; cat << "CONFIG" >> ~/.KONJ/Konjungate.conf
 listen=1
 server=1
 daemon=1
@@ -119,12 +119,12 @@ port=19427
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
 CONFIG
-chmod 700 ~/.KONJ/Konjugate.conf; chmod 700 ~/.KONJ; ls -la ~/.KONJ
+chmod 700 ~/.KONJ/Konjungate.conf; chmod 700 ~/.KONJ; ls -la ~/.KONJ
 ```
 
-### Run Konjugate daemon
+### Run Konjungate daemon
 ```
-cd ~; Konjugated; Konjugated getinfo
+cd ~; Konjungated; Konjungated getinfo
 ```
 
 ### Troubleshooting
@@ -137,21 +137,21 @@ make -f makefile.unix USE_UPNP=-
 ```
 ### Updating daemon in bin directory
 ```
-cd ~; cp -r ~/Konjugate/src/Konjugated /usr/local/bin
+cd ~; cp -r ~/Konjungate/src/Konjungated /usr/local/bin
 ```
 
 License
 -------
 
-Konjugate [KONJ] is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Konjungate [KONJ] is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/SaltineChips/Konjugate/Tags) are created
-regularly to indicate new official, stable release versions of Konjugate [KONJ].
+completely stable. [Tags](https://github.com/SaltineChips/Konjungate/Tags) are created
+regularly to indicate new official, stable release versions of Konjungate [KONJ].
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 

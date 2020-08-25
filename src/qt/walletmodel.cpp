@@ -211,7 +211,7 @@ bool WalletModel::validateAddress(const QString &address)
             return true;
     };
 
-    CKonjugateAddress addressParsed(sAddr);
+    CKonjungateAddress addressParsed(sAddr);
     return addressParsed.IsValid();
 }
 
@@ -243,7 +243,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
         setAddress.insert(rcp.address);
         ++nAddresses;
 
-        CScript scriptPubKey = GetScriptForDestination(CKonjugateAddress(rcp.address.toStdString()).Get());
+        CScript scriptPubKey = GetScriptForDestination(CKonjungateAddress(rcp.address.toStdString()).Get());
         vecSend.push_back(std::pair<CScript, CAmount>(scriptPubKey, rcp.amount));
 
         total += rcp.amount;
@@ -357,7 +357,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction &tran
 
                     CKeyID ckidTo = cpkTo.GetID();
 
-                    CKonjugateAddress addrTo(ckidTo);
+                    CKonjungateAddress addrTo(ckidTo);
 
                     if (SecretToPublicKey(ephem_secret, ephem_pubkey) != 0)
                     {
@@ -389,7 +389,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction &tran
             }
 
             CScript scriptPubKey;
-            scriptPubKey.SetDestination(CKonjugateAddress(sAddr).Get());
+            scriptPubKey.SetDestination(CKonjungateAddress(sAddr).Get());
             vecSend.push_back(make_pair(scriptPubKey, rcp.amount));
         }
 
@@ -429,7 +429,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction &tran
     foreach(const SendCoinsRecipient &rcp, recipients)
     {
         std::string strAddress = rcp.address.toStdString();
-        CTxDestination dest = CKonjugateAddress(strAddress).Get();
+        CTxDestination dest = CKonjungateAddress(strAddress).Get();
         std::string strLabel = rcp.label.toStdString();
         {
             LOCK(wallet->cs_wallet);
@@ -556,7 +556,7 @@ static void NotifyAddressBookChanged(WalletModel *walletmodel, CWallet *wallet,
                                   Q_ARG(int, status));
     } else
     {
-    QString strAddress = QString::fromStdString(CKonjugateAddress(address).ToString());
+    QString strAddress = QString::fromStdString(CKonjungateAddress(address).ToString());
     QString strLabel = QString::fromStdString(label);
 
     qDebug() << "NotifyAddressBookChanged : " + strAddress + " " + strLabel + " isMine=" + QString::number(isMine) + " status=" + QString::number(status);
@@ -680,7 +680,7 @@ WalletModel::UnlockContext::~UnlockContext()
 
 void WalletModel::UnlockContext::CopyFrom(const UnlockContext& rhs)
 {
-    // Konjugate context; old object no longer relocks wallet
+    // Konjungate context; old object no longer relocks wallet
     *this = rhs;
     rhs.relock = false;
 }
@@ -739,7 +739,7 @@ void WalletModel::listCoins(std::map<QString, std::vector<COutput> >& mapCoins) 
         CTxDestination address;
         if(!out.fSpendable || !ExtractDestination(cout.tx->vout[cout.i].scriptPubKey, address))
             continue;
-        mapCoins[QString::fromStdString(CKonjugateAddress(address).ToString())].push_back(out);
+        mapCoins[QString::fromStdString(CKonjungateAddress(address).ToString())].push_back(out);
     }
 }
 

@@ -165,7 +165,7 @@ public:
 
 
 // -- get at the data
-class CKonjugateAddress_B : public CKonjugateAddress
+class CKonjungateAddress_B : public CKonjungateAddress
 {
 public:
     uint8_t getVersion()

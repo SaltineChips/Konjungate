@@ -9,22 +9,22 @@
 #include <QSettings>
 #include <QStringList>
 
-KonjugateUnits::KonjugateUnits(QObject *parent):
+KonjungateUnits::KonjungateUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<KonjugateUnits::Unit> KonjugateUnits::availableUnits()
+QList<KonjungateUnits::Unit> KonjungateUnits::availableUnits()
 {
-    QList<KonjugateUnits::Unit> unitlist;
+    QList<KonjungateUnits::Unit> unitlist;
     unitlist.append(KONJ);
     unitlist.append(mKONJ);
     unitlist.append(uKONJ);
     return unitlist;
 }
 
-bool KonjugateUnits::valid(int unit)
+bool KonjungateUnits::valid(int unit)
 {
     switch(unit)
     {
@@ -37,7 +37,7 @@ bool KonjugateUnits::valid(int unit)
     }
 }
 
-QString KonjugateUnits::name(int unit)
+QString KonjungateUnits::name(int unit)
 {
     switch(unit)
     {
@@ -48,18 +48,18 @@ QString KonjugateUnits::name(int unit)
     }
 }
 
-QString KonjugateUnits::description(int unit)
+QString KonjungateUnits::description(int unit)
 {
     switch(unit)
     {
-    case KONJ: return QString("Konjugates");
-    case mKONJ: return QString("Milli-Konjugates (1 / 1,000)");
-    case uKONJ: return QString("Micro-Konjugates (1 / 1,000,000)");
+    case KONJ: return QString("Konjungates");
+    case mKONJ: return QString("Milli-Konjungates (1 / 1,000)");
+    case uKONJ: return QString("Micro-Konjungates (1 / 1,000,000)");
     default: return QString("???");
     }
 }
 
-qint64 KonjugateUnits::factor(int unit)
+qint64 KonjungateUnits::factor(int unit)
 {
     switch(unit)
     {
@@ -70,7 +70,7 @@ qint64 KonjugateUnits::factor(int unit)
     }
 }
 
-int KonjugateUnits::amountDigits(int unit)
+int KonjungateUnits::amountDigits(int unit)
 {
     switch(unit)
     {
@@ -81,7 +81,7 @@ int KonjugateUnits::amountDigits(int unit)
     }
 }
 
-int KonjugateUnits::decimals(int unit)
+int KonjungateUnits::decimals(int unit)
 {
     switch(unit)
     {
@@ -92,7 +92,7 @@ int KonjugateUnits::decimals(int unit)
     }
 }
 
-QString KonjugateUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
+QString KonjungateUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -120,7 +120,7 @@ QString KonjugateUnits::format(int unit, const CAmount& nIn, bool fPlus, Separat
     return quotient_str + QString(".") + remainder_str;
 }
 
-// TODO: Review all remaining calls to KonjugateUnits::formatWithUnit to
+// TODO: Review all remaining calls to KonjungateUnits::formatWithUnit to
 // TODO: determine whether the output is used in a plain text context
 // TODO: or an HTML context (and replace with
 // TODO: BtcoinUnits::formatHtmlWithUnit in the latter case). Hopefully
@@ -135,19 +135,19 @@ QString KonjugateUnits::format(int unit, const CAmount& nIn, bool fPlus, Separat
 // Please take care to use formatHtmlWithUnit instead, when
 // appropriate.
 
-QString KonjugateUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString KonjungateUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     return format(unit, amount, plussign, separators) + QString(" ") + name(unit);
 }
 
-QString KonjugateUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString KonjungateUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(formatWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }
 
-QString KonjugateUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString KonjungateUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QSettings settings;
     int digits = settings.value("digits").toInt();
@@ -158,14 +158,14 @@ QString KonjugateUnits::floorWithUnit(int unit, const CAmount& amount, bool plus
     return result + QString(" ") + name(unit);
 }
 
-QString KonjugateUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString KonjungateUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(floorWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }
 
-bool KonjugateUnits::parse(int unit, const QString &value, CAmount *val_out)
+bool KonjungateUnits::parse(int unit, const QString &value, CAmount *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -204,23 +204,23 @@ bool KonjugateUnits::parse(int unit, const QString &value, CAmount *val_out)
     return ok;
 }
 
-QString KonjugateUnits::getAmountColumnTitle(int unit)
+QString KonjungateUnits::getAmountColumnTitle(int unit)
 {
     QString amountTitle = QObject::tr("Amount");
-    if (KonjugateUnits::valid(unit))
+    if (KonjungateUnits::valid(unit))
     {
-        amountTitle += " ("+KonjugateUnits::name(unit) + ")";
+        amountTitle += " ("+KonjungateUnits::name(unit) + ")";
     }
     return amountTitle;
 }
 
-int KonjugateUnits::rowCount(const QModelIndex &parent) const
+int KonjungateUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant KonjugateUnits::data(const QModelIndex &index, int role) const
+QVariant KonjungateUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())
@@ -240,7 +240,7 @@ QVariant KonjugateUnits::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-CAmount KonjugateUnits::maxMoney()
+CAmount KonjungateUnits::maxMoney()
 {
     return MAX_SINGLE_TX;
 }

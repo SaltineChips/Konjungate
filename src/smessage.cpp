@@ -928,7 +928,7 @@ int SecureMsgAddWalletAddresses()
 
         // TODO: skip addresses for stealth transactions
 
-        CKonjugateAddress coinAddress(entry.first);
+        CKonjungateAddress coinAddress(entry.first);
         if (!coinAddress.IsValid())
             continue;
 
@@ -2520,7 +2520,7 @@ int SecureMsgScanMessage(uint8_t *pHeader, uint8_t *pPayload, uint32_t nPayload,
         if (!it->fReceiveEnabled)
             continue;
 
-        CKonjugateAddress coinAddress(it->sAddress);
+        CKonjungateAddress coinAddress(it->sAddress);
         addressTo = coinAddress.ToString();
 
         if (!it->fReceiveAnon)
@@ -2629,7 +2629,7 @@ int SecureMsgGetLocalPublicKey(std::string& strAddress, std::string& strPublicKe
     //if (fDebugSmsg)
     //   LogPrint("smessage", "SecureMsgGetLocalPublicKey().\n");
 
-    CKonjugateAddress address;
+    CKonjungateAddress address;
     if (!address.SetString(strAddress))
         return 2; // Invalid coin address
 
@@ -2689,7 +2689,7 @@ int SecureMsgAddAddress(std::string& address, std::string& publicKey)
             5 address is invalid
     */
 
-    CKonjugateAddress coinAddress(address);
+    CKonjungateAddress coinAddress(address);
 
     if (!coinAddress.IsValid())
     {
@@ -2718,7 +2718,7 @@ int SecureMsgAddAddress(std::string& address, std::string& publicKey)
     };
     
     CKeyID keyIDT = pubKeyT.GetID();
-    CKonjugateAddress addressT(keyIDT);
+    CKonjungateAddress addressT(keyIDT);
 
     if (addressT.ToString().compare(address) != 0)
     {
@@ -3334,7 +3334,7 @@ int SecureMsgEncrypt(SecureMessage &smsg, const std::string &addressFrom, const 
 
 
     bool fSendAnonymous;
-    CKonjugateAddress coinAddrFrom;
+    CKonjungateAddress coinAddrFrom;
     CKeyID ckidFrom;
     CKey keyFrom;
 
@@ -3358,7 +3358,7 @@ int SecureMsgEncrypt(SecureMessage &smsg, const std::string &addressFrom, const 
     };
 
 
-    CKonjugateAddress coinAddrDest;
+    CKonjungateAddress coinAddrDest;
     CKeyID ckidDest;
 
     if (!coinAddrDest.SetString(addressTo))
@@ -3505,7 +3505,7 @@ int SecureMsgEncrypt(SecureMessage &smsg, const std::string &addressFrom, const 
         keyFrom.SignCompact(Hash(message.begin(), message.end()), vchSignature);
 
         // -- Save some bytes by sending address raw
-        vchPayload[0] = (static_cast<CKonjugateAddress_B*>(&coinAddrFrom))->getVersion(); // vchPayload[0] = coinAddrDest.nVersion;
+        vchPayload[0] = (static_cast<CKonjungateAddress_B*>(&coinAddrFrom))->getVersion(); // vchPayload[0] = coinAddrDest.nVersion;
         memcpy(&vchPayload[1], (static_cast<CKeyID_B*>(&ckidFrom))->GetPPN(), 20); // memcpy(&vchPayload[1], ckidDest.pn, 20);
 
         memcpy(&vchPayload[1+20], &vchSignature[0], vchSignature.size());
@@ -3660,7 +3660,7 @@ int SecureMsgSend(std::string &addressFrom, std::string &addressTo, std::string 
         LogPrint("smessage", "Encrypting message for outbox.\n");
 
     std::string addressOutbox = "None";
-    CKonjugateAddress coinAddrOutbox;
+    CKonjungateAddress coinAddrOutbox;
 
     BOOST_FOREACH(const PAIRTYPE(CTxDestination, std::string)& entry, pwalletMain->mapAddressBook)
     {
@@ -3668,7 +3668,7 @@ int SecureMsgSend(std::string &addressFrom, std::string &addressTo, std::string 
         if (!IsMine(*pwalletMain, entry.first))
             continue;
 
-        const CKonjugateAddress& address = entry.first;
+        const CKonjungateAddress& address = entry.first;
 
         addressOutbox = address.ToString();
         if (!coinAddrOutbox.SetString(addressOutbox)) // test valid
@@ -3769,7 +3769,7 @@ int SecureMsgDecrypt(bool fTestOnly, std::string &address, uint8_t *pHeader, uin
 
 
     // -- Fetch private key k, used to decrypt
-    CKonjugateAddress coinAddrDest;
+    CKonjungateAddress coinAddrDest;
     CKeyID ckidDest;
     CKey keyDest;
     if (!coinAddrDest.SetString(address))
@@ -3936,7 +3936,7 @@ int SecureMsgDecrypt(bool fTestOnly, std::string &address, uint8_t *pHeader, uin
         uint160 ui160(vchUint160);
         CKeyID ckidFrom(ui160);
 
-        CKonjugateAddress coinAddrFrom;
+        CKonjungateAddress coinAddrFrom;
         coinAddrFrom.Set(ckidFrom);
         if (!coinAddrFrom.IsValid())
         {
@@ -3956,7 +3956,7 @@ int SecureMsgDecrypt(bool fTestOnly, std::string &address, uint8_t *pHeader, uin
         };
 
         // -- get address for the compressed public key
-        CKonjugateAddress coinAddrFromSig;
+        CKonjungateAddress coinAddrFromSig;
         coinAddrFromSig.Set(cpkFromSig.GetID());
 
         if (!(coinAddrFrom == coinAddrFromSig))

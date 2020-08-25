@@ -25,7 +25,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate(): QAbstractItemDelegate(), unit(KonjugateUnits::KONJ)
+    TxViewDelegate(): QAbstractItemDelegate(), unit(KonjungateUnits::KONJ)
     {
 
     }
@@ -81,7 +81,7 @@ public:
             foreground = option.palette.color(QPalette::Text);
         }
         painter->setPen(fUseDarkTheme ? QColor(255, 255, 255) : foreground);
-        QString amountText = KonjugateUnits::formatWithUnit(unit, amount, true);
+        QString amountText = KonjungateUnits::formatWithUnit(unit, amount, true);
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -172,16 +172,16 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& stake, cons
     currentWatchOnlyStake = watchOnlyStake;
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
-    ui->labelBalance->setText(KonjugateUnits::formatWithUnit(nDisplayUnit, balance));
-    ui->labelStake->setText(KonjugateUnits::formatWithUnit(nDisplayUnit, stake));
-    ui->labelUnconfirmed->setText(KonjugateUnits::formatWithUnit(nDisplayUnit, unconfirmedBalance));
-    ui->labelImmature->setText(KonjugateUnits::formatWithUnit(nDisplayUnit, immatureBalance));
-    ui->labelTotal->setText(KonjugateUnits::formatWithUnit(nDisplayUnit, balance + stake + unconfirmedBalance + immatureBalance));
-    ui->labelWatchAvailable->setText(KonjugateUnits::floorWithUnit(nDisplayUnit, watchOnlyBalance));
-    ui->labelWatchStake->setText(KonjugateUnits::floorWithUnit(nDisplayUnit, watchOnlyStake));
-    ui->labelWatchPending->setText(KonjugateUnits::floorWithUnit(nDisplayUnit, watchUnconfBalance));
-    ui->labelWatchImmature->setText(KonjugateUnits::floorWithUnit(nDisplayUnit, watchImmatureBalance));
-    ui->labelWatchTotal->setText(KonjugateUnits::floorWithUnit(nDisplayUnit, watchOnlyBalance + watchOnlyStake + watchUnconfBalance + watchImmatureBalance));
+    ui->labelBalance->setText(KonjungateUnits::formatWithUnit(nDisplayUnit, balance));
+    ui->labelStake->setText(KonjungateUnits::formatWithUnit(nDisplayUnit, stake));
+    ui->labelUnconfirmed->setText(KonjungateUnits::formatWithUnit(nDisplayUnit, unconfirmedBalance));
+    ui->labelImmature->setText(KonjungateUnits::formatWithUnit(nDisplayUnit, immatureBalance));
+    ui->labelTotal->setText(KonjungateUnits::formatWithUnit(nDisplayUnit, balance + stake + unconfirmedBalance + immatureBalance));
+    ui->labelWatchAvailable->setText(KonjungateUnits::floorWithUnit(nDisplayUnit, watchOnlyBalance));
+    ui->labelWatchStake->setText(KonjungateUnits::floorWithUnit(nDisplayUnit, watchOnlyStake));
+    ui->labelWatchPending->setText(KonjungateUnits::floorWithUnit(nDisplayUnit, watchUnconfBalance));
+    ui->labelWatchImmature->setText(KonjungateUnits::floorWithUnit(nDisplayUnit, watchImmatureBalance));
+    ui->labelWatchTotal->setText(KonjungateUnits::floorWithUnit(nDisplayUnit, watchOnlyBalance + watchOnlyStake + watchUnconfBalance + watchImmatureBalance));
 
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users

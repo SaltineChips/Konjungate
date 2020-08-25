@@ -50,7 +50,7 @@ public:
 };
 
 /**
- * Konjugate RPC command dispatcher.
+ * Konjungate RPC command dispatcher.
  */
 class CRPCTable
 {

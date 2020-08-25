@@ -14,7 +14,7 @@ daemon:linux:
     
   artifacts:
     paths:
-    - src/Konjugated
+    - src/Konjungated
 
     
 qt:linux:
@@ -25,4 +25,4 @@ qt:linux:
     
   artifacts:
     paths:
-    - Konjugate-qt
+    - Konjungate-qt

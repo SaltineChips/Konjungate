@@ -7,23 +7,23 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Konjugate-Qt</string>
+	<string>Konjungate-Qt</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>Konjugate-Qt</string>
+	<string>Konjungate-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.Konjugate.Konjugate-Qt</string>
+	<string>co.Konjungate.Konjungate-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>co.Konjugate.KonjugatePayment</string>
+            <string>co.Konjungate.KonjungatePayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>Konjugate</string>
+              <string>Konjungate</string>
             </array>
           </dict>
         </array>

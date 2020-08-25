@@ -15,7 +15,7 @@ class QDateTime;
 class QTimer;
 QT_END_NAMESPACE
 
-/** Model for Konjugate network client. */
+/** Model for Konjungate network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT
@@ -53,7 +53,7 @@ public:
     QString clientName() const;
     QString formatClientStartupTime() const;
 
-    //! Get and set the content of the Konjugate.conf file
+    //! Get and set the content of the Konjungate.conf file
     QString getConfigFileContent() const;
     void setConfigFileContent(const QString &content);
 

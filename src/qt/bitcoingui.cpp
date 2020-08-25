@@ -2,7 +2,7 @@
  * Qt5 bitcoin GUI.
  *
  * W.J. van der Laan 2011-2012
- * The Konjugate Developers 2018-2020
+ * The Konjungate Developers 2018-2020
  */
 
 #include <QApplication>
@@ -78,7 +78,7 @@ extern CWallet* pwalletMain;
 extern int64_t nLastCoinStakeSearchInterval;
 double GetPoSKernelPS();
 
-KonjugateGUI::KonjugateGUI(QWidget *parent):
+KonjungateGUI::KonjungateGUI(QWidget *parent):
     QMainWindow(parent),
     clientModel(0),
     walletModel(0),
@@ -98,7 +98,7 @@ KonjugateGUI::KonjugateGUI(QWidget *parent):
     nWeight(0)
 {
     resize(900, 520);
-    setWindowTitle(tr("Konjugate") + " - " + tr("Wallet"));
+    setWindowTitle(tr("Konjungate") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(fUseDarkTheme ? ":/icons/dark/bitcoin-dark" : ":/icons/bitcoin"));
     setWindowIcon(QIcon(fUseDarkTheme ? ":/icons/dark/bitcoin-dark" : ":/icons/bitcoin"));
@@ -106,8 +106,8 @@ KonjugateGUI::KonjugateGUI(QWidget *parent):
     //setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
-    setObjectName("Konjugate");
-    setStyleSheet("#Konjugate {background-image: url(:/images/qt) }");
+    setObjectName("Konjungate");
+    setStyleSheet("#Konjungate {background-image: url(:/images/qt) }");
 
     // Accept D&D of URIs
     setAcceptDrops(true);
@@ -263,7 +263,7 @@ KonjugateGUI::KonjugateGUI(QWidget *parent):
     gotoOverviewPage();
 }
 
-KonjugateGUI::~KonjugateGUI()
+KonjungateGUI::~KonjungateGUI()
 {
     if(trayIcon) // Hide tray icon, as deleting will let it linger until quit (on Ubuntu)
         trayIcon->hide();
@@ -274,7 +274,7 @@ KonjugateGUI::~KonjugateGUI()
     delete rpcConsole;
 }
 
-void KonjugateGUI::createActions()
+void KonjungateGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
@@ -291,7 +291,7 @@ void KonjugateGUI::createActions()
     tabGroup->addAction(receiveCoinsAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send-sidebar"), tr("&Send"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a Konjugate address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a Konjungate address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(sendCoinsAction);
@@ -348,14 +348,14 @@ void KonjugateGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(fUseDarkTheme ? ":/icons/dark/bitcoin-dark" : ":/icons/bitcoin"), tr("&About Konjugate"), this);
-    aboutAction->setToolTip(tr("Show information about Konjugate"));
+    aboutAction = new QAction(QIcon(fUseDarkTheme ? ":/icons/dark/bitcoin-dark" : ":/icons/bitcoin"), tr("&About Konjungate"), this);
+    aboutAction->setToolTip(tr("Show information about Konjungate"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/qt-project.org/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for Konjugate"));
+    optionsAction->setToolTip(tr("Modify configuration options for Konjungate"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(fUseDarkTheme ? ":/icons/dark/bitcoin-dark" : ":/icons/bitcoin"), tr("&Show / Hide"), this);
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed_toolbar"), tr("&Encrypt Wallet..."), this);
@@ -378,12 +378,12 @@ void KonjugateGUI::createActions()
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setToolTip(tr("Open debugging and diagnostic console"));
 
-    editConfigAction = new QAction(QIcon(":/icons/editconf"), tr("&Edit Konjugate.conf"), this);
-    editConfigAction->setToolTip(tr("Edit the configuration file for Konjugate"));
-    editConfigExtAction = new QAction(QIcon(":/icons/editconf"), tr("&Edit Konjugate.conf (external)"), this);
-    editConfigExtAction->setToolTip(tr("Edit the configuration file for Konjugate (external editor)"));
+    editConfigAction = new QAction(QIcon(":/icons/editconf"), tr("&Edit Konjungate.conf"), this);
+    editConfigAction->setToolTip(tr("Edit the configuration file for Konjungate"));
+    editConfigExtAction = new QAction(QIcon(":/icons/editconf"), tr("&Edit Konjungate.conf (external)"), this);
+    editConfigExtAction->setToolTip(tr("Edit the configuration file for Konjungate (external editor)"));
     openDataDirAction = new QAction(QIcon(":/icons/folder"), tr("&Open data dir"), this);
-    openDataDirAction->setToolTip(tr("Open the directory where Konjugate data is stored"));
+    openDataDirAction->setToolTip(tr("Open the directory where Konjungate data is stored"));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -403,7 +403,7 @@ void KonjugateGUI::createActions()
     connect(openDataDirAction, SIGNAL(triggered()), this, SLOT(openDataDir()));
 }
 
-void KonjugateGUI::createMenuBar()
+void KonjungateGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     appMenuBar = new QMenuBar();
@@ -448,7 +448,7 @@ static QWidget* makeToolBarSpacer()
     return spacer;
 }
 
-void KonjugateGUI::createToolBars()
+void KonjungateGUI::createToolBars()
 {
     fLiteMode = GetBoolArg("-litemode", false);
 
@@ -498,7 +498,7 @@ void KonjugateGUI::createToolBars()
     }
 }
 
-void KonjugateGUI::setClientModel(ClientModel *clientModel)
+void KonjungateGUI::setClientModel(ClientModel *clientModel)
 {
     if(!fOnlyTor)
     netLabel->setText("CLEARNET");
@@ -525,7 +525,7 @@ void KonjugateGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("Konjugate client") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("Konjungate client") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(fUseDarkTheme ? ":/icons/dark/toolbar-dark_testnet" : ":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(fUseDarkTheme ? ":/icons/dark/toolbar-dark_testnet" : ":/icons/toolbar_testnet"));
             }
@@ -552,7 +552,7 @@ void KonjugateGUI::setClientModel(ClientModel *clientModel)
     }
 }
 
-void KonjugateGUI::setWalletModel(WalletModel *walletModel)
+void KonjungateGUI::setWalletModel(WalletModel *walletModel)
 {
     this->walletModel = walletModel;
     if(walletModel)
@@ -582,7 +582,7 @@ void KonjugateGUI::setWalletModel(WalletModel *walletModel)
     }
 }
 
-void KonjugateGUI::setMessageModel(MessageModel *messageModel)
+void KonjungateGUI::setMessageModel(MessageModel *messageModel)
 {
     this->messageModel = messageModel;
     if(messageModel)
@@ -599,14 +599,14 @@ void KonjugateGUI::setMessageModel(MessageModel *messageModel)
     }
 }
 
-void KonjugateGUI::createTrayIcon()
+void KonjungateGUI::createTrayIcon()
 {
     QMenu *trayIconMenu;
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("Konjugate client"));
+    trayIcon->setToolTip(tr("Konjungate client"));
     trayIcon->setIcon(QIcon(fUseDarkTheme ? ":/icons/dark/toolbar-dark" : ":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -639,7 +639,7 @@ void KonjugateGUI::createTrayIcon()
 }
 
 #ifndef Q_OS_MAC
-void KonjugateGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void KonjungateGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -649,7 +649,7 @@ void KonjugateGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
-void KonjugateGUI::optionsClicked()
+void KonjungateGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -658,14 +658,14 @@ void KonjugateGUI::optionsClicked()
     dlg.exec();
 }
 
-void KonjugateGUI::aboutClicked()
+void KonjungateGUI::aboutClicked()
 {
     AboutDialog dlg;
     dlg.setModel(clientModel);
     dlg.exec();
 }
 
-void KonjugateGUI::setNumConnections(int count)
+void KonjungateGUI::setNumConnections(int count)
 {
     QString icon;
     switch(count)
@@ -677,10 +677,10 @@ void KonjugateGUI::setNumConnections(int count)
     default: icon = fUseDarkTheme ? ":/icons/dark/connect_4" : ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Konjugate network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Konjungate network", "", count));
 }
 
-void KonjugateGUI::setNumBlocks(int count)
+void KonjungateGUI::setNumBlocks(int count)
 {
     QString tooltip;
 
@@ -764,9 +764,9 @@ void KonjugateGUI::setNumBlocks(int count)
     statusBar()->setVisible(true);
 }
 
-void KonjugateGUI::message(const QString &title, const QString &message, bool modal, unsigned int style)
+void KonjungateGUI::message(const QString &title, const QString &message, bool modal, unsigned int style)
 {
-    QString strTitle = tr("Konjugate") + " - ";
+    QString strTitle = tr("Konjungate") + " - ";
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -810,7 +810,7 @@ void KonjugateGUI::message(const QString &title, const QString &message, bool mo
         notificator->notify((Notificator::Class)nNotifyIcon, strTitle, message);
 }
 
-void KonjugateGUI::error(const QString &title, const QString &message, bool modal)
+void KonjungateGUI::error(const QString &title, const QString &message, bool modal)
 {
     // Report errors from network/worker thread
     if(modal)
@@ -821,7 +821,7 @@ void KonjugateGUI::error(const QString &title, const QString &message, bool moda
     }
 }
 
-void KonjugateGUI::changeEvent(QEvent *e)
+void KonjungateGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -840,7 +840,7 @@ void KonjugateGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void KonjugateGUI::closeEvent(QCloseEvent *event)
+void KonjungateGUI::closeEvent(QCloseEvent *event)
 {
     if(clientModel)
     {
@@ -858,21 +858,21 @@ void KonjugateGUI::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent(event);
 }
 
-void KonjugateGUI::askFee(qint64 nFeeRequired, bool *payFee)
+void KonjungateGUI::askFee(qint64 nFeeRequired, bool *payFee)
 {
     if (!clientModel || !clientModel->getOptionsModel())
         return;
 
     QString strMessage = tr("This transaction is over the size limit. You can still send it for a fee of %1, "
         "which goes to the nodes that process your transaction and helps to support the network. "
-        "Do you want to pay the fee?").arg(KonjugateUnits::formatWithUnit(clientModel->getOptionsModel()->getDisplayUnit(), nFeeRequired));
+        "Do you want to pay the fee?").arg(KonjungateUnits::formatWithUnit(clientModel->getOptionsModel()->getDisplayUnit(), nFeeRequired));
     QMessageBox::StandardButton retval = QMessageBox::question(
           this, tr("Confirm transaction fee"), strMessage,
           QMessageBox::Yes|QMessageBox::Cancel, QMessageBox::Yes);
     *payFee = (retval == QMessageBox::Yes);
 }
 
-void KonjugateGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
+void KonjungateGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
 {
 	// Prevent balloon-spam when initial block download is in progress
     if(!walletModel || !clientModel || clientModel->inInitialBlockDownload() || walletModel->processingQueuedTransactions())
@@ -900,12 +900,12 @@ void KonjugateGUI::incomingTransaction(const QModelIndex & parent, int start, in
                              "Type: %3\n"
                              "Address: %4\n")
                           .arg(date)
-                          .arg(KonjugateUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
+                          .arg(KonjungateUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
                           .arg(type)
                           .arg(address), icon);
 }
 
-void KonjugateGUI::incomingMessage(const QModelIndex & parent, int start, int end)
+void KonjungateGUI::incomingMessage(const QModelIndex & parent, int start, int end)
 {
     if(!messageModel)
         return;
@@ -934,7 +934,7 @@ void KonjugateGUI::incomingMessage(const QModelIndex & parent, int start, int en
     };
 }
 
-void KonjugateGUI::clearWidgets()
+void KonjungateGUI::clearWidgets()
 {
     centralStackedWidget->setCurrentWidget(centralStackedWidget->widget(0));
     for(int i = centralStackedWidget->count(); i>0; i--){
@@ -944,7 +944,7 @@ void KonjugateGUI::clearWidgets()
     }
 }
 
-void KonjugateGUI::gotoMasternodeManagerPage()
+void KonjungateGUI::gotoMasternodeManagerPage()
 {
     masternodeManagerAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(masternodeManagerPage);
@@ -953,7 +953,7 @@ void KonjugateGUI::gotoMasternodeManagerPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void KonjugateGUI::gotoBlockBrowser()
+void KonjungateGUI::gotoBlockBrowser()
 {
     blockAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(blockBrowser);
@@ -962,7 +962,7 @@ void KonjugateGUI::gotoBlockBrowser()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void KonjugateGUI::gotoOverviewPage()
+void KonjungateGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(overviewPage);
@@ -971,7 +971,7 @@ void KonjugateGUI::gotoOverviewPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void KonjugateGUI::gotoHistoryPage()
+void KonjungateGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(transactionsPage);
@@ -981,7 +981,7 @@ void KonjugateGUI::gotoHistoryPage()
     connect(exportAction, SIGNAL(triggered()), transactionView, SLOT(exportClicked()));
 }
 
-void KonjugateGUI::gotoAddressBookPage()
+void KonjungateGUI::gotoAddressBookPage()
 {
     addressBookAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(addressBookPage);
@@ -991,7 +991,7 @@ void KonjugateGUI::gotoAddressBookPage()
     connect(exportAction, SIGNAL(triggered()), addressBookPage, SLOT(exportClicked()));
 }
 
-void KonjugateGUI::gotoReceiveCoinsPage()
+void KonjungateGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(receiveCoinsPage);
@@ -1001,7 +1001,7 @@ void KonjugateGUI::gotoReceiveCoinsPage()
     connect(exportAction, SIGNAL(triggered()), receiveCoinsPage, SLOT(exportClicked()));
 }
 
-void KonjugateGUI::gotoSendCoinsPage()
+void KonjungateGUI::gotoSendCoinsPage()
 {
     sendCoinsAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(sendCoinsPage);
@@ -1010,7 +1010,7 @@ void KonjugateGUI::gotoSendCoinsPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void KonjugateGUI::gotoSignMessageTab(QString addr)
+void KonjungateGUI::gotoSignMessageTab(QString addr)
 {
     // call show() in showTab_SM()
     signVerifyMessageDialog->showTab_SM(true);
@@ -1019,7 +1019,7 @@ void KonjugateGUI::gotoSignMessageTab(QString addr)
         signVerifyMessageDialog->setAddress_SM(addr);
 }
 
-void KonjugateGUI::gotoVerifyMessageTab(QString addr)
+void KonjungateGUI::gotoVerifyMessageTab(QString addr)
 {
     // call show() in showTab_VM()
     signVerifyMessageDialog->showTab_VM(true);
@@ -1028,7 +1028,7 @@ void KonjugateGUI::gotoVerifyMessageTab(QString addr)
         signVerifyMessageDialog->setAddress_VM(addr);
 }
 
-void KonjugateGUI::gotoMessagePage()
+void KonjungateGUI::gotoMessagePage()
 {
     messageAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(messagePage);
@@ -1038,14 +1038,14 @@ void KonjugateGUI::gotoMessagePage()
     connect(exportAction, SIGNAL(triggered()), messagePage, SLOT(exportClicked()));
 }
 
-void KonjugateGUI::dragEnterEvent(QDragEnterEvent *event)
+void KonjungateGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void KonjugateGUI::dropEvent(QDropEvent *event)
+void KonjungateGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -1061,13 +1061,13 @@ void KonjugateGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             gotoSendCoinsPage();
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Konjugate address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Konjungate address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
 }
 
-void KonjugateGUI::handleURI(QString strURI)
+void KonjungateGUI::handleURI(QString strURI)
 {
     // URI has to be valid
     if (sendCoinsPage->handleURI(strURI))
@@ -1076,10 +1076,10 @@ void KonjugateGUI::handleURI(QString strURI)
         gotoSendCoinsPage();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Konjugate address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Konjungate address or malformed URI parameters."));
 }
 
-void KonjugateGUI::setEncryptionStatus(int status)
+void KonjungateGUI::setEncryptionStatus(int status)
 {
     if(fWalletUnlockStakingOnly)
     {
@@ -1125,7 +1125,7 @@ void KonjugateGUI::setEncryptionStatus(int status)
     }
 }
 
-void KonjugateGUI::encryptWallet()
+void KonjungateGUI::encryptWallet()
 {
     if(!walletModel)
         return;
@@ -1137,7 +1137,7 @@ void KonjugateGUI::encryptWallet()
     setEncryptionStatus(walletModel->getEncryptionStatus());
 }
 
-void KonjugateGUI::backupWallet()
+void KonjungateGUI::backupWallet()
 {
     QString saveDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
     QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
@@ -1148,21 +1148,21 @@ void KonjugateGUI::backupWallet()
     }
 }
 
-void KonjugateGUI::importPrivateKey()
+void KonjungateGUI::importPrivateKey()
 {
     ImportPrivateKeyDialog dlg(this);
     dlg.setModel(walletModel->getAddressTableModel());
     dlg.exec();
 }
 
-void KonjugateGUI::changePassphrase()
+void KonjungateGUI::changePassphrase()
 {
     AskPassphraseDialog dlg(AskPassphraseDialog::ChangePass, this);
     dlg.setModel(walletModel);
     dlg.exec();
 }
 
-void KonjugateGUI::unlockWallet()
+void KonjungateGUI::unlockWallet()
 {
     if(!walletModel)
         return;
@@ -1177,7 +1177,7 @@ void KonjugateGUI::unlockWallet()
     }
 }
 
-void KonjugateGUI::lockWallet()
+void KonjungateGUI::lockWallet()
 {
     if(!walletModel)
         return;
@@ -1185,7 +1185,7 @@ void KonjugateGUI::lockWallet()
     walletModel->setWalletLocked(true);
 }
 
-void KonjugateGUI::showNormalIfMinimized(bool fToggleHidden)
+void KonjungateGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     // activateWindow() (sometimes) helps with keyboard focus on Windows
     if (isHidden())
@@ -1207,12 +1207,12 @@ void KonjugateGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void KonjugateGUI::toggleHidden()
+void KonjungateGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void KonjugateGUI::updateWeight()
+void KonjungateGUI::updateWeight()
 {
     if (!pwalletMain)
         return;
@@ -1228,7 +1228,7 @@ void KonjugateGUI::updateWeight()
     nWeight = pwalletMain->GetStakeWeight();
 }
 
-void KonjugateGUI::updateStakingIcon()
+void KonjungateGUI::updateStakingIcon()
 {
     updateWeight();
 
@@ -1279,13 +1279,13 @@ void KonjugateGUI::updateStakingIcon()
     }
 }
 
-void KonjugateGUI::detectShutdown()
+void KonjungateGUI::detectShutdown()
 {
     if (ShutdownRequested())
         QMetaObject::invokeMethod(QCoreApplication::instance(), "quit", Qt::QueuedConnection);
 }
 
-void KonjugateGUI::showProgress(const QString &title, int nProgress)
+void KonjungateGUI::showProgress(const QString &title, int nProgress)
 {
     if (nProgress == 0)
     {
@@ -1308,21 +1308,21 @@ void KonjugateGUI::showProgress(const QString &title, int nProgress)
         progressDialog->setValue(nProgress);
 }
 
-void KonjugateGUI::editConfig()
+void KonjungateGUI::editConfig()
 {
     EditConfigDialog dlg;
     dlg.setModel(clientModel);
     dlg.exec();
 }
 
-void KonjugateGUI::editConfigExt()
+void KonjungateGUI::editConfigExt()
 {
     filesystem::path path = GetConfigFile();
     QString pathString = QString::fromStdString(path.string());
     QDesktopServices::openUrl(QUrl::fromLocalFile(pathString));
 }
 
-void KonjugateGUI::openDataDir()
+void KonjungateGUI::openDataDir()
 {
     filesystem::path path = GetDataDir();
     QString pathString = QString::fromStdString(path.string());

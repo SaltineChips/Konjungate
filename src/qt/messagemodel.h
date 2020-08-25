@@ -67,7 +67,7 @@ struct MessageTableEntry
     }
 };
 
-/** Interface to Konjugate Secure Messaging from Qt view code. */
+/** Interface to Konjungate Secure Messaging from Qt view code. */
 class MessageModel : public QAbstractTableModel
 {
     Q_OBJECT

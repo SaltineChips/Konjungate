@@ -11,7 +11,7 @@ QT_END_NAMESPACE
 
 /** Widget for entering bitcoin amounts.
   */
-class KonjugateAmountField: public QWidget
+class KonjungateAmountField: public QWidget
 {
     Q_OBJECT
 
@@ -20,7 +20,7 @@ class KonjugateAmountField: public QWidget
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY textChanged USER true)
 
 public:
-    explicit KonjugateAmountField(QWidget *parent = 0);
+    explicit KonjungateAmountField(QWidget *parent = 0);
 
     CAmount value(bool *valid=0) const;
     void setValue(const CAmount& value);

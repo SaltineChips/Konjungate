@@ -100,9 +100,9 @@ Section -post SEC0001
 
     # bitcoin: URI handling disabled for 0.6.0
     #    WriteRegStr HKCR "bitcoin" "URL Protocol" ""
-    #    WriteRegStr HKCR "bitcoin" "" "URL:Konjugate"
+    #    WriteRegStr HKCR "bitcoin" "" "URL:Konjungate"
     #    WriteRegStr HKCR "bitcoin\DefaultIcon" "" $INSTDIR\bitcoin-qt.exe
-    #    WriteRegStr HKCR "bitcoin\Konjugate\open\command" "" '"$INSTDIR\bitcoin-qt.exe" "$$1"'
+    #    WriteRegStr HKCR "bitcoin\Konjungate\open\command" "" '"$INSTDIR\bitcoin-qt.exe" "$$1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -131,8 +131,8 @@ SectionEnd
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall NovaCoin.lnk"
-    #Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Konjugate.lnk"
-    #Delete /REBOOTOK "$SMSTARTUP\Konjugate.lnk"
+    #Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Konjungate.lnk"
+    #Delete /REBOOTOK "$SMSTARTUP\Konjungate.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log

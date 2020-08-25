@@ -13,12 +13,12 @@
   - '0' and 'O' to 'o'
 */
 
-KonjugateAddressValidator::KonjugateAddressValidator(QObject *parent) :
+KonjungateAddressValidator::KonjungateAddressValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State KonjugateAddressValidator::validate(QString &input, int &pos) const
+QValidator::State KonjungateAddressValidator::validate(QString &input, int &pos) const
 {
     // Correction
     for(int idx=0; idx<input.size();)

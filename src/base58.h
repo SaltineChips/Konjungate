@@ -92,23 +92,23 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded Konjugate addresses.
+/** base58-encoded Konjungate addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CKonjugateAddress : public CBase58Data {
+class CKonjungateAddress : public CBase58Data {
 public:
     bool Set(const CKeyID &id);
     bool Set(const CScriptID &id);
     bool Set(const CTxDestination &dest);
     bool IsValid() const;
 
-    CKonjugateAddress() {}
-    CKonjugateAddress(const CTxDestination &dest) { Set(dest); }
-    CKonjugateAddress(const std::string& strAddress) { SetString(strAddress); }
-    CKonjugateAddress(const char* pszAddress) { SetString(pszAddress); }
+    CKonjungateAddress() {}
+    CKonjungateAddress(const CTxDestination &dest) { Set(dest); }
+    CKonjungateAddress(const std::string& strAddress) { SetString(strAddress); }
+    CKonjungateAddress(const char* pszAddress) { SetString(pszAddress); }
 
     CTxDestination Get() const;
     bool GetKeyID(CKeyID &keyID) const;
@@ -118,7 +118,7 @@ public:
 /**
  * A base58-encoded secret key
  */
-class CKonjugateSecret : public CBase58Data
+class CKonjungateSecret : public CBase58Data
 {
 public:
     void SetKey(const CKey& vchSecret);
@@ -127,11 +127,11 @@ public:
     bool SetString(const char* pszSecret);
     bool SetString(const std::string& strSecret);
 
-    CKonjugateSecret(const CKey& vchSecret) { SetKey(vchSecret); }
-    CKonjugateSecret() {}
+    CKonjungateSecret(const CKey& vchSecret) { SetKey(vchSecret); }
+    CKonjungateSecret() {}
 };
 
-template<typename K, int Size, CChainParams::Base58Type Type> class CKonjugateExtKeyBase : public CBase58Data
+template<typename K, int Size, CChainParams::Base58Type Type> class CKonjungateExtKeyBase : public CBase58Data
 {
 public:
     void SetKey(const K &key) {
@@ -146,15 +146,15 @@ public:
         return ret;
     }
 
-    CKonjugateExtKeyBase(const K &key) {
+    CKonjungateExtKeyBase(const K &key) {
         SetKey(key);
     }
 
-    CKonjugateExtKeyBase() {}
+    CKonjungateExtKeyBase() {}
 };
 
-typedef CKonjugateExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CKonjugateExtKey;
-typedef CKonjugateExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CKonjugateExtPubKey;
+typedef CKonjungateExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CKonjungateExtKey;
+typedef CKonjungateExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CKonjungateExtPubKey;
 
 /** base58-encoded Bitcoin addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).

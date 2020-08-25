@@ -74,7 +74,7 @@ ThreadTopUpKeyPool : replenishes the keystore's keypool.
 ThreadCleanWalletPassphrase : re-locks an encrypted wallet after user
 has unlocked it for a period of time. 
 
-SendingDialogStartKonjugate : used by pay-via-ip-address code (obsolete)
+SendingDialogStartKonjungate : used by pay-via-ip-address code (obsolete)
 
 ThreadDelayedRepaint : repaint the gui 
 
@@ -84,7 +84,7 @@ in 500ms.
 ThreadRPCServer : Remote procedure call handler, listens on port 8332
 for connections and services them.
 
-ThreadKonjugateMiner : Generates bitcoins
+ThreadKonjungateMiner : Generates bitcoins
 
 ThreadMapPort : Universal plug-and-play startup/shutdown
 

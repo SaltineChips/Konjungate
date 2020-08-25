@@ -1,5 +1,5 @@
 ---
-name: "Konjugate-deps"
+name: "Konjungate-deps"
 suites:
 - "trusty"
 architectures:
@@ -135,4 +135,4 @@ script: |
   #done
   #
   cd $INSTALLPREFIX
-  find include lib | sort | zip -X@ $OUTDIR/Konjugate-deps-osx-gitian.zip
+  find include lib | sort | zip -X@ $OUTDIR/Konjungate-deps-osx-gitian.zip

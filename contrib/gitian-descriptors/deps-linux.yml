@@ -1,5 +1,5 @@
 ---
-name: "Konjugate-deps"
+name: "Konjungate-deps"
 suites:
 - "trusty"
 architectures:
@@ -135,5 +135,5 @@ script: |
   #
   #
   cd $STAGING
-  find include lib bin host | sort | zip -X@ $OUTDIR/Konjugate-deps-linux${GBUILD_BITS}-gitian.zip
+  find include lib bin host | sort | zip -X@ $OUTDIR/Konjungate-deps-linux${GBUILD_BITS}-gitian.zip
 

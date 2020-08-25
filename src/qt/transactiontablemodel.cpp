@@ -220,7 +220,7 @@ TransactionTableModel::TransactionTableModel(CWallet* wallet, WalletModel *paren
         walletModel(parent),
         priv(new TransactionTablePriv(wallet, this))
 {
-    columns << QString() <<  QString() << tr("Date") << tr("Type") << tr("Address") << KonjugateUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
+    columns << QString() <<  QString() << tr("Date") << tr("Type") << tr("Address") << KonjungateUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
 
     priv->refreshWallet();
 
@@ -238,7 +238,7 @@ TransactionTableModel::~TransactionTableModel()
 /** Updates the column title to "Amount (DisplayUnit)" and emits headerDataChanged() signal for table headers to react. */
 void TransactionTableModel::updateAmountColumnTitle()
 {
-	columns[Amount] = KonjugateUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
+	columns[Amount] = KonjungateUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
 	emit headerDataChanged(Qt::Horizontal,Amount,Amount);
 }
 
@@ -436,7 +436,7 @@ QVariant TransactionTableModel::addressColor(const TransactionRecord *wtx) const
 
 QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed) const
 {
-    QString str = KonjugateUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), wtx->credit + wtx->debit);
+    QString str = KonjungateUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), wtx->credit + wtx->debit);
     if(showUnconfirmed)
     {
         if(!wtx->status.countsForBalance)

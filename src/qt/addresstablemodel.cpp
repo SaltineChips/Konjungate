@@ -64,7 +64,7 @@ public:
             LOCK(wallet->cs_wallet);
             BOOST_FOREACH(const PAIRTYPE(CTxDestination, std::string)& item, wallet->mapAddressBook)
             {
-                const CKonjugateAddress& address = item.first;
+                const CKonjungateAddress& address = item.first;
                 const std::string& strName = item.second;
                 bool fMine = IsMine(*wallet, address.Get());
                 cachedAddressTable.append(AddressTableEntry(fMine ? AddressTableEntry::Receiving : AddressTableEntry::Sending,
@@ -260,7 +260,7 @@ bool AddressTableModel::setData(const QModelIndex &index, const QVariant &value,
                 wallet->UpdateStealthAddress(strTemp, strValue, false);
             } else
             {
-                wallet->SetAddressBookName(CKonjugateAddress(strTemp).Get(), value.toString().toStdString());
+                wallet->SetAddressBookName(CKonjungateAddress(strTemp).Get(), value.toString().toStdString());
             }
             break;
         case Address:
@@ -272,7 +272,7 @@ bool AddressTableModel::setData(const QModelIndex &index, const QVariant &value,
                 return false;
             }
             // Do nothing, if old address == new address
-            if(CKonjugateAddress(rec->address.toStdString()) == CKonjugateAddress(value.toString().toStdString()))
+            if(CKonjungateAddress(rec->address.toStdString()) == CKonjungateAddress(value.toString().toStdString()))
             {
                 editStatus = NO_CHANGES;
                 return false;
@@ -285,7 +285,7 @@ bool AddressTableModel::setData(const QModelIndex &index, const QVariant &value,
             }
             // Check for duplicate addresses to prevent accidental deletion of addresses, if you try
             // to paste an existing address over another address (with a different label)
-            else if(wallet->mapAddressBook.count(CKonjugateAddress(value.toString().toStdString()).Get()))
+            else if(wallet->mapAddressBook.count(CKonjungateAddress(value.toString().toStdString()).Get()))
             {
                 editStatus = DUPLICATE_ADDRESS;
                 return false;
@@ -296,9 +296,9 @@ bool AddressTableModel::setData(const QModelIndex &index, const QVariant &value,
                 {
                     LOCK(wallet->cs_wallet);
                     // Remove old entry
-                    wallet->DelAddressBookName(CKonjugateAddress(rec->address.toStdString()).Get());
+                    wallet->DelAddressBookName(CKonjungateAddress(rec->address.toStdString()).Get());
                     // Add new entry with new address
-                    wallet->SetAddressBookName(CKonjugateAddress(value.toString().toStdString()).Get(), rec->label.toStdString());
+                    wallet->SetAddressBookName(CKonjungateAddress(value.toString().toStdString()).Get(), rec->label.toStdString());
                 }
             }
             break;
@@ -353,7 +353,7 @@ QModelIndex AddressTableModel::index(int row, int column, const QModelIndex &par
 
 void AddressTableModel::updateEntry(const QString &address, const QString &label, bool isMine, int status)
 {
-    // Update address book model from Konjugate core
+    // Update address book model from Konjungate core
     priv->updateEntry(address, label, isMine, status);
 }
 
@@ -399,13 +399,13 @@ QString AddressTableModel::addRow(const QString &type, const QString &label, con
             // Check for duplicate addresses
             {
                 LOCK(wallet->cs_wallet);
-                if (wallet->mapAddressBook.count(CKonjugateAddress(strAddress).Get()))
+                if (wallet->mapAddressBook.count(CKonjungateAddress(strAddress).Get()))
                 {
                     editStatus = DUPLICATE_ADDRESS;
                     return QString();
                 };
                 
-                wallet->SetAddressBookName(CKonjugateAddress(strAddress).Get(), strLabel);
+                wallet->SetAddressBookName(CKonjungateAddress(strAddress).Get(), strLabel);
             }
         }
     }
@@ -440,11 +440,11 @@ QString AddressTableModel::addRow(const QString &type, const QString &label, con
                 editStatus = KEY_GENERATION_FAILURE;
                 return QString();
             }
-            strAddress = CKonjugateAddress(newKey.GetID()).ToString();
+            strAddress = CKonjungateAddress(newKey.GetID()).ToString();
             
             {
                 LOCK(wallet->cs_wallet);
-                wallet->SetAddressBookName(CKonjugateAddress(strAddress).Get(), strLabel);
+                wallet->SetAddressBookName(CKonjungateAddress(strAddress).Get(), strLabel);
             }
         }
     }
@@ -469,7 +469,7 @@ bool AddressTableModel::removeRows(int row, int count, const QModelIndex &parent
     }
     {
         LOCK(wallet->cs_wallet);
-        wallet->DelAddressBookName(CKonjugateAddress(rec->address.toStdString()).Get());
+        wallet->DelAddressBookName(CKonjungateAddress(rec->address.toStdString()).Get());
     }
     return true;
 }
@@ -496,7 +496,7 @@ QString AddressTableModel::labelForAddress(const QString &address) const
             return QString::fromStdString(it->label);
         } else
         {
-            CKonjugateAddress address_parsed(sAddr);
+            CKonjungateAddress address_parsed(sAddr);
             std::map<CTxDestination, std::string>::iterator mi = wallet->mapAddressBook.find(address_parsed.Get());
             if (mi != wallet->mapAddressBook.end())
             {

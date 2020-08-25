@@ -39,7 +39,7 @@ System requirements
 --------------------
 
 C++ compilers are memory-hungry. It is recommended to have at least 1 GB of
-memory available when compiling Konjugate Core. With 512MB of memory or less
+memory available when compiling Konjungate Core. With 512MB of memory or less
 compilation will take much longer due to swap thrashing.
 
 Dependency Build Instructions: Ubuntu & Debian
@@ -77,7 +77,7 @@ Optional:
 Dependencies for the GUI: Ubuntu & Debian
 -----------------------------------------
 
-If you want to build Konjugate-Qt, make sure that the required packages for Qt development
+If you want to build Konjungate-Qt, make sure that the required packages for Qt development
 are installed. Qt 5 is necessary to build the GUI.
 If both Qt 4 and Qt 5 are installed, Qt 5 will be used.
 
@@ -89,7 +89,7 @@ libqrencode (optional) can be installed with:
 
     sudo apt-get install libqrencode-dev
 
-Once these are installed, they will be found by configure and a Konjugate-qt executable will be
+Once these are installed, they will be found by configure and a Konjungate-qt executable will be
 built by default.
 
 Berkeley DB
@@ -97,10 +97,10 @@ Berkeley DB
 It is recommended to use Berkeley DB 4.8. If you have to build it yourself:
 
 ```bash
-Konjugate_ROOT=$(pwd)
+Konjungate_ROOT=$(pwd)
 
-# Pick some path to install BDB to, here we create a directory within the Konjugate directory
-BDB_PREFIX="${Konjugate_ROOT}/db4"
+# Pick some path to install BDB to, here we create a directory within the Konjungate directory
+BDB_PREFIX="${Konjungate_ROOT}/db4"
 mkdir -p $BDB_PREFIX
 
 # Fetch the source and verify that it is not tampered with
@@ -115,8 +115,8 @@ cd db-4.8.30.NC/build_unix/
 ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
 make install
 
-# Configure Konjugate Core to use our own-built instance of BDB
-cd $Konjugate_ROOT
+# Configure Konjungate Core to use our own-built instance of BDB
+cd $Konjungate_ROOT
 ./autogen.sh
 ./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" # (other args...)
 ```
@@ -125,25 +125,25 @@ Notes
 -----
 1) You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-2) The release is built with GCC and then "strip Konjugated" to strip the debug
+2) The release is built with GCC and then "strip Konjungated" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
-To Build Konjugated
+To Build Konjungated
 --------
 
 With UPNP:
 
     cd src && \
     make -f makefile.unix && \
-    strip Konjugated
+    strip Konjungated
 
 (Recommended) Without UPNP:
 
     cd src && \
     make -f makefile.unix USE_UPNP= && \
-    strip Konjugated
+    strip Konjungated
 
-To Build Konjugate-QT
+To Build Konjungate-QT
 --------
 
 With UPNP:
@@ -175,7 +175,7 @@ If you need to build miniupnpc yourself:
 
 Security
 --------
-To help make your Konjugate installation more secure by making certain attacks impossible to
+To help make your Konjungate installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable
@@ -192,7 +192,7 @@ exploit even if a vulnerability is found, you can take the following measures:
     make -f makefile.unix ... -e PIE=1
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
-    scanelf -e ./Konjugate
+    scanelf -e ./Konjungate
 
     The output should contain:
      TYPE
@@ -200,13 +200,13 @@ exploit even if a vulnerability is found, you can take the following measures:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, Konjugate should be built with a non-executable stack
+    vulnerable buffers are found. By default, Konjungate should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    scanelf -e ./Konjugate
+    scanelf -e ./Konjungate
 
     the output should contain:
     STK/REL/PTL

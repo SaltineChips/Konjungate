@@ -37,17 +37,17 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** Konjugate unit definitions. Encapsulates parsing and formatting
+/** Konjungate unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class KonjugateUnits: public QAbstractListModel
+class KonjungateUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit KonjugateUnits(QObject *parent);
+    explicit KonjungateUnits(QObject *parent);
 
-    /** Konjugate units.
+    /** Konjungate units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
@@ -121,8 +121,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<KonjugateUnits::Unit> unitlist;
+    QList<KonjungateUnits::Unit> unitlist;
 };
-typedef KonjugateUnits::Unit KonjugateUnit;
+typedef KonjungateUnits::Unit KonjungateUnit;
 
 #endif // BITCOINUNITS_H

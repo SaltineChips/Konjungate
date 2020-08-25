@@ -22,7 +22,7 @@ class QUrl;
 class QAbstractItemView;
 QT_END_NAMESPACE
 
-/** Utility functions used by the Konjugate Qt UI.
+/** Utility functions used by the Konjungate Qt UI.
  */
 namespace GUIUtil
 {
@@ -30,17 +30,17 @@ namespace GUIUtil
     QString dateTimeStr(const QDateTime &datetime);
     QString dateTimeStr(qint64 nTime);
 
-    // Render Konjugate addresses in monospace font
+    // Render Konjungate addresses in monospace font
     QFont bitcoinAddressFont();
 
     // Set up widgets for address and amounts
     void setupAddressWidget(QLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "Konjugate:" URI into recipient object, return true on successful parsing
-    // See Konjugate URI definition discussion here: https://bitcointalk.org/index.php?topic=33490.0
-    bool parseKonjugateURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseKonjugateURI(QString uri, SendCoinsRecipient *out);
+    // Parse "Konjungate:" URI into recipient object, return true on successful parsing
+    // See Konjungate URI definition discussion here: https://bitcointalk.org/index.php?topic=33490.0
+    bool parseKonjungateURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseKonjungateURI(QString uri, SendCoinsRecipient *out);
 
     // HTML escaping for rich text controls
     QString HtmlEscape(const QString& str, bool fMultiLine=false);
@@ -176,7 +176,7 @@ namespace GUIUtil
     QString formatTimeOffset(int64_t nTimeOffset);
 
 
-    /** Help message for Konjugate-Qt, shown with --help. */
+    /** Help message for Konjungate-Qt, shown with --help. */
     class HelpMessageBox : public QMessageBox
     {
         Q_OBJECT

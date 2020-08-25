@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Konjugate</source>
-        <translation>Konjugate Hakkında</translation>
+        <source>About Konjungate</source>
+        <translation>Konjungate Hakkında</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Konjugate&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Konjugate&lt;/b&gt; versiyonu</translation>
+        <source>&lt;b&gt;Konjungate&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Konjungate&lt;/b&gt; versiyonu</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Konjugate developers</source>
-        <translation>Telif Hakkı © 2009-2014 Konjugate geliştiricileri
+Copyright © 2014 The Konjungate developers</source>
+        <translation>Telif Hakkı © 2009-2014 Konjungate geliştiricileri
 Telif Hakkı © 2012-2014 NovaCoin geliştiricileri
-Telif Hakkı © 2014 Konjugate geliştiricileri</translation>
+Telif Hakkı © 2014 Konjungate geliştiricileri</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -65,8 +65,8 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Konjugate addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Bunlar, ödeme almak için Konjugate adreslerinizdir. Her bir göndericiye farklı birini verebilir, böylece size kimin ödeme yaptığını takip edebilirsiniz.</translation>
+        <source>These are your Konjungate addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Bunlar, ödeme almak için Konjungate adreslerinizdir. Her bir göndericiye farklı birini verebilir, böylece size kimin ödeme yaptığını takip edebilirsiniz.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -80,8 +80,8 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Konjugate address</source>
-        <translation>Bir Konjugate adresine sahip olduğunu ispatlamak için bir mesaj imzala</translation>
+        <source>Sign a message to prove you own a Konjungate address</source>
+        <translation>Bir Konjungate adresine sahip olduğunu ispatlamak için bir mesaj imzala</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -95,8 +95,8 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Konjugate address</source>
-        <translation>Mesajın, belirli bir Konjugate adresiyle imzalandığından emin olmak için onu doğrula</translation>
+        <source>Verify a message to ensure it was signed with a specified Konjungate address</source>
+        <translation>Mesajın, belirli bir Konjungate adresiyle imzalandığından emin olmak için onu doğrula</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -263,8 +263,8 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     </message>
     <message>
         <location line="+82"/>
-        <source>Konjugate will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Konjugate, şifreleme işlemini tamamlamak için şimdi kapatılacak. Cüzdanınızı şifrelemenin; coinlerinizin, bilgisayarınızı etkileyen zararlı yazılımlar tarafından çalınmasını bütünüyle engelleyemeyebileceğini unutmayınız.</translation>
+        <source>Konjungate will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Konjungate, şifreleme işlemini tamamlamak için şimdi kapatılacak. Cüzdanınızı şifrelemenin; coinlerinizin, bilgisayarınızı etkileyen zararlı yazılımlar tarafından çalınmasını bütünüyle engelleyemeyebileceğini unutmayınız.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -309,7 +309,7 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     </message>
 </context>
 <context>
-    <name>KonjugateGUI</name>
+    <name>KonjungateGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
@@ -357,8 +357,8 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Konjugate</source>
-        <translation>Konjugate hakkındaki bilgiyi göster</translation>
+        <source>Show information about Konjungate</source>
+        <translation>Konjungate hakkındaki bilgiyi göster</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -397,13 +397,13 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Konjugate address</source>
-        <translation>Bir Konjugate adresine coin gönder</translation>
+        <source>Send coins to a Konjungate address</source>
+        <translation>Bir Konjungate adresine coin gönder</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Konjugate</source>
-        <translation>Konjugate yapılandırma seçeneklerini değiştir</translation>
+        <source>Modify configuration options for Konjungate</source>
+        <translation>Konjungate yapılandırma seçeneklerini değiştir</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -443,8 +443,8 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Konjugate</source>
-        <translation>Konjugate</translation>
+        <source>Konjungate</source>
+        <translation>Konjungate</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -453,8 +453,8 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Konjugate</source>
-        <translation>Konjugate &amp;Hakkında</translation>
+        <source>&amp;About Konjungate</source>
+        <translation>Konjungate &amp;Hakkında</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -505,13 +505,13 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Konjugate client</source>
-        <translation>Konjugate istemcisi</translation>
+        <source>Konjungate client</source>
+        <translation>Konjungate istemcisi</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Konjugate network</source>
-        <translation><numerusform>Konjugate ağına %n etkin bağlantı</numerusform><numerusform>Konjugate ağına %n etkin bağlantı</numerusform></translation>
+        <source>%n active connection(s) to Konjungate network</source>
+        <translation><numerusform>Konjungate ağına %n etkin bağlantı</numerusform><numerusform>Konjungate ağına %n etkin bağlantı</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -605,8 +605,8 @@ Adres: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Konjugate address or malformed URI parameters.</source>
-        <translation>URI ayrıştırılamadı! Bu, geçersiz bir Konjugate adresi veya hatalı URI parametreleri nedeniyle olabilir.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Konjungate address or malformed URI parameters.</source>
+        <translation>URI ayrıştırılamadı! Bu, geçersiz bir Konjungate adresi veya hatalı URI parametreleri nedeniyle olabilir.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -728,8 +728,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Konjugate can no longer continue safely and will quit.</source>
-        <translation>Önemli bir hata oluştu. Konjugate artık güvenli bir şekilde devam edemez ve şimdi kapatılacak.</translation>
+        <source>A fatal error occurred. Konjungate can no longer continue safely and will quit.</source>
+        <translation>Önemli bir hata oluştu. Konjungate artık güvenli bir şekilde devam edemez ve şimdi kapatılacak.</translation>
     </message>
 </context>
 <context>
@@ -1062,8 +1062,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Konjugate address.</source>
-        <translation>Girilen %1 adresi, geçerli bir Konjugate adresi değildir.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Konjungate address.</source>
+        <translation>Girilen %1 adresi, geçerli bir Konjungate adresi değildir.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1081,8 +1081,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Konjugate-Qt</source>
-        <translation>Konjugate-Qt</translation>
+        <source>Konjungate-Qt</source>
+        <translation>Konjungate-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1154,13 +1154,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Konjugate after logging in to the system.</source>
-        <translation>Sisteme giriş yaptıktan sonra Konjugate&apos;i otomatik olarak başlat</translation>
+        <source>Automatically start Konjungate after logging in to the system.</source>
+        <translation>Sisteme giriş yaptıktan sonra Konjungate&apos;i otomatik olarak başlat</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Konjugate on system login</source>
-        <translation>Sisteme girişte Konjugate&apos;i &amp;başlat</translation>
+        <source>&amp;Start Konjungate on system login</source>
+        <translation>Sisteme girişte Konjungate&apos;i &amp;başlat</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1169,8 +1169,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Konjugate client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönelticide Konjugate istemci portunu otomatik olarak aç. Bu, sadece yönelticiniz UPnP&apos;i desteklediğinde ve etkin olduğunda çalışır.</translation>
+        <source>Automatically open the Konjungate client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönelticide Konjungate istemci portunu otomatik olarak aç. Bu, sadece yönelticiniz UPnP&apos;i desteklediğinde ve etkin olduğunda çalışır.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1179,8 +1179,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Konjugate network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Konjugate ağına bir SOCKS vekil sunucusu yoluyla bağlan (örn. Tor yoluyla bağlanıldığında)</translation>
+        <source>Connect to the Konjungate network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Konjungate ağına bir SOCKS vekil sunucusu yoluyla bağlan (örn. Tor yoluyla bağlanıldığında)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1254,8 +1254,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Konjugate.</source>
-        <translation>Kullanıcı arabirimi dili buradan ayarlanabilir. Ayar, Konjugate yeniden başlatıldığında etkin olacaktır.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Konjungate.</source>
+        <translation>Kullanıcı arabirimi dili buradan ayarlanabilir. Ayar, Konjungate yeniden başlatıldığında etkin olacaktır.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1265,7 +1265,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Konjugate gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
+        <translation>Konjungate gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1321,8 +1321,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Konjugate.</source>
-        <translation>Bu ayar, Konjugate&apos;i yeniden başlattıktan sonra etkin olacaktır.</translation>
+        <source>This setting will take effect after restarting Konjungate.</source>
+        <translation>Bu ayar, Konjungate&apos;i yeniden başlattıktan sonra etkin olacaktır.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1340,8 +1340,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Konjugate network after a connection is established, but this process has not completed yet.</source>
-        <translation>Görüntülenen bilginin tarihi geçmiş olabilir. Cüzdanınız, bağlantı kurulduktan sonra otomatik olarak Konjugate ağı ile senkronize olur ancak bu süreç, henüz tamamlanmamıştır.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Konjungate network after a connection is established, but this process has not completed yet.</source>
+        <translation>Görüntülenen bilginin tarihi geçmiş olabilir. Cüzdanınız, bağlantı kurulduktan sonra otomatik olarak Konjungate ağı ile senkronize olur ancak bu süreç, henüz tamamlanmamıştır.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1414,7 +1414,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start Konjugate: click-to-pay handler</source>
+        <source>Cannot start Konjungate: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1582,8 +1582,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Konjugate-Qt help message to get a list with possible Konjugate command-line options.</source>
-        <translation>Muhtemel Konjugate komut satırı seçeneklerinin bir listesini getirmek için Konjugate-Qt yardım mesajını göster</translation>
+        <source>Show the Konjungate-Qt help message to get a list with possible Konjungate command-line options.</source>
+        <translation>Muhtemel Konjungate komut satırı seçeneklerinin bir listesini getirmek için Konjungate-Qt yardım mesajını göster</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1602,13 +1602,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>Konjugate - Debug window</source>
-        <translation>Konjugate - Hata ayıklama penceresi</translation>
+        <source>Konjungate - Debug window</source>
+        <translation>Konjungate - Hata ayıklama penceresi</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Konjugate Core</source>
-        <translation>Konjugate Core</translation>
+        <source>Konjungate Core</source>
+        <translation>Konjungate Core</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1617,8 +1617,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Konjugate debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Konjugate hata ayıklama günlük kütüğü dosyasını, mevcut veri klasöründen aç. Bu işlem, büyük günlük kütüğü dosyaları için birkaç saniye sürebilir.</translation>
+        <source>Open the Konjungate debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Konjungate hata ayıklama günlük kütüğü dosyasını, mevcut veri klasöründen aç. Bu işlem, büyük günlük kütüğü dosyaları için birkaç saniye sürebilir.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1627,8 +1627,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Konjugate RPC console.</source>
-        <translation>Konjugate RPC konsoluna hoş geldiniz.</translation>
+        <source>Welcome to the Konjungate RPC console.</source>
+        <translation>Konjungate RPC konsoluna hoş geldiniz.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1688,7 +1688,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Konjugate yolla</translation>
+        <translation>Konjungate yolla</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1821,8 +1821,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Bir Konjugate adresi gir (örn: ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Bir Konjungate adresi gir (örn: ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1921,8 +1921,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Konjugate address</source>
-        <translation>UYARI: Geçersiz Konjugate adresi</translation>
+        <source>WARNING: Invalid Konjungate address</source>
+        <translation>UYARI: Geçersiz Konjungate adresi</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1995,8 +1995,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Bir Konjugate adresi girin (örn: ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Bir Konjungate adresi girin (örn: ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
 </context>
 <context>
@@ -2056,8 +2056,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Konjugate address</source>
-        <translation>Bu Konjugate adresine sahip olduğunuzu ispatlamak için mesajı imzala</translation>
+        <source>Sign the message to prove you own this Konjungate address</source>
+        <translation>Bu Konjungate adresine sahip olduğunuzu ispatlamak için mesajı imzala</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2088,8 +2088,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Konjugate address</source>
-        <translation>Mesajın, belirtilen Konjugate adresiyle imzalandığından emin olmak için onu doğrula</translation>
+        <source>Verify the message to ensure it was signed with the specified Konjungate address</source>
+        <translation>Mesajın, belirtilen Konjungate adresiyle imzalandığından emin olmak için onu doğrula</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2099,8 +2099,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Bir Konjugate adresi girin (örn: ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Bir Konjungate adresi girin (örn: ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2109,8 +2109,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Konjugate signature</source>
-        <translation>Konjugate imzası gir</translation>
+        <source>Enter Konjungate signature</source>
+        <translation>Konjungate imzası gir</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2688,8 +2688,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Konjugate version</source>
-        <translation>Konjugate versiyonu</translation>
+        <source>Konjungate version</source>
+        <translation>Konjungate versiyonu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2698,8 +2698,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Konjugated</source>
-        <translation>-sunucu veya Konjugated&apos;ye komut gönder</translation>
+        <source>Send command to -server or Konjungated</source>
+        <translation>-sunucu veya Konjungated&apos;ye komut gönder</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2718,13 +2718,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Konjugate.conf)</source>
-        <translation>Konfigürasyon dosyasını belirt (varsayılan: Konjugate.conf)</translation>
+        <source>Specify configuration file (default: Konjungate.conf)</source>
+        <translation>Konfigürasyon dosyasını belirt (varsayılan: Konjungate.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Konjugated.pid)</source>
-        <translation>pid dosyasını belirt (varsayılan: Konjugate.pid)</translation>
+        <source>Specify pid file (default: Konjungated.pid)</source>
+        <translation>pid dosyasını belirt (varsayılan: Konjungate.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2741,13 +2741,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=Konjugaterpc
+rpcuser=Konjungaterpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Konjungate Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2853,8 +2853,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Konjugate will not work properly.</source>
-        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olduğunu kontrol ediniz! Saatiniz yanlış ise, Konjugate düzgün çalışmayacaktır.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Konjungate will not work properly.</source>
+        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olduğunu kontrol ediniz! Saatiniz yanlış ise, Konjungate düzgün çalışmayacaktır.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -2928,8 +2928,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+41"/>
-        <source>SSL options: (see the Konjugate Wiki for SSL setup instructions)</source>
-        <translation> SSL seçenekleri: (SSL kurulum bilgisi için Konjugate vikisine bakınız)</translation>
+        <source>SSL options: (see the Konjungate Wiki for SSL setup instructions)</source>
+        <translation> SSL seçenekleri: (SSL kurulum bilgisi için Konjungate vikisine bakınız)</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -3160,8 +3160,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Konjugate is shutting down.</source>
-        <translation>Başlangıç uygunluk kontrolü başarısız oldu. Konjugate kapatılıyor.</translation>
+        <source>Initialization sanity check failed. Konjungate is shutting down.</source>
+        <translation>Başlangıç uygunluk kontrolü başarısız oldu. Konjungate kapatılıyor.</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -3225,13 +3225,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Konjugate</source>
-        <translation>wallet.dat yüklenirken hata: Cüzdan, daha yeni bir Konjugate versiyonuna ihtiyaç duyuyor.</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Konjungate</source>
+        <translation>wallet.dat yüklenirken hata: Cüzdan, daha yeni bir Konjungate versiyonuna ihtiyaç duyuyor.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Konjugate to complete</source>
-        <translation>Cüzdanın yeniden yazılması gerekmektedir: Tamamlamak için Konjugate&apos;i yeniden başlatın</translation>
+        <source>Wallet needed to be rewritten: restart Konjungate to complete</source>
+        <translation>Cüzdanın yeniden yazılması gerekmektedir: Tamamlamak için Konjungate&apos;i yeniden başlatın</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3295,8 +3295,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Konjugate is probably already running.</source>
-        <translation>Bu bilgisayarda %s bağlanamadı. Konjugate muhtemelen halen çalışmaktadır.</translation>
+        <source>Unable to bind to %s on this computer. Konjungate is probably already running.</source>
+        <translation>Bu bilgisayarda %s bağlanamadı. Konjungate muhtemelen halen çalışmaktadır.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3335,7 +3335,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Konjugate is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Konjungate is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

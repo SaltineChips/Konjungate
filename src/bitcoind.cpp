@@ -52,12 +52,12 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("Konjugate version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("Konjungate version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  Konjugated [options]                     " + "\n" +
-                  "  Konjugated [options] <command> [params]  " + _("Send command to -server or Konjugated") + "\n" +
-                  "  Konjugated [options] help                " + _("List commands") + "\n" +
-                  "  Konjugated [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  Konjungated [options]                     " + "\n" +
+                  "  Konjungated [options] <command> [params]  " + _("Send command to -server or Konjungated") + "\n" +
+                  "  Konjungated [options] help                " + _("List commands") + "\n" +
+                  "  Konjungated [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -67,7 +67,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "Konjugate:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "Konjungate:"))
                 fCommandLine = true;
 
         if (fCommandLine)

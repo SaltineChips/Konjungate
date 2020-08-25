@@ -86,7 +86,7 @@ public:
     }
 };
 
-/** Interface to Konjugate wallet from Qt view code. */
+/** Interface to Konjungate wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT

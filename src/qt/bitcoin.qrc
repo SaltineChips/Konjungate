@@ -3,7 +3,7 @@
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
         <file alias="send">res/icons/send.png</file>
-        <file alias="toolbar">res/icons/konjugate-16.png</file>
+        <file alias="toolbar">res/icons/konjungate-16.png</file>
         <file alias="connect_0">res/icons/connect0_16.png</file>
         <file alias="connect_1">res/icons/connect1_16.png</file>
         <file alias="connect_2">res/icons/connect2_16.png</file>
@@ -50,9 +50,9 @@
         <file alias="trade">res/icons/trade.png</file>
         <file alias="editconf">res/icons/editconf.png</file>
         <file alias="folder">res/icons/folder.png</file>
-        <file alias="bitcoin_testnet">res/icons/konjugate_testnet.png</file>
-        <file alias="bitcoin">res/icons/konjugate.png</file>
-        <file alias="toolbar_testnet">res/icons/konjugate-16_testnet.png</file>
+        <file alias="bitcoin_testnet">res/icons/konjungate_testnet.png</file>
+        <file alias="bitcoin">res/icons/konjungate.png</file>
+        <file alias="toolbar_testnet">res/icons/konjungate-16_testnet.png</file>
         <file alias="mnodes">res/icons/mnodes.png</file>
         <file alias="message">res/icons/message.png</file>
         <file alias="address-book-sidebar">res/icons/address-book-sidebar.png</file>
@@ -75,10 +75,10 @@
         <file alias="lock_open">res/icons/dark/lock_open.png</file>
         <file alias="staking_off">res/icons/dark/staking_off.png</file>
         <file alias="staking_on">res/icons/dark/staking_on.png</file>
-        <file alias="bitcoin-dark">res/icons/dark/konjugate_dark.png</file>
-        <file alias="bitcoin-dark_testnet">res/icons/dark/konjugate_dark_testnet.png</file>
-        <file alias="toolbar-dark">res/icons/dark/konjugate_dark-16.png</file>
-        <file alias="toolbar-dark_testnet">res/icons/dark/konjugate_dark-16_testnet.png</file>
+        <file alias="bitcoin-dark">res/icons/dark/konjungate_dark.png</file>
+        <file alias="bitcoin-dark_testnet">res/icons/dark/konjungate_dark_testnet.png</file>
+        <file alias="toolbar-dark">res/icons/dark/konjungate_dark-16.png</file>
+        <file alias="toolbar-dark_testnet">res/icons/dark/konjungate_dark-16_testnet.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>

@@ -1,5 +1,5 @@
 ---
-name: "Konjugate-deps"
+name: "Konjungate-deps"
 suites:
 - "trusty"
 architectures:
@@ -204,5 +204,5 @@ script: |
     #
     cd $INSTALLPREFIX
     find -print0 | xargs -r0 touch # fix up timestamps before packaging
-    find include lib | sort | zip -X@ $OUTDIR/Konjugate-deps-win$BITS-gitian.zip
+    find include lib | sort | zip -X@ $OUTDIR/Konjungate-deps-win$BITS-gitian.zip
   done # for BITS in

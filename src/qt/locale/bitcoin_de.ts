@@ -3,19 +3,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Konjugate</source>
-        <translation>Über Konjugate</translation>
+        <source>About Konjungate</source>
+        <translation>Über Konjungate</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Konjugate&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Konjugate&lt;/b&gt; Version</translation>
+        <source>&lt;b&gt;Konjungate&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Konjungate&lt;/b&gt; Version</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Konjugate developers</source>
+Copyright © 2014 The Konjungate developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -58,8 +58,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Konjugate addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Das sind Ihre Konjugate Adressen um Zahlungen zu erhalten. Sie werden vielleicht verschiedene an jeden Sender vergeben, damit Sie im Auge behalten können wer Sie bezahlt.</translation>
+        <source>These are your Konjungate addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Das sind Ihre Konjungate Adressen um Zahlungen zu erhalten. Sie werden vielleicht verschiedene an jeden Sender vergeben, damit Sie im Auge behalten können wer Sie bezahlt.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -73,8 +73,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Konjugate address</source>
-        <translation>Signieren Sie eine Nachricht um zu beweisen, dass Sie eine Konjugate Adresse besitzen</translation>
+        <source>Sign a message to prove you own a Konjungate address</source>
+        <translation>Signieren Sie eine Nachricht um zu beweisen, dass Sie eine Konjungate Adresse besitzen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -88,8 +88,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Konjugate address</source>
-        <translation>Verifizieren Sie ob eine Nachricht einer bestimmten Konjugate Adresse signiert wurde</translation>
+        <source>Verify a message to ensure it was signed with a specified Konjungate address</source>
+        <translation>Verifizieren Sie ob eine Nachricht einer bestimmten Konjungate Adresse signiert wurde</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -256,8 +256,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Konjugate will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Konjugate wird sich schließen um den Verschlüsselungsvorgang abzuschließen. Beachten Sie, dass die Verschlüsselung Ihrer Wallet keinen vollständigen Schutz vor Diebstahl Ihrer Coins duch auf Ihrem Computer installierte Malware gewährleistet</translation>
+        <source>Konjungate will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Konjungate wird sich schließen um den Verschlüsselungsvorgang abzuschließen. Beachten Sie, dass die Verschlüsselung Ihrer Wallet keinen vollständigen Schutz vor Diebstahl Ihrer Coins duch auf Ihrem Computer installierte Malware gewährleistet</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -302,7 +302,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>KonjugateGUI</name>
+    <name>KonjungateGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
@@ -350,8 +350,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Konjugate</source>
-        <translation>Informationen über Konjugate anzeigen</translation>
+        <source>Show information about Konjungate</source>
+        <translation>Informationen über Konjungate anzeigen</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -390,13 +390,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Konjugate address</source>
-        <translation>Senden Sie Coins an eine Konjugate Adresse</translation>
+        <source>Send coins to a Konjungate address</source>
+        <translation>Senden Sie Coins an eine Konjungate Adresse</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Konjugate</source>
-        <translation>Konfigurationsoptionen für Konjugate ändern</translation>
+        <source>Modify configuration options for Konjungate</source>
+        <translation>Konfigurationsoptionen für Konjungate ändern</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -436,8 +436,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Konjugate</source>
-        <translation>Konjugate</translation>
+        <source>Konjungate</source>
+        <translation>Konjungate</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -446,8 +446,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Konjugate</source>
-        <translation>&amp;Über Konjugate</translation>
+        <source>&amp;About Konjungate</source>
+        <translation>&amp;Über Konjungate</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -498,13 +498,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Konjugate client</source>
+        <source>Konjungate client</source>
         <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Konjugate network</source>
-        <translation><numerusform>%n aktive Verbindung zum Konjugate Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum Konjugate Netzwerk</numerusform></translation>
+        <source>%n active connection(s) to Konjungate network</source>
+        <translation><numerusform>%n aktive Verbindung zum Konjungate Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum Konjungate Netzwerk</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -597,8 +597,8 @@ Adresse: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Konjugate address or malformed URI parameters.</source>
-        <translation>Die URI kann nicht erkannt werden! Die Ursache hierfür kann eine ungültige Konjugate Adresse oder eine fehlerhafte Angabe der URI Parameter sein.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Konjungate address or malformed URI parameters.</source>
+        <translation>Die URI kann nicht erkannt werden! Die Ursache hierfür kann eine ungültige Konjungate Adresse oder eine fehlerhafte Angabe der URI Parameter sein.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -720,8 +720,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Konjugate can no longer continue safely and will quit.</source>
-        <translation>Ein fataler Fehler ist aufgetreten. Konjugate kann nicht fortgesetzt werden und wird beendet.</translation>
+        <source>A fatal error occurred. Konjungate can no longer continue safely and will quit.</source>
+        <translation>Ein fataler Fehler ist aufgetreten. Konjungate kann nicht fortgesetzt werden und wird beendet.</translation>
     </message>
 </context>
 <context>
@@ -1040,8 +1040,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Konjugate address.</source>
-        <translation>Die eingegebene Adresse &quot;%1&quot; ist keine gültige Konjugate Adresse.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Konjungate address.</source>
+        <translation>Die eingegebene Adresse &quot;%1&quot; ist keine gültige Konjungate Adresse.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1059,7 +1059,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Konjugate-Qt</source>
+        <source>Konjungate-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1132,13 +1132,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Konjugate after logging in to the system.</source>
-        <translation>Automatisch Konjugate starten beim Einloggen in das System.</translation>
+        <source>Automatically start Konjungate after logging in to the system.</source>
+        <translation>Automatisch Konjungate starten beim Einloggen in das System.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Konjugate on system login</source>
-        <translation>&amp;Starte Konjugate bei Systemstart</translation>
+        <source>&amp;Start Konjungate on system login</source>
+        <translation>&amp;Starte Konjungate bei Systemstart</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1147,8 +1147,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Konjugate client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatisch den Konjugate client port auf dem Router öffnen. Das funktioniert nur wenn der Router UPnP unterstützt und UPnP aktiviert ist.</translation>
+        <source>Automatically open the Konjungate client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatisch den Konjungate client port auf dem Router öffnen. Das funktioniert nur wenn der Router UPnP unterstützt und UPnP aktiviert ist.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1157,7 +1157,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Konjugate network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the Konjungate network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1232,7 +1232,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Konjugate.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Konjungate.</source>
         <translation>Die Sprache der GUI kann hier verändert werden. Die Einstellung wird nach einem Neustart übernommen.</translation>
     </message>
     <message>
@@ -1243,7 +1243,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Wählen Sie die Standarduntereinheit, die in der Benutzeroberfläche und beim Überweisen von Konjugates angezeigt werden soll.</translation>
+        <translation>Wählen Sie die Standarduntereinheit, die in der Benutzeroberfläche und beim Überweisen von Konjungates angezeigt werden soll.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1299,7 +1299,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Konjugate.</source>
+        <source>This setting will take effect after restarting Konjungate.</source>
         <translation>Diese Einstellung wird nach einem Neustart übernommen.</translation>
     </message>
     <message>
@@ -1318,8 +1318,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Konjugate network after a connection is established, but this process has not completed yet.</source>
-        <translation>Die angezeigte Information kann falsch sein. Die Brieftasche synchronisiert automatisch mit dem Konjugate Netzwerk nachdem eine Verbindung zustande gekommen ist, aber dieser Prozess ist nicht abgeschlossen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Konjungate network after a connection is established, but this process has not completed yet.</source>
+        <translation>Die angezeigte Information kann falsch sein. Die Brieftasche synchronisiert automatisch mit dem Konjungate Netzwerk nachdem eine Verbindung zustande gekommen ist, aber dieser Prozess ist nicht abgeschlossen.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1392,7 +1392,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start Konjugate: click-to-pay handler</source>
+        <source>Cannot start Konjungate: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1560,7 +1560,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Konjugate-Qt help message to get a list with possible Konjugate command-line options.</source>
+        <source>Show the Konjungate-Qt help message to get a list with possible Konjungate command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1580,13 +1580,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>Konjugate - Debug window</source>
-        <translation>Konjugate - Debug Fenster</translation>
+        <source>Konjungate - Debug window</source>
+        <translation>Konjungate - Debug Fenster</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Konjugate Core</source>
-        <translation>Konjugate Kern</translation>
+        <source>Konjungate Core</source>
+        <translation>Konjungate Kern</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1595,7 +1595,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Konjugate debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Konjungate debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1605,7 +1605,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Konjugate RPC console.</source>
+        <source>Welcome to the Konjungate RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1666,7 +1666,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Konjugates überweisen</translation>
+        <translation>Konjungates überweisen</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1799,7 +1799,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1899,8 +1899,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Konjugate address</source>
-        <translation>Warnung: Ungültige Konjugate Adresse</translation>
+        <source>WARNING: Invalid Konjungate address</source>
+        <translation>Warnung: Ungültige Konjungate Adresse</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1973,7 +1973,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2034,8 +2034,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Konjugate address</source>
-        <translation>Signiere die Nachricht um zu beweisen das du Besitzer dieser Konjugate Adresse bist.</translation>
+        <source>Sign the message to prove you own this Konjungate address</source>
+        <translation>Signiere die Nachricht um zu beweisen das du Besitzer dieser Konjungate Adresse bist.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2066,7 +2066,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Konjugate address</source>
+        <source>Verify the message to ensure it was signed with the specified Konjungate address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2077,7 +2077,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2087,8 +2087,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Konjugate signature</source>
-        <translation>Konjugate Signatur eingeben</translation>
+        <source>Enter Konjungate signature</source>
+        <translation>Konjungate Signatur eingeben</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2666,7 +2666,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Konjugate version</source>
+        <source>Konjungate version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2676,8 +2676,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Konjugated</source>
-        <translation>Kommando versenden an -server oder Konjugated </translation>
+        <source>Send command to -server or Konjungated</source>
+        <translation>Kommando versenden an -server oder Konjungated </translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2696,13 +2696,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Konjugate.conf)</source>
-        <translation>Konfigurationsdatei angeben (Standard: Konjugate.conf)</translation>
+        <source>Specify configuration file (default: Konjungate.conf)</source>
+        <translation>Konfigurationsdatei angeben (Standard: Konjungate.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Konjugated.pid)</source>
-        <translation>PID Datei angeben (Standard: Konjugate.pid)</translation>
+        <source>Specify pid file (default: Konjungated.pid)</source>
+        <translation>PID Datei angeben (Standard: Konjungate.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2719,13 +2719,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=Konjugaterpc
+rpcuser=Konjungaterpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Konjungate Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2831,8 +2831,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Konjugate will not work properly.</source>
-        <translation>Wanung : Bitte prüfen Sie ob Datum und Uhrzeit richtig eingestellt sind. Wenn das Datum falsch ist wird Konjugate nicht richtig funktionieren.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Konjungate will not work properly.</source>
+        <translation>Wanung : Bitte prüfen Sie ob Datum und Uhrzeit richtig eingestellt sind. Wenn das Datum falsch ist wird Konjungate nicht richtig funktionieren.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -2906,8 +2906,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+41"/>
-        <source>SSL options: (see the Konjugate Wiki for SSL setup instructions)</source>
-        <translation>SSL-Optionen: (siehe Konjugate-Wiki für SSL-Installationsanweisungen)</translation>
+        <source>SSL options: (see the Konjungate Wiki for SSL setup instructions)</source>
+        <translation>SSL-Optionen: (siehe Konjungate-Wiki für SSL-Installationsanweisungen)</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -3138,7 +3138,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Konjugate is shutting down.</source>
+        <source>Initialization sanity check failed. Konjungate is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3203,13 +3203,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Konjugate</source>
-        <translation>Fehler beim Laden wallet.dat. Brieftasche benötigt neuere Version der Konjugate Brieftasche.</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Konjungate</source>
+        <translation>Fehler beim Laden wallet.dat. Brieftasche benötigt neuere Version der Konjungate Brieftasche.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Konjugate to complete</source>
-        <translation>Brieftasche muss neu geschrieben werden. Starte die Konjugate Brieftasche neu zum komplettieren.</translation>
+        <source>Wallet needed to be rewritten: restart Konjungate to complete</source>
+        <translation>Brieftasche muss neu geschrieben werden. Starte die Konjungate Brieftasche neu zum komplettieren.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3273,7 +3273,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Konjugate is probably already running.</source>
+        <source>Unable to bind to %s on this computer. Konjungate is probably already running.</source>
         <translation>Fehler beim anbinden %s auf diesem Computer. BlaclCoin Client läuft wahrscheinlich bereits.</translation>
     </message>
     <message>
@@ -3313,7 +3313,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Konjugate is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Konjungate is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

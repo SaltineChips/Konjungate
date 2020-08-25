@@ -10,7 +10,7 @@
 #include <QApplication>
 #include <qmath.h> // for qPow()
 
-KonjugateAmountField::KonjugateAmountField(QWidget *parent):
+KonjungateAmountField::KonjungateAmountField(QWidget *parent):
         QWidget(parent), amount(0), currentUnit(-1)
 {
     amount = new QDoubleSpinBox(this);
@@ -23,7 +23,7 @@ KonjugateAmountField::KonjugateAmountField(QWidget *parent):
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
-    unit->setModel(new KonjugateUnits(this));
+    unit->setModel(new KonjungateUnits(this));
     layout->addWidget(unit);
     layout->addStretch(1);
     layout->setContentsMargins(0,0,0,0);
@@ -41,7 +41,7 @@ KonjugateAmountField::KonjugateAmountField(QWidget *parent):
     unitChanged(unit->currentIndex());
 }
 
-void KonjugateAmountField::setText(const QString &text)
+void KonjungateAmountField::setText(const QString &text)
 {
     if (text.isEmpty())
         amount->clear();
@@ -49,18 +49,18 @@ void KonjugateAmountField::setText(const QString &text)
         amount->setValue(text.toDouble());
 }
 
-void KonjugateAmountField::clear()
+void KonjungateAmountField::clear()
 {
     amount->clear();
     unit->setCurrentIndex(0);
 }
 
-bool KonjugateAmountField::validate()
+bool KonjungateAmountField::validate()
 {
     bool valid = true;
     if (amount->value() == 0.0)
         valid = false;
-    if (valid && !KonjugateUnits::parse(currentUnit, text(), 0))
+    if (valid && !KonjungateUnits::parse(currentUnit, text(), 0))
         valid = false;
 
     setValid(valid);
@@ -68,7 +68,7 @@ bool KonjugateAmountField::validate()
     return valid;
 }
 
-void KonjugateAmountField::setValid(bool valid)
+void KonjungateAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -76,7 +76,7 @@ void KonjugateAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-QString KonjugateAmountField::text() const
+QString KonjungateAmountField::text() const
 {
     if (amount->text().isEmpty())
         return QString();
@@ -84,7 +84,7 @@ QString KonjugateAmountField::text() const
         return amount->text();
 }
 
-bool KonjugateAmountField::eventFilter(QObject *object, QEvent *event)
+bool KonjungateAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -105,16 +105,16 @@ bool KonjugateAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *KonjugateAmountField::setupTabChain(QWidget *prev)
+QWidget *KonjungateAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     return amount;
 }
 
-CAmount KonjugateAmountField::value(bool *valid_out) const
+CAmount KonjungateAmountField::value(bool *valid_out) const
 {
     CAmount val_out = 0;
-    bool valid = KonjugateUnits::parse(currentUnit, text(), &val_out);
+    bool valid = KonjungateUnits::parse(currentUnit, text(), &val_out);
     if(valid_out)
     {
         *valid_out = valid;
@@ -122,18 +122,18 @@ CAmount KonjugateAmountField::value(bool *valid_out) const
     return val_out;
 }
 
-void KonjugateAmountField::setValue(const CAmount& value)
+void KonjungateAmountField::setValue(const CAmount& value)
 {
-    setText(KonjugateUnits::format(currentUnit, value));
+    setText(KonjungateUnits::format(currentUnit, value));
 }
 
-void KonjugateAmountField::unitChanged(int idx)
+void KonjungateAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
 
     // Determine new unit ID
-    int newUnit = unit->itemData(idx, KonjugateUnits::UnitRole).toInt();
+    int newUnit = unit->itemData(idx, KonjungateUnits::UnitRole).toInt();
 
     // Parse current value and convert to new unit
     bool valid = false;
@@ -142,8 +142,8 @@ void KonjugateAmountField::unitChanged(int idx)
     currentUnit = newUnit;
 
     // Set max length after retrieving the value, to prevent truncation
-    amount->setDecimals(KonjugateUnits::decimals(currentUnit));
-    amount->setMaximum(qPow(10, KonjugateUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
+    amount->setDecimals(KonjungateUnits::decimals(currentUnit));
+    amount->setMaximum(qPow(10, KonjungateUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
 
     if(valid)
     {
@@ -158,7 +158,7 @@ void KonjugateAmountField::unitChanged(int idx)
     setValid(true);
 }
 
-void KonjugateAmountField::setDisplayUnit(int newUnit)
+void KonjungateAmountField::setDisplayUnit(int newUnit)
 {
     unit->setValue(newUnit);
 }

@@ -16,7 +16,7 @@ import sys
 
 settings = {}
 
-class KonjugateRPC:
+class KonjungateRPC:
 	OBJID = 1
 
 	def __init__(self, host, port, username, password):
@@ -59,7 +59,7 @@ class KonjugateRPC:
 		return self.rpc('getblockhash', [index])
 
 def get_block_hashes(settings):
-	rpc = KonjugateRPC(settings['host'], settings['port'],
+	rpc = KonjungateRPC(settings['host'], settings['port'],
 			 settings['rpcuser'], settings['rpcpassword'])
 
 	for height in xrange(settings['min_height'], settings['max_height']+1):

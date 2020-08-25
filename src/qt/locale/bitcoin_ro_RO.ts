@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Konjugate</source>
-        <translation>Despre Konjugate</translation>
+        <source>About Konjungate</source>
+        <translation>Despre Konjungate</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Konjugate&lt;/b&gt; version</source>
-        <translation>Versiune &lt;b&gt;Konjugate&lt;/b&gt;</translation>
+        <source>&lt;b&gt;Konjungate&lt;/b&gt; version</source>
+        <translation>Versiune &lt;b&gt;Konjungate&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Konjugate developers</source>
+Copyright © 2014 The Konjungate developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Konjugate developers</translation>
+Copyright © 2014 The Konjungate developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,8 +60,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Konjugate addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Acestea sunt adresele Konjugate pentru a primi plăți. Poate doriți sa dați o adresa noua fiecarui expeditor pentru a putea ține evidența la cine efectuează plăti.</translation>
+        <source>These are your Konjungate addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Acestea sunt adresele Konjungate pentru a primi plăți. Poate doriți sa dați o adresa noua fiecarui expeditor pentru a putea ține evidența la cine efectuează plăti.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Konjugate address</source>
-        <translation>Semnează un mesaj pentru a dovedi că dețineti o adresă Konjugate</translation>
+        <source>Sign a message to prove you own a Konjungate address</source>
+        <translation>Semnează un mesaj pentru a dovedi că dețineti o adresă Konjungate</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Konjugate address</source>
-        <translation>Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă Konjugate</translation>
+        <source>Verify a message to ensure it was signed with a specified Konjungate address</source>
+        <translation>Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă Konjungate</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,8 +258,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Konjugate will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Konjugate se va inchide pentru a termina procesul de encriptie. Amintiți-vă, criptarea portofelul dumneavoastră nu poate proteja pe deplin monedele dvs. de a fi furate de  infectarea cu malware a computerului.</translation>
+        <source>Konjungate will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Konjungate se va inchide pentru a termina procesul de encriptie. Amintiți-vă, criptarea portofelul dumneavoastră nu poate proteja pe deplin monedele dvs. de a fi furate de  infectarea cu malware a computerului.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -304,7 +304,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>KonjugateGUI</name>
+    <name>KonjungateGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
@@ -352,8 +352,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Konjugate</source>
-        <translation>Arată informații despre Konjugate</translation>
+        <source>Show information about Konjungate</source>
+        <translation>Arată informații despre Konjungate</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,13 +392,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Konjugate address</source>
-        <translation>Trimite monede către o adresă Konjugate</translation>
+        <source>Send coins to a Konjungate address</source>
+        <translation>Trimite monede către o adresă Konjungate</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Konjugate</source>
-        <translation>Modifică opțiuni de configurare pentru Konjugate</translation>
+        <source>Modify configuration options for Konjungate</source>
+        <translation>Modifică opțiuni de configurare pentru Konjungate</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -438,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>Konjugate</source>
-        <translation>Konjugate</translation>
+        <source>Konjungate</source>
+        <translation>Konjungate</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Konjugate</source>
-        <translation>Despre Konjugate</translation>
+        <source>&amp;About Konjungate</source>
+        <translation>Despre Konjungate</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Konjugate client</source>
-        <translation>Clientul Konjugate</translation>
+        <source>Konjungate client</source>
+        <translation>Clientul Konjungate</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Konjugate network</source>
-        <translation><numerusform>%n conexiune activă la reteaua Konjugate</numerusform><numerusform>%n conexiuni active la reteaua Konjugate</numerusform><numerusform>%n conexiuni active la reteaua Konjugate</numerusform></translation>
+        <source>%n active connection(s) to Konjungate network</source>
+        <translation><numerusform>%n conexiune activă la reteaua Konjungate</numerusform><numerusform>%n conexiuni active la reteaua Konjungate</numerusform><numerusform>%n conexiuni active la reteaua Konjungate</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -600,8 +600,8 @@ Adresa: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Konjugate address or malformed URI parameters.</source>
-        <translation>URI nu poate fi parsatt! Cauza poate fi o adresa Konjugate invalidă sau parametrii URI malformați.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Konjungate address or malformed URI parameters.</source>
+        <translation>URI nu poate fi parsatt! Cauza poate fi o adresa Konjungate invalidă sau parametrii URI malformați.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -723,8 +723,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Konjugate can no longer continue safely and will quit.</source>
-        <translation>A apărut o eroare fatală. Konjugate nu mai poate continua în condiții de siguranță și va iesi.</translation>
+        <source>A fatal error occurred. Konjungate can no longer continue safely and will quit.</source>
+        <translation>A apărut o eroare fatală. Konjungate nu mai poate continua în condiții de siguranță și va iesi.</translation>
     </message>
 </context>
 <context>
@@ -1057,8 +1057,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Konjugate address.</source>
-        <translation>Adresa introdusă &quot;%1&quot; nu este o adresă Konjugate validă</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Konjungate address.</source>
+        <translation>Adresa introdusă &quot;%1&quot; nu este o adresă Konjungate validă</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1076,8 +1076,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Konjugate-Qt</source>
-        <translation>Konjugate-Qt</translation>
+        <source>Konjungate-Qt</source>
+        <translation>Konjungate-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1149,13 +1149,13 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Konjugate after logging in to the system.</source>
-        <translation>Pornește Konjugate imdiat după logarea în sistem</translation>
+        <source>Automatically start Konjungate after logging in to the system.</source>
+        <translation>Pornește Konjungate imdiat după logarea în sistem</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Konjugate on system login</source>
-        <translation>$Pornește Konjugate la logarea în sistem</translation>
+        <source>&amp;Start Konjungate on system login</source>
+        <translation>$Pornește Konjungate la logarea în sistem</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1164,8 +1164,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Konjugate client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Deschide automat portul pentru cientul Konjugate pe router. Aces lucru este posibil doara daca routerul suporta UPnP si este activat</translation>
+        <source>Automatically open the Konjungate client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Deschide automat portul pentru cientul Konjungate pe router. Aces lucru este posibil doara daca routerul suporta UPnP si este activat</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1174,8 +1174,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Konjugate network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Conecteaza la reteaua Konjugate prinr-un proxy SOCKS(ex. cand te conectezi prin Tor)</translation>
+        <source>Connect to the Konjungate network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Conecteaza la reteaua Konjungate prinr-un proxy SOCKS(ex. cand te conectezi prin Tor)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1249,8 +1249,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Konjugate.</source>
-        <translation>Limba interfeței utilizator poate fi setat aici. Această setare va avea efect după repornirea Konjugate.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Konjungate.</source>
+        <translation>Limba interfeței utilizator poate fi setat aici. Această setare va avea efect după repornirea Konjungate.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1316,8 +1316,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Konjugate.</source>
-        <translation>Aceasta setare va avea efect dupa repornirea Konjugate.</translation>
+        <source>This setting will take effect after restarting Konjungate.</source>
+        <translation>Aceasta setare va avea efect dupa repornirea Konjungate.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1335,8 +1335,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Konjugate network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informatia afisata poate fi depasita.  Portofel se sincronizează automat cu rețeaua Konjugate după ce se stabilește o conexiune, dar acest proces nu s-a finalizat încă.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Konjungate network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informatia afisata poate fi depasita.  Portofel se sincronizează automat cu rețeaua Konjungate după ce se stabilește o conexiune, dar acest proces nu s-a finalizat încă.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1409,7 +1409,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start Konjugate: click-to-pay handler</source>
+        <source>Cannot start Konjungate: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1577,8 +1577,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Konjugate-Qt help message to get a list with possible Konjugate command-line options.</source>
-        <translation>Afișa mesajul de ajutor Konjugate-Qt pentru a obține o listă cu posibile opțiuni de linie de comandă Konjugate.</translation>
+        <source>Show the Konjungate-Qt help message to get a list with possible Konjungate command-line options.</source>
+        <translation>Afișa mesajul de ajutor Konjungate-Qt pentru a obține o listă cu posibile opțiuni de linie de comandă Konjungate.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1597,13 +1597,13 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Konjugate - Debug window</source>
-        <translation>Konjugate - fereastră depanare</translation>
+        <source>Konjungate - Debug window</source>
+        <translation>Konjungate - fereastră depanare</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Konjugate Core</source>
-        <translation>Konjugate Core</translation>
+        <source>Konjungate Core</source>
+        <translation>Konjungate Core</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1612,8 +1612,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Konjugate debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Deschideti fisierul de depanare Konjugate din folderul curent. Acest lucru poate dura cateva secunde pentru fisiere de log mari.</translation>
+        <source>Open the Konjungate debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Deschideti fisierul de depanare Konjungate din folderul curent. Acest lucru poate dura cateva secunde pentru fisiere de log mari.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1622,8 +1622,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Konjugate RPC console.</source>
-        <translation>Bine ati venit la consola Konjugate RPC.</translation>
+        <source>Welcome to the Konjungate RPC console.</source>
+        <translation>Bine ati venit la consola Konjungate RPC.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1816,8 +1816,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Introduceți o adresă Konjugate(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Introduceți o adresă Konjungate(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1916,8 +1916,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Konjugate address</source>
-        <translation>Atenție: Adresă Konjugate invalidă</translation>
+        <source>WARNING: Invalid Konjungate address</source>
+        <translation>Atenție: Adresă Konjungate invalidă</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1990,8 +1990,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Introduceți o adresă Konjugate(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Introduceți o adresă Konjungate(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
 </context>
 <context>
@@ -2010,7 +2010,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Puteti semna mesaje cu adresa dumneavoastra pentru a demostra ca sunteti proprietarul lor. Aveti grija sa nu semnati nimic vag, deoarece atacurile de tip phishing va pot pacali sa le Konjugateati identitatea. Semnati numai declaratiile detaliate cu care sunteti deacord.</translation>
+        <translation>Puteti semna mesaje cu adresa dumneavoastra pentru a demostra ca sunteti proprietarul lor. Aveti grija sa nu semnati nimic vag, deoarece atacurile de tip phishing va pot pacali sa le Konjungateati identitatea. Semnati numai declaratiile detaliate cu care sunteti deacord.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -2051,8 +2051,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Konjugate address</source>
-        <translation>Semnează un mesaj pentru a dovedi că dețineti o adresă Konjugate</translation>
+        <source>Sign the message to prove you own this Konjungate address</source>
+        <translation>Semnează un mesaj pentru a dovedi că dețineti o adresă Konjungate</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2083,8 +2083,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Konjugate address</source>
-        <translation>Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă Konjugate</translation>
+        <source>Verify the message to ensure it was signed with the specified Konjungate address</source>
+        <translation>Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă Konjungate</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2094,8 +2094,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Konjugate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
-        <translation>Introduceți o adresă Konjugate(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
+        <source>Enter a Konjungate address (e.g. ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</source>
+        <translation>Introduceți o adresă Konjungate(ex:ie6sxvFwLpMsp5tRHpAS6q3cZVewmqYzTg)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2104,8 +2104,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Konjugate signature</source>
-        <translation>Introduceti semnatura Konjugate</translation>
+        <source>Enter Konjungate signature</source>
+        <translation>Introduceti semnatura Konjungate</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2683,8 +2683,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Konjugate version</source>
-        <translation>Versiune Konjugate</translation>
+        <source>Konjungate version</source>
+        <translation>Versiune Konjungate</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2693,8 +2693,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Konjugated</source>
-        <translation>Trimite comanda catre server sau Konjugated</translation>
+        <source>Send command to -server or Konjungated</source>
+        <translation>Trimite comanda catre server sau Konjungated</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2713,13 +2713,13 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Konjugate.conf)</source>
-        <translation>Specifica fisier de configurare(implicit: Konjugate.conf)</translation>
+        <source>Specify configuration file (default: Konjungate.conf)</source>
+        <translation>Specifica fisier de configurare(implicit: Konjungate.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Konjugated.pid)</source>
-        <translation>Speficica fisier pid(implicit: Konjugate.pid)</translation>
+        <source>Specify pid file (default: Konjungated.pid)</source>
+        <translation>Speficica fisier pid(implicit: Konjungate.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2736,13 +2736,13 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=Konjugaterpc
+rpcuser=Konjungaterpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Konjungate Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2848,8 +2848,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Konjugate will not work properly.</source>
-        <translation>Atentie: Va rugam verificati ca timpul si data calculatorului sunt corete. Daca timpul este gresit Konjugate nu va functiona corect.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Konjungate will not work properly.</source>
+        <translation>Atentie: Va rugam verificati ca timpul si data calculatorului sunt corete. Daca timpul este gresit Konjungate nu va functiona corect.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -2923,8 +2923,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+41"/>
-        <source>SSL options: (see the Konjugate Wiki for SSL setup instructions)</source>
-        <translation>Optiuni SSl (vezi Konjugate wiki pentru intructiunile de instalare)</translation>
+        <source>SSL options: (see the Konjungate Wiki for SSL setup instructions)</source>
+        <translation>Optiuni SSl (vezi Konjungate wiki pentru intructiunile de instalare)</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -3155,7 +3155,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Konjugate is shutting down.</source>
+        <source>Initialization sanity check failed. Konjungate is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3220,13 +3220,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Konjugate</source>
-        <translation>Eroare la încărcarea wallet.dat: Portofelul necesita o versiune mai noua de Konjugate</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Konjungate</source>
+        <translation>Eroare la încărcarea wallet.dat: Portofelul necesita o versiune mai noua de Konjungate</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Konjugate to complete</source>
-        <translation>A fost nevoie de rescrierea portofelului: restartați Konjugate pentru a finaliza</translation>
+        <source>Wallet needed to be rewritten: restart Konjungate to complete</source>
+        <translation>A fost nevoie de rescrierea portofelului: restartați Konjungate pentru a finaliza</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3290,8 +3290,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Konjugate is probably already running.</source>
-        <translation>Imposibil de conectat %s pe acest computer. Cel mai probabil Konjugate ruleaza</translation>
+        <source>Unable to bind to %s on this computer. Konjungate is probably already running.</source>
+        <translation>Imposibil de conectat %s pe acest computer. Cel mai probabil Konjungate ruleaza</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3330,7 +3330,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Konjugate Alert&quot; admin@fo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Konjugate is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Konjungate is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

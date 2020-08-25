@@ -41,7 +41,7 @@
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
-         <string>Konjugate Network</string>
+         <string>Konjungate Network</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout">
          <item row="1" column="0">
@@ -101,7 +101,7 @@
            <item>
             <widget class="QLabel" name="label_2">
              <property name="text">
-              <string>Konjugate Node Count:</string>
+              <string>Konjungate Node Count:</string>
              </property>
             </widget>
            </item>

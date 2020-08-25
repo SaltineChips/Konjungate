@@ -17,7 +17,7 @@ class CTxIn;
 class CMNenginePool;
 class CMNengineSigner;
 class CMasterNodeVote;
-class CKonjugateAddress;
+class CKonjungateAddress;
 class CMNengineQueue;
 class CMNengineBroadcastTx;
 class CActiveMasternode;

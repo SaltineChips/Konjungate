@@ -96,7 +96,7 @@
    <item row="8" column="1">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="KonjugateAmountField" name="payAmount"/>
+      <widget class="KonjungateAmountField" name="payAmount"/>
      </item>
      <item>
       <widget class="QToolButton" name="deleteButton">
@@ -149,7 +149,7 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KonjugateAmountField</class>
+   <class>KonjungateAmountField</class>
    <extends>QSpinBox</extends>
    <header>bitcoinamountfield.h</header>
    <container>1</container>

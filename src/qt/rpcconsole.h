@@ -19,7 +19,7 @@ class QMenu;
 class QItemSelection;
 QT_END_NAMESPACE
 
-/** Local Konjugate RPC console. */
+/** Local Konjungate RPC console. */
 class RPCConsole: public QWidget
 {
     Q_OBJECT

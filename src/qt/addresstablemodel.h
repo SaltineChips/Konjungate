@@ -21,13 +21,13 @@ public:
 
     enum AddressType {
         AT_Unknown = 0, /**< User specified label */
-        AT_Normal = 1,  /**< Konjugate address */
+        AT_Normal = 1,  /**< Konjungate address */
         AT_Stealth = 2  /**< Stealth address */
     };
 
     enum ColumnIndex {
         Label = 0,   /**< User specified label */
-        Address = 1,  /**< Konjugate address */
+        Address = 1,  /**< Konjungate address */
 	Type = 2 /**< Address type */
     };
 

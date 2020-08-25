@@ -91,8 +91,8 @@ QFont bitcoinAddressFont()
 
 void setupAddressWidget(QLineEdit *widget, QWidget *parent)
 {
-    widget->setMaxLength(KonjugateAddressValidator::MaxAddressLength);
-    widget->setValidator(new KonjugateAddressValidator(parent));
+    widget->setMaxLength(KonjungateAddressValidator::MaxAddressLength);
+    widget->setValidator(new KonjungateAddressValidator(parent));
     widget->setFont(bitcoinAddressFont());
 }
 
@@ -105,10 +105,10 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
     widget->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
 }
 
-bool parseKonjugateURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseKonjungateURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // NovaCoin: check prefix
-    if(uri.scheme() != QString("Konjugate"))
+    if(uri.scheme() != QString("Konjungate"))
         return false;
 
     SendCoinsRecipient rv;
@@ -138,7 +138,7 @@ bool parseKonjugateURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!KonjugateUnits::parse(KonjugateUnits::KONJ, i->second, &rv.amount))
+                if(!KonjungateUnits::parse(KonjungateUnits::KONJ, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -156,18 +156,18 @@ bool parseKonjugateURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseKonjugateURI(QString uri, SendCoinsRecipient *out)
+bool parseKonjungateURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert konjugate:// to Konjugate:
+    // Convert konjungate:// to Konjungate:
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("konjugate://", Qt::CaseInsensitive))
+    if(uri.startsWith("konjungate://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 11, "Konjugate:");
+        uri.replace(0, 11, "Konjungate:");
     }
     QUrl uriInstance(uri);
-    return parseKonjugateURI(uriInstance, out);
+    return parseKonjungateURI(uriInstance, out);
 }
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
@@ -492,12 +492,12 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Konjugate.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Konjungate.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Konjugate.lnk
+    // check for Konjungate.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -574,7 +574,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "Konjugate.desktop";
+    return GetAutostartDir() / "Konjungate.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -612,10 +612,10 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a Konjugate.desktop file to the autostart directory:
+        // Write a Konjungate.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Konjugate\n";
+        optionFile << "Name=Konjungate\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -634,7 +634,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the Konjugate app
+    // loop through the list of startup items and try to find the Konjungate app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -668,7 +668,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add Konjugate app to startup item list
+        // add Konjungate app to startup item list
         LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, bitcoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {
@@ -687,10 +687,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("Konjugate-Qt") + " " + tr("version") + " " +
+    header = tr("Konjungate-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  Konjugate-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  Konjungate-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -699,7 +699,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("Konjugate-Qt"));
+    setWindowTitle(tr("Konjungate-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));

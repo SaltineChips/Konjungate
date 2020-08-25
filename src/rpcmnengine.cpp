@@ -37,7 +37,7 @@ void SendMoney(const CTxDestination &address, CAmount nValue, CWalletTx& wtxNew,
         throw JSONRPCError(RPC_WALLET_ERROR, strError);
     }
 
-    // Parse Konjugate address
+    // Parse Konjungate address
     CScript scriptPubKey = GetScriptForDestination(address);
 
     // Create and send the transaction
@@ -81,16 +81,16 @@ Value masternode(const Array& params, bool fHelp)
                 "  list         - Print list of all known masternodes (see masternodelist for more info)\n"
                 "  list-conf    - Print masternode.conf in JSON format\n"
                 "  outputs      - Print masternode compatible outputs\n"
-                "  start        - Start masternode configured in Konjugate.conf\n"
+                "  start        - Start masternode configured in Konjungate.conf\n"
                 "  start-alias  - Start single masternode by assigned alias configured in masternode.conf\n"
                 "  start-many   - Start all masternodes configured in masternode.conf\n"
                 "  status       - Print masternode status information\n"
-                "  stop         - Stop masternode configured in Konjugate.conf\n"
+                "  stop         - Stop masternode configured in Konjungate.conf\n"
                 "  stop-alias   - Stop single masternode by assigned alias configured in masternode.conf\n"
                 "  stop-many    - Stop all masternodes configured in masternode.conf\n"
                 "  winners      - Print list of masternode winners\n"
-                "  vote-many    - Vote on a Konjugate initiative\n"
-                "  vote         - Vote on a Konjugate initiative\n"
+                "  vote-many    - Vote on a Konjungate initiative\n"
+                "  vote         - Vote on a Konjungate initiative\n"
                 );
 
     if (strCommand == "stop")
@@ -443,7 +443,7 @@ Value masternode(const Array& params, bool fHelp)
             pubkey.SetDestination(winner->pubkey.GetID());
             CTxDestination address1;
             ExtractDestination(pubkey, address1);
-            CKonjugateAddress address2(address1);
+            CKonjungateAddress address2(address1);
 
             obj.push_back(Pair("IP:port",       winner->addr.ToString().c_str()));
             obj.push_back(Pair("protocol",      (int64_t)winner->protocolVersion));
@@ -462,7 +462,7 @@ Value masternode(const Array& params, bool fHelp)
         CKey secret;
         secret.MakeNewKey(false);
 
-        return CKonjugateSecret(secret).ToString();
+        return CKonjungateSecret(secret).ToString();
     }
 
     if (strCommand == "winners")
@@ -479,7 +479,7 @@ Value masternode(const Array& params, bool fHelp)
             if(masternodePayments.GetBlockPayee(nHeight, payee, vin)){
                 CTxDestination address1;
                 ExtractDestination(payee, address1);
-                CKonjugateAddress address2(address1);
+                CKonjungateAddress address2(address1);
 
                 if(strMode == "addr")
                     obj.push_back(Pair(boost::lexical_cast<std::string>(nHeight),       address2.ToString().c_str()));
@@ -669,7 +669,7 @@ Value masternode(const Array& params, bool fHelp)
         pubkey = GetScriptForDestination(activeMasternode.pubKeyMasternode.GetID());
         CTxDestination address1;
         ExtractDestination(pubkey, address1);
-        CKonjugateAddress address2(address1);
+        CKonjungateAddress address2(address1);
 
         Object mnObj;
         CMasternode *pmn = mnodeman.Find(activeMasternode.vin);
@@ -678,7 +678,7 @@ Value masternode(const Array& params, bool fHelp)
         mnObj.push_back(Pair("service", activeMasternode.service.ToString().c_str()));
         mnObj.push_back(Pair("status", activeMasternode.status));
         //mnObj.push_back(Pair("pubKeyMasternode", address2.ToString().c_str()));
-        if (pmn) mnObj.push_back(Pair("pubkey", CKonjugateAddress(pmn->pubkey.GetID()).ToString()));
+        if (pmn) mnObj.push_back(Pair("pubkey", CKonjungateAddress(pmn->pubkey.GetID()).ToString()));
         mnObj.push_back(Pair("notCapableReason", activeMasternode.notCapableReason.c_str()));
 
         return mnObj;
@@ -715,7 +715,7 @@ Value masternodelist(const Array& params, bool fHelp)
                 "  rank           - Print rank of a masternode based on current block\n"
                 "  status         - Print masternode status: ENABLED / EXPIRED / VIN_SPENT / REMOVE / POS_ERROR (can be additionally filtered, partial match)\n"
                 "  addr            - Print ip address associated with a masternode (can be additionally filtered, partial match)\n"
-                "  votes          - Print all masternode votes for a Konjugate initiative (can be additionally filtered, partial match)\n"
+                "  votes          - Print all masternode votes for a Konjungate initiative (can be additionally filtered, partial match)\n"
                 "  lastpaid       - The last time a node was paid on the network\n"
                 );
     }
@@ -738,7 +738,7 @@ Value masternodelist(const Array& params, bool fHelp)
             } else if (strMode == "donation") {
                 CTxDestination address1;
                 ExtractDestination(mn.donationAddress, address1);
-                CKonjugateAddress address2(address1);
+                CKonjungateAddress address2(address1);
 
                 if(strFilter !="" && address2.ToString().find(strFilter) == string::npos &&
                     strVin.find(strFilter) == string::npos) continue;
@@ -756,7 +756,7 @@ Value masternodelist(const Array& params, bool fHelp)
                 pubkey.SetDestination(mn.pubkey.GetID());
                 CTxDestination address1;
                 ExtractDestination(pubkey, address1);
-                CKonjugateAddress address2(address1);
+                CKonjungateAddress address2(address1);
 
                 std::ostringstream addrStream;
                 addrStream << setw(21) << strVin;
@@ -787,7 +787,7 @@ Value masternodelist(const Array& params, bool fHelp)
                 pubkey.SetDestination(mn.pubkey.GetID());
                 CTxDestination address1;
                 ExtractDestination(pubkey, address1);
-                CKonjugateAddress address2(address1);
+                CKonjungateAddress address2(address1);
 
                 if(strFilter !="" && address2.ToString().find(strFilter) == string::npos &&
                     strVin.find(strFilter) == string::npos) continue;

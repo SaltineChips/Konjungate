@@ -82,7 +82,7 @@ void CMNenginePool::SetNull(){
 }
 
 bool CMNenginePool::SetCollateralAddress(std::string strAddress){
-    CKonjugateAddress address;
+    CKonjungateAddress address;
     if (!address.SetString(strAddress))
     {
         LogPrintf("CMNenginePool::SetCollateralAddress - Invalid MNengine collateral address\n");
@@ -408,7 +408,7 @@ void CMNenginePool::ChargeRandomFees(){
 
                 Being that MNengine has "no fees" we need to have some kind of cost associated
                 with using it to stop abuse. Otherwise it could serve as an attack vector and
-                allow endless transaction that would bloat Konjugate and make it unusable. To
+                allow endless transaction that would bloat Konjungate and make it unusable. To
                 stop these kinds of attacks 1 in 50 successful transactions are charged. This
                 adds up to a cost of 0.002 KONJ per transaction on average.
             */
@@ -1037,7 +1037,7 @@ bool CMNengineSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey){
 }
 
 bool CMNengineSigner::SetKey(std::string strSecret, std::string& errorMessage, CKey& key, CPubKey& pubkey){
-    CKonjugateSecret vchSecret;
+    CKonjungateSecret vchSecret;
     bool fGood = vchSecret.SetString(strSecret);
 
     if (!fGood) {
@@ -1190,7 +1190,7 @@ void ThreadCheckMNenginePool()
     if(fLiteMode) return; //disable all MNengine/Masternode related functionality
 
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("Konjugate-mnengine");
+    RenameThread("Konjungate-mnengine");
 
     unsigned int c = 0;
 

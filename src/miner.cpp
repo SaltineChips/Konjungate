@@ -16,7 +16,7 @@ using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// KonjugateMiner
+// KonjungateMiner
 //
 
 extern unsigned int nMinerSleep;
@@ -633,7 +633,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("Konjugate-miner");
+    RenameThread("Konjungate-miner");
 
     CReserveKey reservekey(pwallet);
 

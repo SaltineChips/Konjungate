@@ -9,7 +9,7 @@
 
 extern bool fUseDarkTheme;
 
-/** Interface from Qt to configuration data structure for Konjugate client.
+/** Interface from Qt to configuration data structure for Konjungate client.
    To Qt, the options are presented as a list with the different options
    laid out vertically.
    This can be changed to a tree once the settings become sufficiently
@@ -29,12 +29,12 @@ public:
         MinimizeOnClose,        // bool
         Fee,                    // qint64
         ReserveBalance,         // qint64
-        DisplayUnit,            // KonjugateUnits::Unit
+        DisplayUnit,            // KonjungateUnits::Unit
         Language,               // QString
         CoinControlFeatures,    // bool
         UseDarkTheme,     // bool
         MNengineRounds,    // int
-        AnonymizeKonjugateAmount, //int
+        AnonymizeKonjungateAmount, //int
         OptionIDRowCount,
     };
 
@@ -75,7 +75,7 @@ signals:
     void reserveBalanceChanged(qint64);
     void coinControlFeaturesChanged(bool);
     void mnengineRoundsChanged(int);
-    void AnonymizeKonjugateAmountChanged(int);
+    void AnonymizeKonjungateAmountChanged(int);
 };
 
 #endif // OPTIONSMODEL_H

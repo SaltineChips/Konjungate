@@ -62,7 +62,7 @@
           </widget>
          </item>
          <item>
-          <widget class="KonjugateAmountField" name="transactionFee"/>
+          <widget class="KonjungateAmountField" name="transactionFee"/>
          </item>
          <item>
           <spacer name="horizontalSpacerFee">
@@ -108,7 +108,7 @@
           </widget>
          </item>
          <item>
-          <widget class="KonjugateAmountField" name="reserveBalance"/>
+          <widget class="KonjungateAmountField" name="reserveBalance"/>
          </item>
          <item>
           <spacer name="horizontalSpacerReserveBalance">
@@ -128,10 +128,10 @@
        <item row="4" column="0">
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
-          <string>Automatically start Konjugate after logging in to the system.</string>
+          <string>Automatically start Konjungate after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start Konjugate on system login</string>
+          <string>&amp;Start Konjungate on system login</string>
          </property>
         </widget>
        </item>
@@ -158,7 +158,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the Konjugate client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the Konjungate client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -243,7 +243,7 @@
          <item>
           <widget class="QValueComboBox" name="lang">
            <property name="toolTip">
-            <string>The user interface language can be set here. This setting will take effect after restarting Konjugate.</string>
+            <string>The user interface language can be set here. This setting will take effect after restarting Konjungate.</string>
            </property>
           </widget>
          </item>
@@ -387,7 +387,7 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KonjugateAmountField</class>
+   <class>KonjungateAmountField</class>
    <extends>QSpinBox</extends>
    <header>bitcoinamountfield.h</header>
    <container>1</container>

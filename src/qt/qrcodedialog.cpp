@@ -83,7 +83,7 @@ void QRCodeDialog::genCode()
 
 QString QRCodeDialog::getURI()
 {
-    QString ret = QString("Konjugate:%1").arg(address);
+    QString ret = QString("Konjungate:%1").arg(address);
     int paramCount = 0;
 
     ui->outUri->clear();
@@ -93,7 +93,7 @@ QString QRCodeDialog::getURI()
         if (ui->lnReqAmount->validate())
         {
             // even if we allow a non KONJ unit input in lnReqAmount, we generate the URI with KONJ as unit (as defined in BIP21)
-            ret += QString("?amount=%1").arg(KonjugateUnits::format(KonjugateUnits::KONJ, ui->lnReqAmount->value()));
+            ret += QString("?amount=%1").arg(KonjungateUnits::format(KonjungateUnits::KONJ, ui->lnReqAmount->value()));
             paramCount++;
         }
         else

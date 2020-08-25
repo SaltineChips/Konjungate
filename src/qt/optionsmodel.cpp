@@ -53,7 +53,7 @@ void OptionsModel::Init()
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", KonjugateUnits::KONJ);
+        settings.setValue("nDisplayUnit", KonjungateUnits::KONJ);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
     
     fUseDarkTheme = settings.value("fUseDarkTheme", false).toBool();
@@ -66,13 +66,13 @@ void OptionsModel::Init()
     if (!settings.contains("nMNengineRounds"))
         settings.setValue("nMNengineRounds", 2);
     nMNengineRounds = settings.value("nMNengineRounds").toLongLong();
-    if (!settings.contains("nAnonymizeKonjugateAmount"))
-        settings.setValue("nAnonymizeKonjugateAmount", 1000);
-    nAnonymizeKonjugateAmount = settings.value("nAnonymizeKonjugateAmount").toLongLong();
+    if (!settings.contains("nAnonymizeKonjungateAmount"))
+        settings.setValue("nAnonymizeKonjungateAmount", 1000);
+    nAnonymizeKonjungateAmount = settings.value("nAnonymizeKonjungateAmount").toLongLong();
     if (settings.contains("nMNengineRounds"))
         SoftSetArg("-mnenginerounds", settings.value("nMNengineRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeKonjugateAmount"))
-        SoftSetArg("-anonymizeKonjugateamount", settings.value("nAnonymizeKonjugateAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeKonjungateAmount"))
+        SoftSetArg("-anonymizeKonjungateamount", settings.value("nAnonymizeKonjungateAmount").toString().toStdString());
 
 
 
@@ -177,8 +177,8 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return fCoinControlFeatures;
         case MNengineRounds:
             return QVariant(nMNengineRounds);
-        case AnonymizeKonjugateAmount:
-            return QVariant(nAnonymizeKonjugateAmount);
+        case AnonymizeKonjungateAmount:
+            return QVariant(nAnonymizeKonjungateAmount);
         case UseDarkTheme:
             return QVariant(fUseDarkTheme);
         default:
@@ -251,10 +251,10 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             settings.setValue("nMNengineRounds", nMNengineRounds);
             emit mnengineRoundsChanged(nMNengineRounds);
             break;
-        case AnonymizeKonjugateAmount:
-            nAnonymizeKonjugateAmount = value.toInt();
-            settings.setValue("nAnonymizeKonjugateAmount", nAnonymizeKonjugateAmount);
-            emit AnonymizeKonjugateAmountChanged(nAnonymizeKonjugateAmount);
+        case AnonymizeKonjungateAmount:
+            nAnonymizeKonjungateAmount = value.toInt();
+            settings.setValue("nAnonymizeKonjungateAmount", nAnonymizeKonjungateAmount);
+            emit AnonymizeKonjungateAmountChanged(nAnonymizeKonjungateAmount);
             break;
         default:
             break;

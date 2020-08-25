@@ -31,16 +31,16 @@ class QScrollArea;
 QT_END_NAMESPACE
 
 /**
-  Konjugate GUI main class. This class represents the main window of the Konjugate UI. It communicates with both the client and
+  Konjungate GUI main class. This class represents the main window of the Konjungate UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class KonjugateGUI : public QMainWindow
+class KonjungateGUI : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit KonjugateGUI(QWidget *parent = 0);
-    ~KonjugateGUI();
+    explicit KonjungateGUI(QWidget *parent = 0);
+    ~KonjungateGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -52,7 +52,7 @@ public:
     */
     void setWalletModel(WalletModel *walletModel);
     /** Set the message model.
-        The message model represents a Konjugate  Note or D-Note, and offers secure messaging through a peer to peer
+        The message model represents a Konjungate  Note or D-Note, and offers secure messaging through a peer to peer
         relay.
     */
     void setMessageModel(MessageModel *messageModel);
@@ -239,7 +239,7 @@ private slots:
     /** Show progress dialog e.g. for verifychain */
     void showProgress(const QString &title, int nProgress);
 
-    /** Edit the Konjugate.conf file */
+    /** Edit the Konjungate.conf file */
     void editConfig();
     void editConfigExt();
     /** Open the data directory */

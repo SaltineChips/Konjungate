@@ -1,14 +1,14 @@
-Konjugate-qt: Qt5 GUI for Konjugate
+Konjungate-qt: Qt5 GUI for Konjungate
 ===============================
 
 Linux
 -------
-https://github.com/Konjugatedev/Konjugate/blob/master/doc/build-unix.md
+https://github.com/Konjungatedev/Konjungate/blob/master/doc/build-unix.md
 
 Windows
 --------
-https://github.com/Konjugatedev/Konjugate/blob/master/doc/build-msw.md
+https://github.com/Konjungatedev/Konjungate/blob/master/doc/build-msw.md
 
 Mac OS X
 --------
-https://github.com/Konjugatedev/Konjugate/blob/master/doc/build-osx.md
+https://github.com/Konjungatedev/Konjungate/blob/master/doc/build-osx.md
