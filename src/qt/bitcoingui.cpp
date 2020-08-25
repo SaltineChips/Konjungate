@@ -107,7 +107,7 @@ KonjugateGUI::KonjugateGUI(QWidget *parent):
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
     setObjectName("Konjugate");
-    setStyleSheet("#Konjugate { background-color: #ffffff; color: #03dac6;}");
+    setStyleSheet("#Konjugate {background-image: url(:/images/qt) }");
 
     // Accept D&D of URIs
     setAcceptDrops(true);

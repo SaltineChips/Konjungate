@@ -87,6 +87,7 @@
         <file alias="splash-dark">res/images/splash_dark.png</file>
         <file alias="about-dark">res/images/about_dark.png</file>
         <file alias="header-dark">res/images/header_dark.png</file>
+        <file alias="qt">res/images/qt.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>

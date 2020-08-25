@@ -2670,7 +2670,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
             nMasterNodeChecksEngageTime = nMasterNodeChecksDelayBaseTime + nMasterNodeChecksDelay;
         }
         // Devops Address Set and Updates
-        strVfyDevopsAddress = ""; // CcABDmWkcSZPw8rMtoobShVFuudhf1svZu
+        strVfyDevopsAddress = "K8LHiHK8be6YucgmvhsnzVxT2d7p7SDGnc"; // K8LHiHK8be6YucgmvhsnzVxT2d7p7SDGnc
         if(pindexBest->GetBlockTime() < nPaymentUpdate_2) { strVfyDevopsAddress = Params().DevOpsAddress(); }
         // Check PoW or PoS payments for current block
         for (unsigned int i=0; i < vtx[isProofOfStake].vout.size(); i++) {

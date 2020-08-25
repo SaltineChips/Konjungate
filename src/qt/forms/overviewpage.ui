@@ -20,7 +20,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">#Konjugate {background-image: url(:/images/qt) }</string>
   </property>
   <layout class="QVBoxLayout" name="topLayout">
    <item>

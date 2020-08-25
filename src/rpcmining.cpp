@@ -688,7 +688,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
             // Set Masternode / DevOps payments
             int64_t masternodePayment = GetMasternodePayment(pindexPrev->nHeight+1, networkPayment);
             int64_t devopsPayment = GetDevOpsPayment(pindexPrev->nHeight+1, networkPayment);
-            std::string devpayee2 = ""; // CcABDmWkcSZPw8rMtoobShVFuudhf1svZu
+            std::string devpayee2 = "K8LHiHK8be6YucgmvhsnzVxT2d7p7SDGnc"; // K8LHiHK8be6YucgmvhsnzVxT2d7p7SDGnc
 
             if (pindexBest->GetBlockTime() < nPaymentUpdate_2) {
                 devpayee2 = Params().DevOpsAddress();

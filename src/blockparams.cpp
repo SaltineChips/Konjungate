@@ -490,7 +490,12 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees){
                i2++;// Move up in loop round
             }
         }
-
+        //premine function
+        if(nHeight > nReservePhaseStart) {
+            if(pindexBest->nMoneySupply < (nBlockRewardReserve * 100)) {
+                nSubsidy = nBlockRewardReserve;
+            }
+        }
     // 30.21 = PoW Payments for regular miners
     // hardCap v2.1
     if(pindexBest->nMoneySupply > MAX_SINGLE_TX){

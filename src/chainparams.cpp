@@ -103,8 +103,8 @@ public:
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
         nPoolMaxTransactions = 9;
-        strMNenginePoolDummyAddress = ""; // CcABDmWkcSZPw8rMtoobShVFuudhf1svZu devopsaddress is dHy3LZvqX5B2rAAoLiA7Y7rpvkLXKTkD18
-        strDevOpsAddress = ""; // Ce1XyENjUHHPBt8mxy2LupkH2PnequevMM
+        strMNenginePoolDummyAddress = "K8LHiHK8be6YucgmvhsnzVxT2d7p7SDGnc"; // CcABDmWkcSZPw8rMtoobShVFuudhf1svZu devopsaddress is dHy3LZvqX5B2rAAoLiA7Y7rpvkLXKTkD18
+        strDevOpsAddress = "KMWpXKTakT4KkP9FBZ66awR1k5ScXaQuab"; // Ce1XyENjUHHPBt8mxy2LupkH2PnequevMM
         nEndPoWBlock = 0x7fffffff;
         nStartPoSBlock = 1;
     }
