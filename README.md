@@ -107,15 +107,15 @@ cd ~; cd ~/Konjungate; qmake -qt=qt5 USE_UPNP=-; make
 
 ### Create config file for daemon
 ```
-cd ~; sudo ufw allow 19427/tcp; sudo ufw allow 18695/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.KONJ; cat << "CONFIG" >> ~/.KONJ/Konjungate.conf
+cd ~; sudo ufw allow 19417/tcp; sudo ufw allow 18495/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.KONJ; cat << "CONFIG" >> ~/.KONJ/Konjungate.conf
 listen=1
 server=1
 daemon=1
 testnet=0
 rpcuser=KONJrpcuser
 rpcpassword=SomeCrazyVeryVerySecurePasswordHere
-rpcport=18695
-port=19427
+rpcport=18495
+port=19417
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
 CONFIG
