@@ -489,7 +489,10 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees){
                }
                i2++;// Move up in loop round
             }
+        } else {
+            nSubsidy += nMasterNodeAdjustment;
         }
+
         //premine function
         if(nHeight > nReservePhaseStart) {
             if(pindexBest->nMoneySupply < (nBlockRewardReserve * 100)) {
@@ -531,10 +534,12 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
            }
            i2++;// Move up in loop round
         }
+    } else {
+        nSubsidy += nMasterNodeAdjustment;
     }
 
     // hardCap v2.1
-    else if(pindexBest->nMoneySupply > MAX_SINGLE_TX)
+    if(pindexBest->nMoneySupply > MAX_SINGLE_TX)
     {
         LogPrint("MINEOUT", "GetProofOfStakeReward(): create=%s nFees=%d\n", FormatMoney(nFees), nFees);
         return nFees;
