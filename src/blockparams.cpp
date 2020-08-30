@@ -345,14 +345,6 @@ void VRX_Dry_Run(const CBlockIndex* pindexLast)
         return; // can't index prevblock
     }
 
-    if(pindexBest->GetBlockTime() > 1596024000) {
-        if(pindexBest->GetBlockTime() < 1596304801) {
-          // Reset diff for fork (Rewards update)
-          fDryRun = true;
-          return;
-        }
-    }
-
     // Test Fork
     if (nLiveForkToggle != 0) {
         // Do nothing
@@ -536,6 +528,13 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
         }
     } else {
         nSubsidy += nMasterNodeAdjustment;
+    }
+
+    //premine function
+    if(pindexBest->nHeight > nReservePhaseStart) {
+        if(pindexBest->nMoneySupply < (nBlockRewardReserve * 100)) {
+            nSubsidy = nBlockRewardReserve;
+        }
     }
 
     // hardCap v2.1
