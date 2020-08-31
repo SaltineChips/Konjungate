@@ -430,7 +430,7 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
 // Payout per day       : 300 * ((1 * 60 * 60) / (2 * 60) * 24)                   =       216,000 KONJ
 // Payout per month     : 300 * (((1 * 60 * 60) / (2 * 60) * 24) * 30)            =     6,480,000 KONJ
 // Payout per year      : 300 * (((1 * 60 * 60) / (2 * 60) * 24) * 365)           =    78,840,000 KONJ
-// Mineout              : 300 * (25.36 * (((1 * 60 * 60) / (2 * 60) * 24) * 365)) = 2,000,000,000 KONJ
+// Mineout              : 300 * (25.36 * (((1 * 60 * 60) / (2 * 60) * 24) * 365)) = 2,750,000,000 KONJ
 // ----------------------------------
 // (Network Allocation) (BLOCKS | 25-Years of minting)
 // Singular Payout      : 150-->50 KONJ

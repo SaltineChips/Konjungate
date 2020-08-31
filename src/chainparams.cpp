@@ -55,7 +55,6 @@ public:
         pchMessageStart[3] = 0x2f;
         vAlertPubKey = ParseHex("01b88735a489f996be6b65945645c897ebeb5d517698712acdbef78945c2f81f85d131aadfef3be6145678454852a2d08c6314bba5ca3cbe5616262da3b1a6afed");
         nDefaultPort = 19417;
-        
         nRPCPort = 18495;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 14);
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 16);
@@ -104,7 +103,7 @@ public:
 
         nPoolMaxTransactions = 9;
         strMNenginePoolDummyAddress = "K8LHiHK8be6YucgmvhsnzVxT2d7p7SDGnc"; // CcABDmWkcSZPw8rMtoobShVFuudhf1svZu devopsaddress is dHy3LZvqX5B2rAAoLiA7Y7rpvkLXKTkD18
-        strDevOpsAddress = "K7gNsQQKF1ynvpgM3kMc5oB52C3oJdCJDU"; // KMWpXKTakT4KkP9FBZ66awR1k5ScXaQuab
+        strDevOpsAddress = "KMWpXKTakT4KkP9FBZ66awR1k5ScXaQuab"; // Ce1XyENjUHHPBt8mxy2LupkH2PnequevMM
         nEndPoWBlock = 0x7fffffff;
         nStartPoSBlock = 1;
     }

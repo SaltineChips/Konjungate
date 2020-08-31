@@ -9,7 +9,7 @@
 #include "clientversion.h"
 
 //
-// Bootup the masternode, look for a 2,000,000 KONJ input and register on the network
+// Bootup the masternode, look for a 2,750,000 KONJ input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
