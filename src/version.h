@@ -30,7 +30,7 @@ static const int DATABASE_VERSION = 70509;
 //
 // network protocol versioning
 //
-static const int PROTOCOL_VERSION = 62025;
+static const int PROTOCOL_VERSION = 62026;
 
 // intial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
@@ -57,7 +57,7 @@ static const int NOBLKS_VERSION_START = 0;
 static const int NOBLKS_VERSION_END = 62016;
 
 // hard cutoff time for legacy network connections
-static const int64_t HRD_LEGACY_CUTOFF = 1596304800; // ON Date and time (GMT): Saturday, August 1, 2020 6:00:00 PM
+static const int64_t HRD_LEGACY_CUTOFF = 9993058800; // OFF (NOT TOGGLED)
 
 // hard cutoff time for future network connections
 static const int64_t HRD_FUTURE_CUTOFF = 9993058800; // OFF (NOT TOGGLED)
@@ -70,5 +70,8 @@ static const int MEMPOOL_GD_VERSION = 60002;
 
 // MasterNode peer IP advanced relay system start (Unfinished, not used)
 static const int64_t MIN_MASTERNODE_ADV_RELAY = 9993058800; // OFF (NOT TOGGLED)
+
+// MasterNode peer IP basic relay system start (on and functional)
+static const int64_t MIN_MASTERNODE_BSC_RELAY = 62026; // ON
 
 #endif

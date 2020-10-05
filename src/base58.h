@@ -153,8 +153,8 @@ public:
     CKonjungateExtKeyBase() {}
 };
 
-typedef CKonjungateExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CKonjungateExtKey;
-typedef CKonjungateExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CKonjungateExtPubKey;
+typedef CKonjungateExtKeyBase<CExtKey, 32, CChainParams::EXT_SECRET_KEY> CKonjungateExtKey;
+typedef CKonjungateExtKeyBase<CExtPubKey, 20, CChainParams::EXT_PUBLIC_KEY> CKonjungateExtPubKey;
 
 /** base58-encoded Bitcoin addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).

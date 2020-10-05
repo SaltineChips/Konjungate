@@ -613,7 +613,7 @@
                      </color>
                     </brush>
                    </colorrole>
-                   <colorrole role="PlaceholderText">
+                   <colorrole role="Base">
                     <brush brushstyle="NoBrush">
                      <color alpha="128">
                       <red>68</red>
@@ -660,7 +660,7 @@
                      </color>
                     </brush>
                    </colorrole>
-                   <colorrole role="PlaceholderText">
+                   <colorrole role="Base">
                     <brush brushstyle="NoBrush">
                      <color alpha="128">
                       <red>68</red>
@@ -707,7 +707,7 @@
                      </color>
                     </brush>
                    </colorrole>
-                   <colorrole role="PlaceholderText">
+                   <colorrole role="Base">
                     <brush brushstyle="NoBrush">
                      <color alpha="128">
                       <red>68</red>
@@ -801,7 +801,7 @@
                      </color>
                     </brush>
                    </colorrole>
-                   <colorrole role="PlaceholderText">
+                   <colorrole role="Base">
                     <brush brushstyle="NoBrush">
                      <color alpha="128">
                       <red>68</red>
@@ -848,7 +848,7 @@
                      </color>
                     </brush>
                    </colorrole>
-                   <colorrole role="PlaceholderText">
+                   <colorrole role="Base">
                     <brush brushstyle="NoBrush">
                      <color alpha="128">
                       <red>68</red>
@@ -895,7 +895,7 @@
                      </color>
                     </brush>
                    </colorrole>
-                   <colorrole role="PlaceholderText">
+                   <colorrole role="Base">
                     <brush brushstyle="NoBrush">
                      <color alpha="128">
                       <red>68</red>

@@ -116,8 +116,23 @@ rpcuser=KONJrpcuser
 rpcpassword=SomeCrazyVeryVerySecurePasswordHere
 rpcport=18495
 port=19417
+masternode=1
+externalip=188.166.109.87 
+bind=188.166.109.87
+masternodeaddr=188.166.109.87:19417
+masternodeprivkey=2pGDPDJUAUsH24GHvjgQ2sPBRtfewWM6AdPYERBXAqjZXV5bZ9J
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
+addnode=188.166.109.87
+addnode=188.166.109.87:19417
+addnode=80.110.125.108
+addnode=80.110.125.108:19417
+addnode=192.168.1.114
+addnode=192.168.1.114:19417
+addnode=139.99.239.62
+addnode=139.99.239.62:19417
+addnode=37.187.180.53
+addnode=37.187.180.53:19417
 CONFIG
 chmod 700 ~/.KONJ/Konjungate.conf; chmod 700 ~/.KONJ; ls -la ~/.KONJ
 ```
