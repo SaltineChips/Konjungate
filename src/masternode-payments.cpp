@@ -337,8 +337,8 @@ bool CMasternodePayments::ProcessBlock(int nBlockHeight)
                 payeeSource = GetScriptForDestination(pmn->pubkey.GetID());
 
                 break; // we found active MN
-            }
-        } */
+            } */
+        }
     }
 
     if(!fNodeisCapable) return false;
