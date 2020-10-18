@@ -4417,7 +4417,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         if (fSecMsgEnabled) {
             SecureMsgReceiveData(pfrom, strCommand, vRecv);
         }
-        if (pfrom->nVersion >= MIN_MASTERNODE_BSC_RELAY) {
+        if (1 == 1) {
             mnodeman.ProcessMessage(pfrom, strCommand, vRecv);
             ProcessMessageMasternodePayments(pfrom, strCommand, vRecv);
             ProcessMessageInstantX(pfrom, strCommand, vRecv);
