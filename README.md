@@ -36,7 +36,7 @@ Konjungate uses
 	Boost1.68, OR Boost1.58,  
 	Openssl1.02r,
 	Berkeley DB 6.2.32,
-	QT5.12.1,
+	QT5.15,
 	to compile
 
 
