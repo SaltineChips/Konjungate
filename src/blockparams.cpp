@@ -529,6 +529,10 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
     } else {
         nSubsidy += nMasterNodeAdjustment;
     }
+    //PoS block reward increase means it pays DevOps && meets proper rewards
+    if(pindexBest->nHeight > 200000){
+        nSubsidy += 25 * COIN;
+    }
 
     //premine function
     if(pindexBest->nHeight > nReservePhaseStart) {
