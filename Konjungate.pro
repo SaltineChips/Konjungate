@@ -17,9 +17,9 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 }
 
 win32{
-BOOST_LIB_SUFFIX=-mgw8-mt-s-x32-1_73
-BOOST_INCLUDE_PATH=C:/deps/boost_1_73_0
-BOOST_LIB_PATH=C:/deps/boost_1_73_0/stage/lib
+BOOST_LIB_SUFFIX=-mgw8-mt-s-x32-1_74
+BOOST_INCLUDE_PATH=C:/deps/boost_1_74_0
+BOOST_LIB_PATH=C:/deps/boost_1_74_0/stage/lib
 BDB_INCLUDE_PATH=C:/deps/db-6.2.38.NC/build_unix
 BDB_LIB_PATH=C:/deps/db-6.2.38.NC/build_unix
 OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.2u/include
