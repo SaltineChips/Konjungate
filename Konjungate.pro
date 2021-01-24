@@ -286,6 +286,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/rpcserver.h \
     src/rpcvelocity.h \
     src/limitedmap.h \
+    src/qt/fractalui.h \
     src/qt/overviewpage.h \
     src/qt/csvmodelwriter.h \
     src/crypter.h \
@@ -340,6 +341,9 @@ HEADERS += src/qt/bitcoingui.h \
     src/crypto/bmw/bmw512.h \
     src/crypto/echo/echo512.h \
     src/limitedmap.h
+    src/fractal/fractalengine.h \
+    src/fractal/fractalcontract.h \
+    src/fractal/fractaltoken.h
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/transactiontablemodel.cpp \
@@ -426,6 +430,10 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/noui.cpp \
     src/kernel.cpp \
     src/pbkdf2.cpp \
+    src/qt/fractalui.cpp \
+    src/fractal/fractalengine.cpp \
+    src/fractal/fractalcontract.cpp \
+    src/fractal/fractaltoken.cpp
     src/support/cleanse.cpp \
     src/stealth.cpp \
     src/qt/flowlayout.cpp \

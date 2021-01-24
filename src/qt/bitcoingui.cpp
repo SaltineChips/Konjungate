@@ -38,6 +38,7 @@
 #include "messagemodel.h"
 #include "messagepage.h"
 #include "blockbrowser.h"
+#include "fractalui.h"
 #include "importprivatekeydialog.h"
 
 #ifdef Q_OS_MAC
@@ -141,6 +142,8 @@ KonjungateGUI::KonjungateGUI(QWidget *parent):
 
     sendCoinsPage = new SendCoinsDialog(this);
 
+    fractalUI = new FractalUI(this);
+
     signVerifyMessageDialog = new SignVerifyMessageDialog(this);
 
     masternodeManagerPage = new MasternodeManager(this);
@@ -157,6 +160,7 @@ KonjungateGUI::KonjungateGUI(QWidget *parent):
     centralStackedWidget->addWidget(masternodeManagerPage);
     centralStackedWidget->addWidget(messagePage);
     centralStackedWidget->addWidget(blockBrowser);
+    centralStackedWidget->addWidget(fractalUI);
 
     QWidget *centralWidget = new QWidget();
     QVBoxLayout *centralLayout = new QVBoxLayout(centralWidget);
@@ -325,6 +329,12 @@ void KonjungateGUI::createActions()
     blockAction->setCheckable(true);
     tabGroup->addAction(blockAction);
 
+    fractalUIAction = new QAction(QIcon(":/icons/sitechain"), tr("&Fractal UI"), this);
+    fractalUIAction->setToolTip(tr("Espers Site on Blockchain (Websites on the Chain)"));
+    fractalUIAction->setCheckable(true);
+    fractalUIAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_9));
+    tabGroup->addAction(fractalUIAction);
+
     showBackupsAction = new QAction(QIcon(":/icons/browse"), tr("Show Auto&Backups"), this);
     showBackupsAction->setStatusTip(tr("S"));
 
@@ -343,6 +353,8 @@ void KonjungateGUI::createActions()
     connect(masternodeManagerAction, SIGNAL(triggered()), this, SLOT(gotoMasternodeManagerPage()));
     connect(messageAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(messageAction, SIGNAL(triggered()), this, SLOT(gotoMessagePage()));
+    connect(fractalUIAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
+    connect(fractalUIAction, SIGNAL(triggered()), this, SLOT(gotoFractalUI()));
 
     quitAction = new QAction(QIcon(":icons/quit"), tr("E&xit"), this);
     quitAction->setToolTip(tr("Quit application"));
@@ -478,6 +490,7 @@ void KonjungateGUI::createToolBars()
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
     toolbar->addAction(masternodeManagerAction);
+    toolbar->addAction(fractalUIAction);
     if (!fLiteMode){
         toolbar->addAction(messageAction);
     }
@@ -948,6 +961,15 @@ void KonjungateGUI::gotoMasternodeManagerPage()
 {
     masternodeManagerAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(masternodeManagerPage);
+
+    exportAction->setEnabled(false);
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
+}
+
+void CampusCashGUI::gotoFractalUI()
+{
+    fractalUIAction->setChecked(true);
+    centralStackedWidget->setCurrentWidget(fractalUI);
 
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
