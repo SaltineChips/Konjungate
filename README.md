@@ -74,7 +74,7 @@ cd ~; wget http://download.oracle.com/berkeley-db/db-6.2.32.NC.tar.gz; tar zxf d
 
 ### GitHub pull (Source Download)
 ```
-cd ~; git clone https://github.com/SaltineChips/Konjungate Konjungate
+cd ~; git clone https://github.com/SaltineChips/Konjungate-Control Konjungate
 ```
 
 ### Build Konjungate daemon
