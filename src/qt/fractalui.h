@@ -1,13 +1,17 @@
+// Copyright (c) 2017-2021 The Espers Project/CryptoCoderz Team
+// Copyright (c) 2020-2021 The Konjungate Team
+
 #ifndef FRACTALUI_H
 #define FRACTALUI_H
 
 #include <QWidget>
 
 namespace Ui {
-	class FractalUI;
+    class FractalUI;
 }
 class ClientModel;
 class WalletModel;
+
 QT_BEGIN_NAMESPACE
 class QModelIndex;
 QT_END_NAMESPACE
@@ -15,10 +19,10 @@ QT_END_NAMESPACE
 /** Overview ("home") page widget */
 class FractalUI : public QWidget
 {
-	    Q_OBJECT
+    Q_OBJECT
 
 public:
-	explicit FractalUI(QWidget *parent = 0);
+    explicit FractalUI(QWidget *parent = 0);
     ~FractalUI();
     void setModel(FractalUI *model);
 
@@ -32,6 +36,7 @@ private:
 
 private slots:
 
+        void on_pushButton_clicked();
 };
 
-#endif // FRACTALUI_H
+#endif // FRACTALUI_H 

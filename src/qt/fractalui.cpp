@@ -1,5 +1,5 @@
-// Copyright (c) 2021 The CryptoCoderz Team / Espers
-// Copyright (c) 2021 The CampusCash Team
+// Copyright (c) 2017-2021 The Espers Project/CryptoCoderz Team
+// Copyright (c) 2020-2021 The Konjungate Team
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include "fractalui.h"
@@ -11,6 +11,8 @@
 #include "guiutil.h"
 #include "guiconstants.h"
 
+#include "fractal/fractalcontract.h"
+
 #include <QAbstractItemDelegate>
 #include <QPainter>
 
@@ -19,7 +21,6 @@
 
 FractalUI::FractalUI(QWidget *parent) :
     ui(new Ui::FractalUI),
-
     model(0)
 {
     ui->setupUi(this);
@@ -29,3 +30,8 @@ FractalUI::~FractalUI()
 {
     delete ui;
 }
+
+void FractalUI::on_pushButton_clicked()
+{
+    create_smartCONTRACT("this is only a test", "testCONTRACT");
+} 

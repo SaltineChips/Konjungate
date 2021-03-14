@@ -330,7 +330,7 @@ void KonjungateGUI::createActions()
     tabGroup->addAction(blockAction);
 
     fractalUIAction = new QAction(QIcon(":/icons/sitechain"), tr("&Fractal UI"), this);
-    fractalUIAction->setToolTip(tr("Espers Site on Blockchain (Websites on the Chain)"));
+    fractalUIAction->setToolTip(tr("Konjungate Fractal Network"));
     fractalUIAction->setCheckable(true);
     fractalUIAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_9));
     tabGroup->addAction(fractalUIAction);
@@ -966,7 +966,7 @@ void KonjungateGUI::gotoMasternodeManagerPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void CampusCashGUI::gotoFractalUI()
+void KonjungateGUI::gotoFractalUI()
 {
     fractalUIAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(fractalUI);
