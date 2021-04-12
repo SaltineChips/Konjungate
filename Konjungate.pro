@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = Konjungate-qt
-VERSION = 1.1.0.1
+VERSION = 1.1.1.0
 INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
 QT += core gui widgets network printsupport
 DEFINES += ENABLE_WALLET
@@ -324,10 +324,14 @@ HEADERS += src/qt/bitcoingui.h \
     src/crypto/common/sha1.h \
     src/crypto/common/sha256.h \
     src/crypto/common/sha512.h \
+    src/stb/stb_image.h \
+    src/stb/stb_image_write.h \
     src/fractal/fractalengine.h \
     src/fractal/fractalcontract.h \
     src/fractal/fractalparams.h \
     src/fractal/fractaldataob.h \
+    src/fractal/fractalnft.h \
+    src/fractal/fractalbvac.h \
     src/qt/masternodemanager.h \
     src/qt/addeditadrenalinenode.h \
     src/qt/adrenalinenodeconfigdialog.h \
@@ -438,6 +442,8 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/fractal/fractalcontract.cpp \
     src/fractal/fractalparams.cpp \
     src/fractal/fractaldataob.cpp \
+    src/fractal/fractalnft.cpp \
+    src/fractal/fractalbvac.cpp \
     src/support/cleanse.cpp \
     src/stealth.cpp \
     src/qt/flowlayout.cpp \

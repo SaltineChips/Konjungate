@@ -7,7 +7,7 @@
 // NOTICE!
 //
 // This is a completely experimental smart-contract platform written by
-// CrpytoCoderz (Jonathan Dan Zaretsky - cryptocoderz@gmail.com)
+// CryptoCoderz (Jonathan Dan Zaretsky - cryptocoderz@gmail.com)
 //
 // PLEASE USE AT YOUR OWN RISK!!!
 //
@@ -17,6 +17,7 @@
 #include "fractalcontract.h"
 
 #include "fractal/fractaldataob.h"
+#include "fractal/fractalnft.h"
 
 using namespace std;
 
@@ -25,11 +26,18 @@ std::string set_raw_input_data = "";
 std::string set_contract_data = "";
 std::string set_fractal_SCRIPT = "";
 
-void create_smartCONTRACT(std::string raw_input_data, std::string contract_alias) {
+void create_smartCONTRACT(std::string raw_input_data, std::string contract_alias, int contract_type) {
     //
     //contract_alias = selected_contract_alias;
     //raw_input_data = set_raw_input_data;
-    priming(raw_input_data, contract_alias);
+    if (contract_type == 3) {
+        NFTparse(raw_input_data);
+        if (iLOAD) {
+            priming(nftOut_String, contract_alias, contract_type);
+        }
+    } else {
+        priming(raw_input_data, contract_alias, contract_type);
+    }
 }
 
 void edit_smartCONTRACT(std::string contract_data, std::string contract_alias) {

@@ -11,3 +11,4 @@
 //
 // PLEASE USE AT YOUR OWN RISK!!!
 // 
+#include "fractalparams.h"
