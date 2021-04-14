@@ -59,6 +59,7 @@
         <file alias="send-sidebar">res/icons/send-sidebar.png</file>
         <file alias="lock_closed_toolbar">res/icons/lock_closed_toolbar.png</file>
         <file alias="lock_open_toolbar">res/icons/lock_open_toolbar .png</file>
+        <file alias="fractal">res/icons/fractal.png</file>
     </qresource>
     <qresource prefix="/icons/dark">
         <file alias="connect_0">res/icons/dark/connect0_16.png</file>

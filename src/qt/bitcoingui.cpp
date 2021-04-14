@@ -329,7 +329,7 @@ void KonjungateGUI::createActions()
     blockAction->setCheckable(true);
     tabGroup->addAction(blockAction);
 
-    fractalUIAction = new QAction(QIcon(":/icons/sitechain"), tr("&Fractal UI"), this);
+    fractalUIAction = new QAction(QIcon(":/icons/fractal"), tr("&Fractal UI"), this);
     fractalUIAction->setToolTip(tr("Konjungate Fractal Network"));
     fractalUIAction->setCheckable(true);
     fractalUIAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_9));
