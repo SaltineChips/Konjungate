@@ -19,6 +19,12 @@
 // For Logprintf
 #include "util.h"
 
+// For image read
+#include "fractalnft.h"
+
+// For threadsafe messages
+#include "ui_interface.h"
+
 #include <string>
 #include <cstring>
 
@@ -27,7 +33,8 @@ using namespace std;
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb/stb_image_write.h"
 
-std::string mydata = "CeyQ1FkJc4gwqLvRzCJv5CG8TW1Y2s1H"; // PubKey Example, will be replaced with a users pubkey once system is complete
+std::string mydata = "CeyQ1FkJc4gwqLvRzCJv5CG8TW1Y2s1H"; // PubKey Example
+std::string thatdata = ""; // Set and used for decode
 
 // Initialize Valid Bit mapping Array
 std::string Bit_String[4] = { "11", "00", "10", "01" };
@@ -35,6 +42,11 @@ std::string Bit_String[4] = { "11", "00", "10", "01" };
 // Initialize Valid Color mapping Array
 // Black, White, Blue, Red
 std::string Color_String[4] = { "000", "255255255", "00255", "25500" };
+std::string Color_String_TEMP_FORMAT_WORKAROUND[4] = { "0 0 0", "255 255 255", "0 0 255", "255 0 0" };
+// Absolute color values
+int Color_String_Absolutes[2] = { 0, 255 };
+// Acceptable color value window values
+int Color_String_Window_Absolutes[2] = {90, 100};
 
 // Initialize Valid Character String Array
 std::string BVAC_Character_String[62] = { "A", "a", "B", "b",
@@ -52,7 +64,7 @@ std::string BVAC_Character_String[62] = { "A", "a", "B", "b",
 std::string BVAC_Conversion_String[62] = { "01 00 00 01", "01 10 00 01", "01 00 00 10", "01 10 00 10",
 "01 00 00 11", "01 10 00 11", "01 00 01 00", "01 10 01 00", "01 00 01 01", "01 10 01 01", "01 00 01 10", "01 10 01 10",
 "01 00 01 11", "01 10 01 11", "01 00 10 00", "01 10 10 00", "01 00 10 01", "01 10 10 01", "01 00 10 10", "01 10 10 10",
-"01 00 10 11", "01 10 10 11", "01 00 11 00", "01 10 11 00", "01 00 11 01", " 01 10 11 01", "01 00 11 10", "01 10 11 10",
+"01 00 10 11", "01 10 10 11", "01 00 11 00", "01 10 11 00", "01 00 11 01", "01 10 11 01", "01 00 11 10", "01 10 11 10",
 "01 00 11 11", "01 10 11 11", "01 01 00 00", "01 11 00 00", "01 01 00 01", "01 11 00 01", "01 01 00 10", "01 11 00 10",
 "01 01 00 11", "01 11 00 11", "01 01 01 00", "01 11 01 00", "01 01 01 01", "01 11 01 01", "01 01 01 10", "01 11 01 10",
 "01 01 01 11", "01 11 01 11", "01 01 10 00", "01 11 10 00", "01 01 10 01", "01 11 10 01", "01 01 10 10", "01 11 10 10",
@@ -63,7 +75,16 @@ std::string BVAC_Conversion_String[62] = { "01 00 00 01", "01 10 00 01", "01 00 
 // Logging of each character count (hard limit of 5000 characters per encoding)
 std::string Encoding_Letter_Count[5000] = {};
 
-void enCode(string input_mydata) {
+// Logging of each character count (hard limit of 5000 characters per encoding)
+std::string Decoding_Letter_Count[5000] = {};
+
+// Logging of each character count (hard limit of 5000 characters per encoding)
+std::string Decoding_Bits_Count[5000] = {};
+
+// Logging of succesfull run
+bool BVAC_run = false;
+
+void enCode(string input_mydata, string input_alias) {
     // Set mydata value with input value from toggle
     mydata = input_mydata;
     int letter_total_word = 0;
@@ -119,10 +140,10 @@ void enCode(string input_mydata) {
          str_ch_ltrcount.push_back(ch_ltrcount);
 	}
 
-     printCODED(letter_loop_total, 16, 16, 3);
+     printCODED(letter_loop_total, 16, 16, 3, input_alias);
 }
 
-void printCODED(int char_TOTAL, int w, int h, int channels) {
+void printCODED(int char_TOTAL, int w, int h, int channels, std::string passed_alias) {
 
     // Encoded data to write
     unsigned char data[w * h * channels];
@@ -263,9 +284,243 @@ void printCODED(int char_TOTAL, int w, int h, int channels) {
         }
     }
 
+    // Inform user of image generation
+    uiInterface.ThreadSafeMessageBox("Your BVAC image has been generated!", "", CClientUIInterface::MSG_INFORMATION);
     // Print image
-    stbi_write_jpg("jpg_test_001.jpg", w, h, channels, data, 100);
+    stbi_write_jpg(passed_alias.c_str(), w, h, channels, data, 100);
 }
 
-
 #undef STB_IMAGE_WRITE_IMPLEMENTATION// TODO: verify this, good practice would be unload as needed...
+
+void deCode(std::string image_to_deCode) {
+    BVAC_run = false;
+    int width, height;
+    int r, g, b;
+    std::vector<unsigned char> image;
+    std::string str_x, str_y, str_r, str_g, str_b;
+    std::string bvacBUF = " ";
+    // Set image data
+    bool success = load_image(image, image_to_deCode, width, height);
+    // Report failure
+    if (!success)
+    {
+        // Print for debugging
+        LogPrintf("BVAC deCode - ERROR - could not open or load image!\n");
+        // Reset RGB(A) index value for next attempt
+        n = 0;
+        return;
+    }
+    // Hard limit maximum BVAC pixel size
+    // Limit set to 16x16 for testing
+    // This can be removed later
+    // as BVAC only cares about amount of data
+    // to decode and not really how many pixels are there
+    else if ((width * height) > 256 || width != height)
+    {
+        // Print for debugging
+        LogPrintf("NFTparse - ERROR - image is not 16x16 pixels!\n");
+        // Reset RGB(A) index value for next attempt
+        n = 0;
+        return;
+    }
+
+    // Print for debugging
+    LogPrintf("BVAC Decode - Image dimensions (width x height): %u %u\n", width, height);
+
+    // Define pixel position
+    int x = 1;
+    int y = 1;
+    int p = 1;
+    int positionLOOP = 0;
+    int yLOOP = 1;
+
+    // Either 3 or 4
+    size_t RGBA = n;
+    size_t index = 0;
+
+    if (RGBA == 4)
+    {
+        // Throw error
+        BVAC_run = false;
+        // Print for debugging
+        LogPrintf("BVAC Decode - ERROR - Invalid RGB type: expected RGB, parsed RGBA\n");
+        return;
+    }
+
+    // Loop handling for a 16x16 image
+    while (positionLOOP < (width * height))
+    {
+        // Handle RGB decoding
+        r = static_cast<int>(image[index + 0]);
+        g = static_cast<int>(image[index + 1]);
+        b = static_cast<int>(image[index + 2]);
+
+        // Handle RGB degradation
+        if (r < Color_String_Window_Absolutes[0])
+        {
+            // Set absolute
+            r = Color_String_Absolutes[0];
+        } else if (r > Color_String_Window_Absolutes[1])
+        {
+            // Set absolute
+            r = Color_String_Absolutes[1];
+        }
+
+        // Handle RGB degradation
+        if (g < Color_String_Window_Absolutes[0])
+        {
+            // Set absolute
+            g = Color_String_Absolutes[0];
+        } else if (g > Color_String_Window_Absolutes[1])
+        {
+            // Set absolute
+            g = Color_String_Absolutes[1];
+        }
+
+        // Handle RGB degradation
+        if (b < Color_String_Window_Absolutes[0])
+        {
+            // Set absolute
+            b = Color_String_Absolutes[0];
+        } else if (b > Color_String_Window_Absolutes[1])
+        {
+            // Set absolute
+            b = Color_String_Absolutes[1];
+        }
+
+
+        // Move to get next pixel of RGB
+        index += RGBA;
+
+        str_x = std::to_string(x);
+        str_y = std::to_string(y);
+        str_r = std::to_string(r);
+        str_g = std::to_string(g);
+        str_b = std::to_string(b);
+        // Print for debugging
+        LogPrintf("BVAC Decode - Pixel |%u| Position x=%s y=%s - RGB data parsed: %s, %s, %s\n", p, str_x, str_y, str_r, str_g, str_b);
+        // Write data to array
+        Decoding_Letter_Count[positionLOOP] = str_r + bvacBUF + str_g + bvacBUF + str_b;
+        // Move up in loop logic and pixel position
+        if (yLOOP == width)
+        {
+            y = 0;
+            yLOOP = 0;
+            x++;
+        }
+        y++;
+        p++;
+        yLOOP++;
+        positionLOOP++;
+    }
+
+    // Reset RGB(A) index value for next attempt
+    n = 0;
+
+    // Match data and get ready for use
+    match_deCode(Decoding_Letter_Count[0]);
+}
+
+void match_deCode(std::string input_thatdata) {
+    // Set mydata value with input value from toggle
+    thatdata = input_thatdata;
+    int letter_total_word = 0;
+    // Returns word as string for letters
+    std::string str_ch_ltrcount = thatdata;
+    // set word letter count
+    int letter_loop_total = 4;// 32 more after
+    // reset character loop position
+    int character_detection_loop = 0;
+    int bits_match_loop = 0;
+    // Encoded data string
+    std::string Decoded_String = "";
+    std::string Bitmatch_String = "";
+    std::string bvacBUF = " ";
+
+    // loop until we match RGB with known bit values
+    while(bits_match_loop < 34)//size of pubkey
+    {
+        while(letter_total_word < letter_loop_total)
+        {
+            LogPrintf("BVAC Decoding - decoding string |%s| by matching RGB values \n", str_ch_ltrcount);
+
+            // loop until we match up string character with known characters
+            while(character_detection_loop < 4)
+            {
+                if(str_ch_ltrcount == Color_String_TEMP_FORMAT_WORKAROUND[character_detection_loop])
+                {
+                    // Print for debugging
+                    LogPrintf("BVAC Decoding - matched value |%s| with: %s \n", str_ch_ltrcount, Bit_String[character_detection_loop]);
+                    // Break loop when letter match is found
+                    break;
+                }
+                // Move up in loop count if not matched
+                character_detection_loop ++;
+            }
+
+            // decode bits
+            if(letter_total_word == (letter_loop_total - 1)) {
+                Bitmatch_String += (Bit_String[character_detection_loop]);
+            } else {
+                Bitmatch_String += (Bit_String[character_detection_loop] + bvacBUF);
+            }
+
+            // Reset character detection loop
+            character_detection_loop = 0;
+
+            // add onto values count for encoding
+            letter_total_word ++;
+
+            // Set  next values
+            str_ch_ltrcount = Decoding_Letter_Count[letter_total_word];
+        }
+
+        // Reset outer loop
+        letter_loop_total += 4;
+
+
+        // Set grouped data into staging array
+        // Staging array hardlimit 5000 character bit assortments
+        Decoding_Bits_Count[bits_match_loop] = Bitmatch_String;
+        // Clear bit match data
+        Bitmatch_String = "";
+        // Reset inner loop
+        character_detection_loop = 0;
+        // Move up in round
+        bits_match_loop ++;
+    }
+
+    // Reset looping for next section
+    bits_match_loop = 0;
+
+    // loop until we match bit values with known characters
+    while(bits_match_loop < 34)//size of pubkey
+    {
+        // Print for debugging
+        LogPrintf("BVAC Decoding - processing bit cluster |%s| \n", Decoding_Bits_Count[bits_match_loop]);
+        //
+        while(character_detection_loop < 62) {
+            if(Decoding_Bits_Count[bits_match_loop] == BVAC_Conversion_String[character_detection_loop])
+            {
+                // Print for debugging
+                LogPrintf("BVAC Decoding - matched bit cluster |%s| with: %s \n", Decoding_Bits_Count[bits_match_loop], BVAC_Character_String[character_detection_loop]);
+
+                Decoded_String += BVAC_Character_String[character_detection_loop];
+
+                // Break loop when letter match is found
+                break;
+            }
+            // Move up in loop count if not matched
+            character_detection_loop ++;
+        }
+        // Reset character detection loop
+        character_detection_loop = 0;
+
+        bits_match_loop ++;
+    }
+
+    thatdata = Decoded_String;
+
+    BVAC_run = true;
+
+}

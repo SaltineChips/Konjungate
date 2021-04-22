@@ -18,6 +18,7 @@
 #include <QClipboard>
 #include <QMessageBox>
 #include <QMenu>
+#include <QFileDialog>
 
 AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     QDialog(parent),
@@ -391,6 +392,7 @@ void AddressBookPage::on_showBVACencode_clicked()
 
         QString address;
         std::string str_address;
+        std::string str_alias;
         QTableView *table = ui->tableView;
         QModelIndexList indexes = table->selectionModel()->selectedRows(AddressTableModel::Address);
         if(indexes.empty()){
@@ -400,10 +402,13 @@ void AddressBookPage::on_showBVACencode_clicked()
         } else {
             address = indexes[0].data().toString();
         }
+        // Have user select file to decode
+        QString BVAC_name = QFileDialog::getSaveFileName(nullptr, "BVAC Enoding: Select a save location", ".", "Images (*.jpg)" );
         // Convert Address to std::string
         str_address = address.toStdString();
+        str_alias = BVAC_name.toStdString();
         // Encode address std::string
-        enCode(str_address);
+        enCode(str_address, str_alias);
     }
 
     return;
