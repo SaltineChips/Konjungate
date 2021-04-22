@@ -149,6 +149,9 @@ extern int64_t nLiveForkToggle;
 extern int64_t nMasterNodeChecksDelayBaseTime;
 //MasterNode peer IP advanced relay system toggle
 extern bool fMnAdvRelay;
+//Logic for lock/unlock GUI icon
+//does not affect daemon operation
+extern bool settingsStatus;
 //will sync until this block height. default -1 which represents disabled
 extern int maxBlockHeight;
 

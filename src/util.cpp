@@ -112,6 +112,9 @@ int64_t nLiveForkToggle = 0;
 int64_t nMasterNodeChecksDelayBaseTime = 0;
 //MasterNode peer IP advanced relay system toggle
 bool fMnAdvRelay = false;
+//Logic for lock/unlock GUI icon
+//does not affect daemon operation
+bool settingsStatus = false;
 //Max Blockheight Value
 int maxBlockHeight = -1;
 

@@ -16,6 +16,9 @@
   <property name="windowTitle">
    <string>Digging</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <property name="styleSheet">
    <string notr="true">color:#505050;
 font-family:'Open Sans,sans-serif';</string>
@@ -484,4 +487,4 @@ font-family:'Open Sans,sans-serif';</string>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
-</ui> 
+</ui>

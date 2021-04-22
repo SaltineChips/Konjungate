@@ -39,4 +39,4 @@ private slots:
         void on_cCON_clicked();
 };
 
-#endif // FRACTALUI_H 
+#endif // FRACTALUI_H

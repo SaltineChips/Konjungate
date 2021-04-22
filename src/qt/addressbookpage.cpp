@@ -36,9 +36,10 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     ui->deleteButton->setIcon(QIcon());
 #endif
 
-#ifndef USE_QRCODE
-    ui->showQRCode->setVisible(false);
-#endif
+// Checked in Show QR code button function
+//#ifndef USE_QRCODE
+//    ui->showQRCode->setVisible(false);
+//#endif
 
     switch(mode)
     {
@@ -55,16 +56,20 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     {
     case SendingTab:
         ui->labelExplanation->setVisible(false);
+        ui->AddressLabelName->setText("Send-To Addresses");
         ui->deleteButton->setVisible(true);
         ui->showBVACencode->setVisible(true);
         ui->signMessage->setVisible(false);
         ui->copySmsgInfo->setVisible(false);
+        ui->showQRCode->setVisible(true);
         break;
     case ReceivingTab:
+        ui->AddressLabelName->setText("Receiving Addresses");
         ui->deleteButton->setVisible(false);
         ui->signMessage->setVisible(true);
         ui->copySmsgInfo->setVisible(true);
         ui->showBVACencode->setVisible(true);
+        ui->showQRCode->setVisible(true);
         break;
     }
 
@@ -83,7 +88,7 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     contextMenu = new QMenu();
     contextMenu->addAction(copyAddressAction);
     if(tab == ReceivingTab)
-            contextMenu->addAction(copySmsgInfoAction);
+        contextMenu->addAction(copySmsgInfoAction);
     contextMenu->addAction(copyLabelAction);
     contextMenu->addAction(editAction);
     contextMenu->addAction(showBVACencodeAction);
@@ -148,7 +153,7 @@ void AddressBookPage::setModel(AddressTableModel *model)
     // Set column widths
     ui->tableView->horizontalHeader()->resizeSection(
             AddressTableModel::Address, 320);
-    ui->tableView->horizontalHeader()->setResizeMode(
+    ui->tableView->horizontalHeader()->setSectionResizeMode(
             AddressTableModel::Label, QHeaderView::Stretch);
 
     connect(ui->tableView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
@@ -299,12 +304,12 @@ void AddressBookPage::selectionChanged()
             break;
         }
         ui->copyToClipboard->setEnabled(true);
-        ui->showQRCode->setEnabled(true);
+        //ui->showQRCode->setEnabled(true);
     }
     else
     {
         ui->deleteButton->setEnabled(false);
-        ui->showQRCode->setEnabled(false);
+        //ui->showQRCode->setEnabled(false);
         ui->copyToClipboard->setEnabled(false);
         ui->signMessage->setEnabled(false);
         ui->verifyMessage->setEnabled(false);
@@ -370,15 +375,29 @@ void AddressBookPage::on_showQRCode_clicked()
 
     foreach (QModelIndex index, indexes)
     {
-        QString address = index.data().toString(), label = index.sibling(index.row(), 0).data(Qt::EditRole).toString();
+        //QString address = index.data().toString(), label = index.sibling(index.row(), 0).data(Qt::EditRole).toString();
 
-        QRCodeDialog *dialog = new QRCodeDialog(address, label, tab == ReceivingTab, this);
+        QString address;
+        QTableView *table = ui->tableView;
+        QModelIndexList indexes = table->selectionModel()->selectedRows(AddressTableModel::Address);
+        if(indexes.empty()){
+            QMessageBox::information(this, tr("Nothing Selected"), tr("You must select an address from the list first."),
+                                  QMessageBox::Ok, QMessageBox::Ok);
+            return;
+        } else {
+            address = indexes[0].data().toString();
+        }
+
+        QRCodeDialog *dialog = new QRCodeDialog(address, "label", 0, this);
         if(optionsModel)
             dialog->setModel(optionsModel);
         dialog->setAttribute(Qt::WA_DeleteOnClose);
         dialog->show();
     }
+    return;
 #endif
+    QMessageBox::information(this, tr("QR Not Supported"), tr("This build was compiled without QR code support."),
+                          QMessageBox::Ok, QMessageBox::Ok);
 }
 
 void AddressBookPage::on_showBVACencode_clicked()
