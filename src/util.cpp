@@ -112,9 +112,10 @@ int64_t nLiveForkToggle = 0;
 int64_t nMasterNodeChecksDelayBaseTime = 0;
 //MasterNode peer IP advanced relay system toggle
 bool fMnAdvRelay = false;
-//Logic for lock/unlock GUI icon
-//does not affect daemon operation
+//Logic for lock/unlock GUI icon, does not affect daemon operation
 bool settingsStatus = false;
+//Demi-node handling
+bool fDemiNodes = false;
 //Max Blockheight Value
 int maxBlockHeight = -1;
 
@@ -1210,6 +1211,9 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                FILE* ConfFile = fopen(ConfPath.string().c_str(), "w");
                fprintf(ConfFile, "listen=1\n");
                fprintf(ConfFile, "server=1\n");
+               fprintf(ConfFile, "staking=1\n");
+               fprintf(ConfFile, "deminodes=1\n");
+               fprintf(ConfFile, "demimaxdepth=200\n");
                fprintf(ConfFile, "maxconnections=150\n");
                fprintf(ConfFile, "rpcuser=yourusername\n");
 
@@ -1225,12 +1229,14 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                fprintf(ConfFile, "rpcport=18495\n");
                fprintf(ConfFile, "rpcconnect=127.0.0.1\n");
                fprintf(ConfFile, "rpcallowip=127.0.0.1\n");
-               fprintf(ConfFile, "addnode=188.166.109.87\n");
-               fprintf(ConfFile, "addnode=188.166.109.87:19417\n");
-               fprintf(ConfFile, "addnode=37.187.180.53\n");
-               fprintf(ConfFile, "addnode=37.187.180.53:19417\n");
+               fprintf(ConfFile, "addnode=159.89.18.103\n");
+               fprintf(ConfFile, "addnode=159.89.18.103:19417\n");
+               fprintf(ConfFile, "addnode=51.68.175.13\n");
+               fprintf(ConfFile, "addnode=51.68.175.13:19417\n");
                fprintf(ConfFile, "addnode=139.99.239.62\n");
                fprintf(ConfFile, "addnode=139.99.239.62:19417\n");
+               fprintf(ConfFile, "addnode=51.195.42.49\n");
+               fprintf(ConfFile, "addnode=51.195.42.49:19417\n");
                fclose(ConfFile);
     }
 

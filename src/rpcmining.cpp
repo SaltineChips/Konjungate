@@ -49,7 +49,7 @@ Value getsubsidy(const Array& params, bool fHelp)
             "getsubsidy [nTarget]\n"
             "Returns proof-of-work subsidy value for the specified value of target.");
 
-    return (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0);
+    return (int64_t)GetProofOfStakeReward(pindexBest, 0, 0);
 }
 
 Value getstakesubsidy(const Array& params, bool fHelp)
@@ -76,7 +76,7 @@ Value getstakesubsidy(const Array& params, bool fHelp)
     if (!tx.GetCoinAge(txdb, pindexBest, nCoinAge))
         throw JSONRPCError(RPC_MISC_ERROR, "GetCoinAge failed");
 
-    return (uint64_t)GetProofOfStakeReward(pindexBest->pprev, nCoinAge, 0);
+    return (uint64_t)GetProofOfStakeReward(pindexBest, nCoinAge, 0);
 }
 
 Value getmininginfo(const Array& params, bool fHelp)
@@ -91,7 +91,7 @@ Value getmininginfo(const Array& params, bool fHelp)
         nWeight = pwalletMain->GetStakeWeight();
 
     // Define block rewards
-    int64_t nRewardPoW = (uint64_t)GetProofOfWorkReward(nBestHeight, 0);
+    int64_t nRewardPoW = (uint64_t)GetProofOfWorkReward(nBestHeight+1, 0);
 
     Object obj, diff, weight;
     obj.push_back(Pair("blocks",        (int)nBestHeight));
@@ -177,7 +177,7 @@ Value checkkernel(const Array& params, bool fHelp)
     if (vNodes.empty())
         throw JSONRPCError(-9, "Konjungate is not connected!");
 
-    if (IsInitialBlockDownload())
+    if (IsInitialBlockDownload()) // Prevents a User from mining before sync
         throw JSONRPCError(-10, "Konjungate is downloading blocks...");
 
     COutPoint kernel;
@@ -272,8 +272,8 @@ Value getworkex(const Array& params, bool fHelp)
     if (vNodes.empty())
         throw JSONRPCError(-9, "Konjungate is not connected!");
 
-    if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "Konjungate is downloading blocks...");
+    /*if (IsInitialBlockDownload()) // Prevents mining before complete sync
+        throw JSONRPCError(-10, "Konjungate is downloading blocks...");*/
 
     if (pindexBest->nHeight >= Params().EndPoWBlock()){
         if(pindexBest->GetBlockTime() >= nPoWToggle){
@@ -411,8 +411,8 @@ Value getwork(const Array& params, bool fHelp)
     if (vNodes.empty())
         throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Konjungate is not connected!");
 
-    if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Konjungate is downloading blocks...");
+    /*if (IsInitialBlockDownload()) // Prevents miners from mining before sync
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Konjungate is downloading blocks...");*/
 
     if (pindexBest->nHeight >= Params().EndPoWBlock()){
         if(pindexBest->GetBlockTime() >= nPoWToggle){
@@ -568,8 +568,8 @@ Value getblocktemplate(const Array& params, bool fHelp)
     if (vNodes.empty())
         throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Konjungate is not connected!");
 
-    if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Konjungate is downloading blocks...");
+    /*if (IsInitialBlockDownload()) // Prevents miners from mining before sync
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Konjungate is downloading blocks..."); */
 
     if (pindexBest->nHeight >= Params().EndPoWBlock()){
         if(pindexBest->GetBlockTime() >= nPoWToggle){
@@ -638,7 +638,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
         bool fInvalid = false;
         if (tx.FetchInputs(txdb, mapUnused, false, false, mapInputs, fInvalid))
         {
-            entry.push_back(Pair("fee", (int64_t)(tx.GetValueIn(mapInputs) - tx.GetValueOut())));
+            entry.push_back(Pair("fee", (int64_t)(tx.GetValueMapIn(mapInputs) - tx.GetValueOut())));
 
             Array deps;
             BOOST_FOREACH (MapPrevTx::value_type& inp, mapInputs)
@@ -686,36 +686,78 @@ Value getblocktemplate(const Array& params, bool fHelp)
         if (pindexBest->GetBlockTime() > nPaymentUpdate_1) // Monday, May 20, 2019 12:00:00 AM
         {
             // Set Masternode / DevOps payments
-            int64_t masternodePayment = GetMasternodePayment(pindexPrev->nHeight+1, networkPayment);
-            int64_t devopsPayment = GetDevOpsPayment(pindexPrev->nHeight+1, networkPayment);
-            std::string devpayee2 = "K8LHiHK8be6YucgmvhsnzVxT2d7p7SDGnc"; // K8LHiHK8be6YucgmvhsnzVxT2d7p7SDGnc
+            int64_t masternodePayment = GetMasternodePayment(pindexPrev->nHeight, networkPayment);
+            int64_t devopsPayment = GetDevOpsPayment(pindexPrev->nHeight, networkPayment);
+            std::string devopsPayee = "K7gNsQQKF1ynvpgM3kMc5oB52C3oJdCJDU"; // K8LHiHK8be6YucgmvhsnzVxT2d7p7SDGnc
+            std::string masternodePayee;
 
             if (pindexBest->GetBlockTime() < nPaymentUpdate_2) {
-                devpayee2 = Params().DevOpsAddress();
+                devopsPayee = Params().DevOpsAddress();
             }
 
-            // Include DevOps payments
-            CAmount devopsSplit = devopsPayment;
-            result.push_back(Pair("devops_payee", devpayee2));
-            result.push_back(Pair("devops_amount", (int64_t)devopsSplit));
-            result.push_back(Pair("devops_payments", true));
-            result.push_back(Pair("enforce_devops_payments", true));
-
-            // Include Masternode payments
-            CAmount masternodeSplit = masternodePayment;
+            CScript devopsScript = GetScriptForDestination(CBitcoinAddress(devopsPayee).Get());
+            CScript masternodeScript;
+            
             CMasternode* winningNode = mnodeman.GetCurrentMasterNode(1);
+
             if (winningNode) {
-                CScript payee = GetScriptForDestination(winningNode->pubkey.GetID());
+                masternodeScript = GetScriptForDestination(winningNode->pubkey.GetID());
                 CTxDestination address1;
-                ExtractDestination(payee, address1);
+                ExtractDestination(masternodeScript, address1);
                 CBitcoinAddress address2(address1);
-                result.push_back(Pair("masternode_payee", address2.ToString().c_str()));
+                masternodePayee = address2.ToString().c_str();
             } else {
-                result.push_back(Pair("masternode_payee", devpayee2.c_str()));
+                masternodePayee = devopsPayee;
+                masternodeScript = devopsScript;
             }
-            result.push_back(Pair("payee_amount", (int64_t)masternodeSplit));
-            result.push_back(Pair("masternode_payments", true));
-            result.push_back(Pair("enforce_masternode_payments", true));
+
+            // Include Masternode / DevOps payments
+            Object oMasternode;
+            oMasternode.push_back(Pair("payee", masternodePayee));
+            oMasternode.push_back(Pair("script", HexStr(masternodeScript)));
+            oMasternode.push_back(Pair("amount", (int64_t)masternodePayment));
+            
+            result.push_back(Pair("masternode", oMasternode));
+            result.push_back(Pair("masternode_payments_started", true));
+            result.push_back(Pair("masternode_payments_enforced", true));
+
+            Object oDevops;
+            oDevops.push_back(Pair("payee", devopsPayee));
+            oDevops.push_back(Pair("script", HexStr(devopsScript)));
+            oDevops.push_back(Pair("amount", (int64_t)devopsPayment));
+
+            Array aSuperblock;
+            aSuperblock.push_back(oDevops);
+
+            // Include Refund
+            if(pindexBest->nHeight >= nPaymentUpdate_4 && pindexBest->nHeight < nEndOfRefund)
+            {
+                if(pblock->vtx[0].vout[pblock->vtx[0].vout.size()-1].nValue == nBlockStandardRefund)
+                {
+                    int64_t refundPayment = nBlockStandardRefund;
+                    CScript refundScript = pblock->vtx[0].vout[pblock->vtx[0].vout.size()-1].scriptPubKey;
+                    std::string refundPayee;
+                    CTxDestination address1;
+                    ExtractDestination(refundScript, address1);
+                    CBitcoinAddress address2(address1);
+                    refundPayee = address2.ToString().c_str();
+
+                    Object oRefund;
+                    oRefund.push_back(Pair("payee", refundPayee));
+                    oRefund.push_back(Pair("script", HexStr(refundScript)));
+                    oRefund.push_back(Pair("amount", (int64_t)refundPayment));
+
+                    aSuperblock.push_back(oRefund);
+
+                    networkPayment += refundPayment;
+                }
+            }
+                        
+            result.push_back(Pair("superblock", aSuperblock));
+            result.push_back(Pair("superblocks_started", true));
+            result.push_back(Pair("superblocks_enabled", true));
+
+            networkPayment += masternodePayment + devopsPayment;
         }
     }
     // Standard values cont...

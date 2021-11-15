@@ -11,9 +11,6 @@
 #include "main.h"
 #include "uint256.h"
 
-
-static const int nCheckpointSpan = 5000;
-
 namespace Checkpoints
 {
     typedef std::map<int, uint256> MapCheckpoints;
@@ -41,6 +38,26 @@ namespace Checkpoints
         (80000,  uint256("0x766f30ad50c5b48680e9f5f0d3be2a7594349945ea4ddf3160f2c4aa2f1017cc"))
         (100000, uint256("0xf6a13abde1e012185f5c46b4616368ad1eb64d31d54ba4f8b6d769aff942c9be"))
         (104293, uint256("0x000000000157c91b96608aeed733f5f3b8124c5795f1822faed2b7728c49b0cc"))
+        (150000, uint256("0x000000000061edd95f733cb94de3b493f4b3f343d62240d6d0e164442d6be315"))
+        (200000, uint256("0x0000000000fac9848205d60548055519732faf219137a6260bd3a003381b34e5"))
+        (250000, uint256("0x0000000000bf74f747a060bef3b5b9e483832c66843bd58ba93978657bb6a7c0"))
+        (300000, uint256("0x0000000000fc33954fb98cfdff5f72f3f334cd232d1e0b99c575f7c25df2c057"))
+        (350000, uint256("0x28968f7124079e435c00df7468db85f366956a8b28500a6bdff108f2bfd7040b"))
+        (400000, uint256("0xc98e9128138c5ac38f4529cea666a3fdcfa22ea14b691f49bb711d66bf19b687"))
+        (450000, uint256("0x00000000008fe0fe49683a2909a247dd4d96be9db2c9347f3dd6ceaeed55ad9f"))
+        (500000, uint256("0x83f3249bb781f3be2f3bdb4782295130eabe02b4aa8a184870843d32e3ba9796"))
+        (550000, uint256("0x5680dcb37fd20160c3b6f9b737657ccada8d5ed7bcfe861fa0c4e6face67dec6"))
+        (600000, uint256("0x276a8d53f8e19a341299034829d98bb996f060ebdaa959a41aa31828fbff2aaf"))
+        (602073, uint256("0x0000000003e461bb4107459397a3561cee787eefb3dae398024dca0502c0816b"))
+        (625000, uint256("0x0000000002cf42960483dcf438e74a6c11410eb2687e3fa63ae975c4235d1477"))
+        (650000, uint256("0x301a0ce40a777d14ca2a40c885036e4fb21e281d8576bfa567be690d26c75afd"))
+        (675000, uint256("0x0000000013be01ded5961bb66d90f07aece18be4de200b9a40a9d8a3b6586b20"))
+        (700000, uint256("0x000000000135d5196d23f0dd055c55060ec4da98b233e8faf0dddcb264b166a7"))
+        (725000, uint256("0x92e4fc040c008b91f8278a2f930e5d9f3b59f88628198540cdde7589a28776b9"))
+        (750000, uint256("0x6c85d6bcb7ace94c67746941dccd239cd00aa12ff373c7608767c8b1817ebeac"))
+        (775000, uint256("0x2d1ed218811a007b1ddb6db0bfc1375c62b90568406440e31824ab2100533c32"))
+        (800000, uint256("0x855a8c9f8fc5eda57fae6e33a65bd7f0c21e80e58116629a0de6bcd1f663fc60"))
+        (807390, uint256("0x4622497276183e6a406a74d29fb4a857c88f05ae517436d9ce70963d6cb95ef6"))
     ;
 
     // TestNet has no checkpoints
@@ -82,8 +99,17 @@ namespace Checkpoints
     const CBlockIndex* AutoSelectSyncCheckpoint()
     {
         const CBlockIndex *pindex = pindexBest;
+        // Ensure we have sufficient blocks to index
+        if(pindexBest->nHeight < 500) {
+            if(pindexBest->nHeight < 1) {
+                return pindex;
+            } else {
+                return pindex->pprev;
+            }
+        }
         // Search backward for a block within max span and maturity window
-        while (pindex->pprev && pindex->nHeight + nCheckpointSpan > pindexBest->nHeight)
+        // Taking into account our 120 block depth + reorganize depth
+        while (pindex->pprev && pindex->nHeight + (BLOCK_TEMP_CHECKPOINT_DEPTH + 500) > pindexBest->nHeight)
             pindex = pindex->pprev;
         return pindex;
     }

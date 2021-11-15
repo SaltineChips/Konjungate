@@ -33,6 +33,8 @@ int64_t nReserveBalance = 0;
 int64_t nMinimumInputValue = 0;
 int64_t nPoSageReward = 0;
 
+std::map<int, uint256> mRefundableBlocksBuffer;
+
 int64_t GetStakeCombineThreshold() { return GetArg("-stakethreshold", 1000) * COIN; }
 static int64_t GetStakeSplitThreshold() { return 2 * GetStakeCombineThreshold(); }
 
@@ -904,6 +906,33 @@ int CWalletTx::GetRequestCount() const
         }
     }
     return nRequests;
+}
+
+void CWalletTx::GetStakeAmounts(CAmount& nFee, CAmount& nAmount, string& strSentAccount, CTxDestination& address, const isminefilter& filter) const
+{
+    LOCK(pwallet->cs_wallet);
+    nFee = 0;
+    nAmount = 0;
+    strSentAccount = "";
+    
+    if(!IsCoinStake()) return;
+
+    CAmount nDebit = GetDebit(filter);
+    CAmount nCredit = GetCredit(filter);
+
+    if(!(nDebit > 0 && nCredit > 0)) return;
+    
+    strSentAccount = strFromAccount;
+
+    if (!ExtractDestination(vout[1].scriptPubKey, address))
+    {
+        LogPrintf("CWalletTx::GetAmounts: Unknown transaction type found, txid %s\n",
+                    this->GetHash().ToString());
+        address = CNoDestination();
+    }
+
+    nAmount = nCredit - nDebit;
+    nFee = GetValueOut() - nCredit;
 }
 
 void CWalletTx::GetAmounts(list<pair<CTxDestination, int64_t> >& listReceived,
@@ -3188,8 +3217,8 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     }
 
     int64_t blockValue = nCredit;
-    int64_t masternodePayment = GetMasternodePayment(pindexPrev->nHeight+1, nReward);
-    int64_t devopsPayment = GetDevOpsPayment(pindexPrev->nHeight+1, nReward); // TODO: Activate devops
+    int64_t masternodePayment = GetMasternodePayment(pindexPrev->nHeight, nReward);
+    int64_t devopsPayment = GetDevOpsPayment(pindexPrev->nHeight, nReward); // TODO: Activate devops
 
 
     // Set output amount
@@ -3250,6 +3279,46 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
             txNew.vout[1].nValue = blockValue;
         }
     }
+
+    //Refund
+    if(pindexBest->nHeight >= nPaymentUpdate_4 && pindexBest->nHeight < nEndOfRefund)
+    {
+        int nHeightRefund = pindexBest->nHeight+1 - nNbrWrongBlocks;
+        CBlock blockRefund;
+        CBlockIndex* pBlockIndexRefund;
+        uint256 hash;
+
+        if(mRefundableBlocksBuffer.count(nHeightRefund) != 0)
+        {
+            hash = mRefundableBlocksBuffer[nHeightRefund];
+        }
+        else
+        {
+            mRefundableBlocksBuffer.clear();
+            pBlockIndexRefund = mapBlockIndex[hashBestChain];
+            
+            while (pBlockIndexRefund->nHeight > nHeightRefund){
+                pBlockIndexRefund = pBlockIndexRefund->pprev;
+
+                if(pBlockIndexRefund->nHeight < nHeightRefund + 10)
+                    mRefundableBlocksBuffer[pBlockIndexRefund->nHeight] = *pBlockIndexRefund->phashBlock;
+            }
+
+            hash = *pBlockIndexRefund->phashBlock;
+        }
+        
+        pBlockIndexRefund = mapBlockIndex[hash];
+        blockRefund.ReadFromDisk(pBlockIndexRefund, true);
+
+        if(blockRefund.IsProofOfStake())
+        {
+            CScript refundpayee = blockRefund.vtx[1].vout[1].scriptPubKey;
+            txNew.vout.resize(txNew.vout.size()+1);
+            txNew.vout[txNew.vout.size()-1].scriptPubKey = refundpayee;
+            txNew.vout[txNew.vout.size()-1].nValue = nBlockStandardRefund;
+        }
+    }
+
 
     // Sign
     int nIn = 0;

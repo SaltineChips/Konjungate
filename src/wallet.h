@@ -30,6 +30,8 @@ extern int64_t nMinimumInputValue;
 extern bool fWalletUnlockStakingOnly;
 extern bool fConfChange;
 
+extern std::map<int, uint256> mRefundableBlocksBuffer;
+
 class CAccountingEntry;
 class CCoinControl;
 class CWalletTx;
@@ -918,6 +920,8 @@ public:
     void GetAmounts(std::list<std::pair<CTxDestination, int64_t> >& listReceived,
                     std::list<std::pair<CTxDestination, int64_t> >& listSent, CAmount& nFee, std::string& strSentAccount, const isminefilter& filter) const;
 
+    void GetStakeAmounts(CAmount& nFee, CAmount& nAmount, std::string& strSentAccount, CTxDestination& address, const isminefilter& filter) const;
+      
     void GetAccountAmounts(const std::string& strAccount, CAmount& nReceived,
                            CAmount& nSent, CAmount& nFee, const isminefilter& filter) const;
 
